@@ -3,14 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "algoliasearch": "^3.24.8",
+    "base-64": "^0.1.0",
+    "lodash.chunk": "^4.2.0",
+    "lodash.debounce": "^4.0.8",
+    "mdast-util-heading-range": "^2.1.0",
+    "mdast-util-toc": "^2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "remark": "^8.0.0",
+    "remark-react": "^4.0.1",
+    "remark-slug": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "jsxBracketSameLine": true
   }
 }
