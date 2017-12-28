@@ -9,6 +9,7 @@
     "lodash.debounce": "^4.0.8",
     "mdast-util-heading-range": "^2.1.0",
     "mdast-util-toc": "^2.0.1",
+    "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -16,11 +17,17 @@
     "react-scripts": "1.0.17",
     "remark": "^8.0.0",
     "remark-react": "^4.0.1",
-    "remark-slug": "^5.0.0"
+    "remark-slug": "^5.0.0",
+    "tailwindcss": "^0.4.0",
+    "watch": "^1.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm-run-all -p start:css start:js",
+    "start:css": "watch 'npm run build:css' ./src/css",
+    "start:js": "react-scripts start",
+    "build": "npm-run-all build:css build:js",
+    "build:css": "tailwind build ./src/css/index.pcss -c ./tailwind-config.js -o ./src/index.css",
+    "build:js": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
