@@ -52,10 +52,12 @@ const a = props => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
+const tocHeading = "contents|toc|table[ -]of[ -]contents?";
+
 function removeTOC() {
   return transformer;
   function transformer(tree) {
-    heading(tree, "contents", mutate);
+    heading(tree, tocHeading, mutate);
   }
   function mutate(start, nodes, end) {
     return [end];
@@ -67,18 +69,22 @@ function onlyTOC() {
   return transformer;
 
   function transformer(node) {
-    var result = utiltoc(node, {
-      heading: "contents|toc|table[ -]of[ -]contents?",
+    // Make a new TOC with all headings after the existing TOC section
+    let result = utiltoc(node, {
+      heading: tocHeading,
       maxDepth: 6,
       tight: false,
     });
 
     if (result.index === null || result.index === -1 || !result.map) {
-      return;
+      // Since an existing TOC section was not found, use all headings
+      result = utiltoc(node, {
+        maxDepth: 6,
+        tight: false,
+      });
     }
 
-    /* Replace markdown. */
-    node.children = [result.map];
+    node.children = result.map ? [result.map] : [];
   }
 }
 
