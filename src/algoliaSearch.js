@@ -8,7 +8,7 @@ const algolia = new AlgoliaSearch(
 );
 
 const index = algolia.initIndex("repositories");
-const data = {};
+let data = {};
 
 const searchStats = function(batchSize = 1000) {
   const batches = chunk(Object.keys(data), batchSize);
@@ -18,7 +18,8 @@ const searchStats = function(batchSize = 1000) {
 
     index.search({ filters, hitsPerPage: batchSize }, (success, content) => {
       content.hits.forEach(hit => {
-        data[hit.objectID].forEach(callback => callback(hit));
+        const callbacks = data[hit.objectID] || [];
+        callbacks.forEach(callback => callback(hit));
       });
     });
   });
@@ -43,3 +44,7 @@ export const search = debounce(function(query, callback) {
     callback
   );
 }, 500);
+
+export const resetStats = function() {
+  data = {};
+};
