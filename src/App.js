@@ -7,7 +7,8 @@ import utiltoc from "mdast-util-toc";
 import slug from "remark-slug";
 import base64 from "base-64";
 
-import fetchStats from "./fetchStats";
+import Search from "./Search";
+import { fetchStats } from "./algoliaSearch";
 
 const username = process.env.REACT_APP_GITHUB_USERNAME;
 const password = process.env.REACT_APP_GITHUB_PASSWORD;
@@ -38,14 +39,19 @@ class Stats extends Component {
 
 const a = props => {
   if (props.href.includes("github.com")) {
+    const fullName = githubUrlToRepo(props.href);
+
     return (
-      <span>
-        <a href={props.href}>{props.children}</a>
-        <Stats fullName={githubUrlToRepo(props.href)} />
+      <span id={fullName}>
+        <a target="_blank" rel="noopener noreferrer" href={props.href}>
+          {props.children}
+        </a>
+        <Stats fullName={fullName} />
       </span>
     );
   }
-  return <a {...props} />;
+
+  return <a target="_blank" rel="noopener noreferrer" {...props} />;
 };
 
 function removeTOC() {
@@ -117,6 +123,9 @@ class App extends Component {
 
     return (
       <div>
+        <div style={{ background: "lime" }}>
+          <Search />
+        </div>
         <div style={{ background: "cyan" }}>{contentsTOC}</div>
         <div style={{ background: "salmon" }}>{contentsBody}</div>
       </div>
