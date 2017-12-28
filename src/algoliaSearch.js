@@ -2,8 +2,6 @@ import AlgoliaSearch from "algoliasearch";
 import debounce from "lodash.debounce";
 import chunk from "lodash.chunk";
 
-const password = process.env.REACT_APP_GITHUB_PASSWORD;
-
 const algolia = new AlgoliaSearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
   process.env.REACT_APP_ALGOLIA_API_KEY
