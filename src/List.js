@@ -17,7 +17,9 @@ function githubUrlToRepo(url) {
   return url
     .replace(/^.*:\/?\/?/, "") // Remove protocol (eg: "http://", "github:")
     .replace(/\.git(#.+)?$/, "") // Remove .git (and optional branch) suffix
-    .replace(/(\w+@)?github\.com[/:]/, ""); // Remove domain or ssh clone url
+    .replace(/\?.*$/, "") // Remove query params (used in search and trending links)
+    .replace(/(\w+@)?github\.com[/:]/, "") // Remove domain or ssh clone url
+    .replace(/([^/]+)\/([^/]+)\/?.*/, "$1/$2") // Remove everything after the second slash
 }
 
 class Stats extends Component {
