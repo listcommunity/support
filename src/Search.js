@@ -13,11 +13,15 @@ class Search extends Component {
     const query = e.target.value;
     const lastUpdate = new Date();
 
-    search(query, (success, content) => {
-      if (this.state.lastUpdate.getTime() < lastUpdate.getTime()) {
-        this.setState({ results: content.hits, lastUpdate });
-      }
-    });
+    if (!query) {
+      this.setState({ results: [], lastUpdate });
+    } else {
+      search(query, (success, content) => {
+        if (this.state.lastUpdate.getTime() < lastUpdate.getTime()) {
+          this.setState({ results: content.hits, lastUpdate });
+        }
+      });
+    }
   };
 
   render() {
