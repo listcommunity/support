@@ -1,100 +1,24 @@
 import React, { Component } from "react";
-import remark from "remark";
-import reactRenderer from "remark-react";
-import heading from "mdast-util-heading-range";
-import utiltoc from "mdast-util-toc";
-import slug from "remark-slug";
 import base64 from "base-64";
 
-import Search from "./Search";
+import Topbar from "./Topbar";
 import Notification from "./Notification";
 import AccessTokenDialog from "./AccessTokenDialog";
-import { fetchStats, resetStats } from "./algoliaSearch";
-
-// Receives an URL to GitHub and returns a shorthand
-// (eg: "http://github.com/madebyform/react-parts" becomes "madebyform/react-parts")
-function githubUrlToRepo(url) {
-  return url
-    .replace(/^.*:\/?\/?/, "") // Remove protocol (eg: "http://", "github:")
-    .replace(/\.git(#.+)?$/, "") // Remove .git (and optional branch) suffix
-    .replace(/\?.*$/, "") // Remove query params (used in search and trending links)
-    .replace(/(\w+@)?github\.com[/:]/, "") // Remove domain or ssh clone url
-    .replace(/([^/]+)\/([^/]+)\/?.*/, "$1/$2") // Remove everything after the second slash
-}
-
-class Stats extends Component {
-  state = {};
-
-  componentDidMount() {
-    fetchStats(this.props.fullName, stats => this.setState(stats));
-  }
-  render() {
-    return (
-      <strong>
-        {this.state.watchers} stars, {this.state.forks} forks
-      </strong>
-    );
-  }
-}
-
-const a = props => {
-  if (props.href.includes("github.com")) {
-    const fullName = githubUrlToRepo(props.href);
-
-    return (
-      <span id={fullName}>
-        <a target="_blank" rel="noopener noreferrer" href={props.href}>
-          {props.children}
-        </a>
-        <Stats fullName={fullName} />
-      </span>
-    );
-  }
-
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
-};
-
-const tocHeading = "contents|toc|table[ -]of[ -]contents?";
-
-function removeTOC() {
-  return transformer;
-  function transformer(tree) {
-    heading(tree, tocHeading, mutate);
-  }
-  function mutate(start, nodes, end) {
-    return [end];
-  }
-}
-
-function onlyTOC() {
-  this.use(slug);
-  return transformer;
-
-  function transformer(node) {
-    // Make a new TOC with all headings after the existing TOC section
-    let result = utiltoc(node, {
-      heading: tocHeading,
-      maxDepth: 6,
-      tight: false,
-    });
-
-    if (result.index === null || result.index === -1 || !result.map) {
-      // Since an existing TOC section was not found, use all headings
-      result = utiltoc(node, {
-        maxDepth: 6,
-        tight: false,
-      });
-    }
-
-    node.children = result.map ? [result.map] : [];
-  }
-}
+import { resetStats } from "./algoliaSearch";
+import ListContent from "./ListContent";
+import ListSidebar from "./ListSidebar";
+import lists from "./lists";
 
 class List extends Component {
   state = {
     text: "# Loading…",
     requestAccessToken: false,
     notification: null,
+    sidebarOpen: false,
+  };
+
+  handleSidebarToggle = sidebarOpen => {
+    this.setState({ sidebarOpen });
   };
 
   fetchData() {
@@ -159,7 +83,8 @@ class List extends Component {
   };
 
   render() {
-    const { text, requestAccessToken } = this.state;
+    const { author, name } = this.props.match.params;
+    const { text, requestAccessToken, sidebarOpen } = this.state;
 
     const notification = this.state.notification && (
       <Notification text={this.state.notification} onDismiss={this.handleNotificationDismiss} />
@@ -167,36 +92,35 @@ class List extends Component {
 
     if (requestAccessToken) {
       return (
-        <div>
+        <div className="flex-1">
           {notification}
           <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />
         </div>
       );
     }
 
-    const contentsTOC = remark()
-      .use(onlyTOC)
-      .use(reactRenderer)
-      .processSync(text).contents;
-
-    const contentsBody = remark()
-      .use(removeTOC)
-      .use(reactRenderer, {
-        remarkReactComponents: {
-          a,
-        },
-      })
-      .processSync(text).contents;
-
     return (
-      <div>
+      <div className="h-screen flex flex-row overflow-hidden font-sans tracking-tight bg-white">
         {notification}
 
-        <div style={{ background: "lime" }}>
-          <Search />
+        <div className="flex-1 flex flex-col">
+          <div className="flex-none">
+            <Topbar
+              sidebarOpen={sidebarOpen}
+              onSidebarToggle={this.handleSidebarToggle}
+              background={lists[`${author}/${name}`].color}
+            />
+          </div>
+          <div className="flex-1 overflow-y-scroll w-full">
+            <ListContent text={text} />
+          </div>
         </div>
-        <div style={{ background: "cyan" }}>{contentsTOC}</div>
-        <div style={{ background: "salmon" }}>{contentsBody}</div>
+        <div
+          className={`flex-none overflow-y-scroll w-full max-w-xs bg-grey-lightest lg:block lg:h-full lg:static lg:mt-0 ${
+            sidebarOpen ? "fixed pin-r mt-15 pin-t pin-b" : "hidden"
+          }`}>
+          <ListSidebar text={text} />
+        </div>
       </div>
     );
   }

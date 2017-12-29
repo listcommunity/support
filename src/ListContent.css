@@ -1,0 +1,40 @@
+/* A placeholder for while images are loading. It has the same height of badges.
+ * List from `marky-markdown (http://git.io/vEzmx) `*/
+img[data-canonical-src*='badge.fury.io'],
+img[data-canonical-src*='badges.github.io'],
+img[data-canonical-src*='badges.gitter.im'],
+img[data-canonical-src*='ci.testling.com'],
+img[data-canonical-src*='coveralls.io'],
+img[data-canonical-src*='david-dm.org'],
+img[data-canonical-src*='img.shields.io'],
+img[data-canonical-src*='nodei.co'],
+img[data-canonical-src*='saucelabs.com'],
+img[data-canonical-src*='secure.travis-ci.org'],
+img[data-canonical-src*='travis-ci.org'] {
+  background: #f7f7f7;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+/* Other aesthetic changes */
+
+.markdown-body img {
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body table th,
+.markdown-body table td {
+  border-color: #e6e6e6;
+}
+
+.markdown-body hr {
+  background-color: #e6e6e6;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre,
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f7f7f7;
+}

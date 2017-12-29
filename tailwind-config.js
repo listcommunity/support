@@ -45,31 +45,31 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 let colors = {
   transparent: "transparent",
 
-  black: "#22292f",
-  "grey-darkest": "#3d4852",
-  "grey-darker": "#606f7b",
-  "grey-dark": "#8795a1",
-  grey: "#b8c2cc",
-  "grey-light": "#dae1e7",
-  "grey-lighter": "#f1f5f8",
-  "grey-lightest": "#f8fafc",
+  black: "#000000",
+  "grey-darkest": "#444444",
+  "grey-darker": "#666666",
+  "grey-dark": "#888888",
+  grey: "#b1b1b1",
+  "grey-light": "#e6e6e6",
+  "grey-lighter": "#f2f2f2",
+  "grey-lightest": "#fafafa",
   white: "#ffffff",
 
-  "red-darkest": "#3b0d0c",
-  "red-darker": "#621b18",
+  "red-darkest": "#420806",
+  "red-darker": "#6a1b19",
   "red-dark": "#cc1f1a",
   red: "#e3342f",
   "red-light": "#ef5753",
   "red-lighter": "#f9acaa",
   "red-lightest": "#fcebea",
 
-  "orange-darkest": "#462a16",
-  "orange-darker": "#613b1f",
-  "orange-dark": "#de751f",
-  orange: "#f6993f",
-  "orange-light": "#faad63",
-  "orange-lighter": "#fcd9b6",
-  "orange-lightest": "#fff5eb",
+  "orange-darkest": "#4d370e",
+  "orange-darker": "#7b5136",
+  "orange-dark": "#ce972d",
+  orange: "#efb33d",
+  "orange-light": "#fec93e",
+  "orange-lighter": "#ffe7b2",
+  "orange-lightest": "#fff9ed",
 
   "yellow-darkest": "#453411",
   "yellow-darker": "#684f1d",
@@ -79,8 +79,8 @@ let colors = {
   "yellow-lighter": "#fff9c2",
   "yellow-lightest": "#fcfbeb",
 
-  "green-darkest": "#0f2f21",
-  "green-darker": "#1a4731",
+  "green-darkest": "#032d19",
+  "green-darker": "#0b4228",
   "green-dark": "#1f9d55",
   green: "#38c172",
   "green-light": "#51d88a",
@@ -88,20 +88,20 @@ let colors = {
   "green-lightest": "#e3fcec",
 
   "teal-darkest": "#0d3331",
-  "teal-darker": "#20504f",
+  "teal-darker": "#174e4b",
   "teal-dark": "#38a89d",
   teal: "#4dc0b5",
   "teal-light": "#64d5ca",
   "teal-lighter": "#a0f0ed",
   "teal-lightest": "#e8fffe",
 
-  "blue-darkest": "#12283a",
-  "blue-darker": "#1c3d5a",
-  "blue-dark": "#2779bd",
-  blue: "#3490dc",
-  "blue-light": "#6cb2eb",
-  "blue-lighter": "#bcdefa",
-  "blue-lightest": "#eff8ff",
+  "blue-darkest": "#002056",
+  "blue-darker": "#003a9a",
+  "blue-dark": "#2d6fdf",
+  blue: "#4285f4",
+  "blue-light": "#77a9ff",
+  "blue-lighter": "#c2d9ff",
+  "blue-lightest": "#f3f8ff",
 
   "indigo-darkest": "#191e38",
   "indigo-darker": "#2f365f",
@@ -111,16 +111,16 @@ let colors = {
   "indigo-lighter": "#b2b7ff",
   "indigo-lightest": "#e6e8ff",
 
-  "purple-darkest": "#21183c",
-  "purple-darker": "#382b5f",
+  "purple-darkest": "#1f133f",
+  "purple-darker": "#352465",
   "purple-dark": "#794acf",
   purple: "#9561e2",
   "purple-light": "#a779e9",
   "purple-lighter": "#d6bbfc",
   "purple-lightest": "#f3ebff",
 
-  "pink-darkest": "#451225",
-  "pink-darker": "#6f213f",
+  "pink-darkest": "#45051e",
+  "pink-darker": "#72173a",
   "pink-dark": "#eb5286",
   pink: "#f66d9b",
   "pink-light": "#fa7ea8",
@@ -190,6 +190,7 @@ module.exports = {
 
   fonts: {
     sans: [
+      "Karla",
       "-apple-system",
       "BlinkMacSystemFont",
       "Segoe UI",
@@ -287,9 +288,9 @@ module.exports = {
   */
 
   leading: {
-    none: 1,
+    none: 0,
     tight: 1.25,
-    normal: 1.5,
+    normal: 1.35,
     loose: 2,
   },
 
@@ -306,9 +307,9 @@ module.exports = {
   */
 
   tracking: {
-    tight: "-0.05em",
+    tight: "-0.02em",
     normal: "0",
-    wide: "0.05em",
+    wide: "0.02em",
   },
 
   /*
@@ -482,6 +483,7 @@ module.exports = {
     "8": "2rem",
     "10": "2.5rem",
     "12": "3rem",
+    "15": "3.75rem",
     "16": "4rem",
     "24": "6rem",
     "32": "8rem",
@@ -601,6 +603,8 @@ module.exports = {
     "4": "1rem",
     "6": "1.5rem",
     "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
   },
 
   /*
@@ -628,6 +632,10 @@ module.exports = {
     "4": "1rem",
     "6": "1.5rem",
     "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "15": "3.75rem",
+    "80": "20rem",
   },
 
   /*

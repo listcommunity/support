@@ -9,8 +9,7 @@ class Search extends Component {
     lastUpdate: new Date(),
   };
 
-  handleChange = e => {
-    const query = e.target.value;
+  handleChange = query => {
     const lastUpdate = new Date();
 
     if (!query) {
@@ -30,12 +29,25 @@ class Search extends Component {
     return (
       <div>
         <SearchBox handleChange={this.handleChange} />
-        {results.map(result => (
-          <a style={{ display: "block" }} href={`#${result.full_name}`} key={result.full_name}>
-            <span dangerouslySetInnerHTML={{ __html: result._highlightResult.name.value }} /> -
-            <span dangerouslySetInnerHTML={{ __html: result._highlightResult.description.value }} />
-          </a>
-        ))}
+        {results.length > 0 && (
+          <div className="px-3 py-2 bg-white rounded shadow mt-2">
+            {results.map(result => (
+              <a
+                style={{ display: "block" }}
+                href={`#${result.full_name}`}
+                key={result.full_name}
+                className="block py-1">
+                <strong
+                  className="mr-2"
+                  dangerouslySetInnerHTML={{ __html: result._highlightResult.name.value }}
+                />
+                <span
+                  dangerouslySetInnerHTML={{ __html: result._highlightResult.description.value }}
+                />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
