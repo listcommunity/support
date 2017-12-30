@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import base64 from "base-64";
+import { Helmet } from "react-helmet";
 
 import Topbar from "./Topbar";
 import Notification from "./Notification";
@@ -83,8 +84,9 @@ class List extends Component {
   };
 
   render() {
-    const { author, name } = this.props.match.params;
     const { text, requestAccessToken, sidebarOpen } = this.state;
+    const { author, name } = this.props.match.params;
+    const fullName = `${author}/${name}`;
 
     const notification = this.state.notification && (
       <Notification text={this.state.notification} onDismiss={this.handleNotificationDismiss} />
@@ -108,7 +110,7 @@ class List extends Component {
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
-              background={lists[`${author}/${name}`].color}
+              background={lists[fullName].color}
             />
           </div>
           <div className="flex-1 overflow-y-scroll w-full">
@@ -121,6 +123,8 @@ class List extends Component {
           }`}>
           <ListSidebar text={text} />
         </div>
+
+        <Helmet><title>{lists[fullName].label}</title></Helmet>
       </div>
     );
   }

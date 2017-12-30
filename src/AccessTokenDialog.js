@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 
 class AccessTokenDialog extends Component {
@@ -14,7 +14,7 @@ class AccessTokenDialog extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         GitHub limits unauthenticated API requests to 60 per hour, but after binding your access
         token you will be able to enjoy the rate limit of 5,000 requests per hour. You should at
         least add permission for public_repo to enable star/unstar, and user:follow to enable
@@ -26,7 +26,7 @@ class AccessTokenDialog extends Component {
           placeholder="Paste access token here"
         />
         <button onClick={this.handleSubmit}>Save</button>
-      </div>
+      </Fragment>
     );
   }
 }

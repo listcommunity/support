@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import SearchBox from "./SearchBox";
 import { search } from "./algoliaSearch";
@@ -27,8 +27,9 @@ class Search extends Component {
     const { results } = this.state;
 
     return (
-      <div>
+      <Fragment>
         <SearchBox handleChange={this.handleChange} />
+
         {results.length > 0 && (
           <div className="px-3 py-2 bg-white rounded shadow mt-2">
             {results.map(result => (
@@ -48,7 +49,7 @@ class Search extends Component {
             ))}
           </div>
         )}
-      </div>
+      </Fragment>
     );
   }
 }
