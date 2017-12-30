@@ -12,7 +12,7 @@ import lists from "./lists";
 
 class List extends Component {
   state = {
-    text: "# Loading…",
+    text: null,
     requestAccessToken: false,
     notification: null,
     sidebarOpen: false,

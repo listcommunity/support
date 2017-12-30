@@ -7,20 +7,34 @@ import { onlyTOC } from "./markdownUtils";
 import "./ListSidebar.css";
 
 class ListSidebar extends Component {
-  shouldComponentUpdate(nextProps) {
-    return this.props.text !== nextProps.text;
+  state = {
+    content: null,
+  };
+
+  renderMarkdown(text) {
+    remark()
+      .use(onlyTOC)
+      .use(reactRenderer)
+      .process(text, (e, res) => this.setState({ content: res.contents }));
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.text !== nextProps.text) {
+      this.renderMarkdown(nextProps.text);
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.text) {
+      this.renderMarkdown(this.props.text);
+    }
   }
 
   render() {
-    const toc = remark()
-      .use(onlyTOC)
-      .use(reactRenderer)
-      .processSync(this.props.text).contents;
-
     return (
       <div className="ListSidebar m-4">
         <Search />
-        <div className="mt-4">{toc}</div>
+        <div className="mt-4">{this.state.content || "Loading…"}</div>
       </div>
     );
   }
