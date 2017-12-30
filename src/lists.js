@@ -1,5 +1,6 @@
 export default {
   "matteocrippa/awesome-swift": {
+    slug: "swift",
     fullName: "matteocrippa/awesome-swift",
     label: "Swift",
     shortDescription:
@@ -8,6 +9,7 @@ export default {
     color: "#ef5138",
   },
   "h4cc/awesome-elixir": {
+    slug: "elixir",
     fullName: "h4cc/awesome-elixir",
     label: "Elixir",
     shortDescription:
@@ -16,6 +18,7 @@ export default {
     color: "#4e2a8e",
   },
   "avelino/awesome-go": {
+    slug: "go",
     fullName: "avelino/awesome-go",
     label: "Go",
     shortDescription:
@@ -24,6 +27,7 @@ export default {
     color: "#375eab",
   },
   "markets/awesome-ruby": {
+    slug: "ruby",
     fullName: "markets/awesome-ruby",
     label: "Ruby",
     shortDescription:
