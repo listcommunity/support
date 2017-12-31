@@ -1,6 +1,7 @@
 import AlgoliaSearch from "algoliasearch";
 import debounce from "lodash.debounce";
 import chunk from "lodash.chunk";
+import difference from "lodash.difference";
 
 const algolia = new AlgoliaSearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
@@ -11,7 +12,8 @@ const index = algolia.initIndex("repositories");
 let data = {};
 
 const searchStats = function(batchSize = 1000) {
-  const batches = chunk(Object.keys(data), batchSize);
+  const ids = Object.keys(data);
+  const batches = chunk(ids, batchSize);
 
   batches.forEach(batch => {
     const filters = batch.map(f => `objectID:${f}`).join(" OR ");
@@ -20,6 +22,11 @@ const searchStats = function(batchSize = 1000) {
       content.hits.forEach(hit => {
         const callbacks = data[hit.objectID] || [];
         callbacks.forEach(callback => callback(hit));
+      });
+
+      difference(ids, content.hits.map(hit => hit.objectID)).forEach(objectID => {
+        const callbacks = data[objectID] || [];
+        callbacks.forEach(callback => callback({ watchers: null, forks: null }));
       });
     });
   });

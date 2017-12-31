@@ -113,3 +113,16 @@ input:focus {
   border-color: rgba(3, 102, 214, 0.2);
   outline: none;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.spin {
+  animation: spin 2s infinite linear;
+}
