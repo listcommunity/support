@@ -3,6 +3,7 @@ import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
 import headings from "remark-autolink-headings";
+import emoji from "remark-emoji";
 import sanitizeGhSchema from "hast-util-sanitize/lib/github.json";
 import "github-markdown-css";
 
@@ -20,6 +21,7 @@ class ListContent extends Component {
       .use(slug)
       .use(removeTOC)
       .use(headings)
+      .use(emoji)
       .use(reactRenderer, {
         sanitize: {
           ...sanitizeGhSchema,
