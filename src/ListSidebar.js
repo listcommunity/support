@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import remark from "remark";
 import reactRenderer from "remark-react";
+import slug from "remark-slug";
 
 import Search from "./Search";
 import { onlyTOC } from "./markdownUtils";
@@ -13,6 +14,7 @@ class ListSidebar extends Component {
 
   renderMarkdown(text) {
     remark()
+      .use(slug)
       .use(onlyTOC)
       .use(reactRenderer)
       .process(text, (e, res) => this.setState({ content: res.contents }));

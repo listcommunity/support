@@ -87,6 +87,7 @@ class List extends Component {
     const { text, requestAccessToken, sidebarOpen } = this.state;
     const { author, name } = this.props.match.params;
     const fullName = `${author}/${name}`;
+    const config = lists[fullName] || {};
 
     const notification = this.state.notification && (
       <Notification text={this.state.notification} onDismiss={this.handleNotificationDismiss} />
@@ -110,11 +111,11 @@ class List extends Component {
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
-              background={lists[fullName].color}
+              background={config.color}
             />
           </div>
           <div className="flex-1 overflow-y-scroll w-full">
-            <ListContent text={text} />
+            <ListContent fullName={fullName} text={text} />
           </div>
         </div>
         <div
@@ -124,7 +125,7 @@ class List extends Component {
           <ListSidebar text={text} />
         </div>
 
-        <Helmet><title>{lists[fullName].label}</title></Helmet>
+        <Helmet><title>{config.label}</title></Helmet>
       </div>
     );
   }

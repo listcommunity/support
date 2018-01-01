@@ -1,21 +1,21 @@
 import heading from "mdast-util-heading-range";
 import utiltoc from "mdast-util-toc";
-import slug from "remark-slug";
 
 const tocHeading = "contents|toc|table[ -]of[ -]contents?";
 
 export const removeTOC = function() {
   return transformer;
+
   function transformer(tree) {
     heading(tree, tocHeading, mutate);
   }
+
   function mutate(start, nodes, end) {
     return [end];
   }
 };
 
 export const onlyTOC = function() {
-  this.use(slug);
   return transformer;
 
   function transformer(node) {
