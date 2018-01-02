@@ -23,9 +23,7 @@ const App = () => (
         ))}
       </Switch>
 
-      <Helmet titleTemplate="%s / List.community">
-        <title>List.community</title>
-      </Helmet>
+      <Helmet titleTemplate="%s / List.community" defaultTitle="List.community" />
     </Fragment>
   </Router>
 );

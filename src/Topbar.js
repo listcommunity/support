@@ -13,7 +13,7 @@ class Topbar extends Component {
   };
 
   render() {
-    const { sidebarOpen, inverse, background, small } = this.props;
+    const { sidebarOpen, inverse, background } = this.props;
     const { author, name } = this.props.match.params;
     const fullName = author && name ? `${author}/${name}` : null;
 
@@ -21,7 +21,7 @@ class Topbar extends Component {
       <header
         className={`select-none bg-grey-darkest ${inverse ? "text-black" : "text-white"}`}
         style={background ? { background } : {}}>
-        <div className={`max-w-xl mx-auto flex items-center ${small ? "h-12" : "h-15"} px-2`}>
+        <div className="max-w-xl mx-auto flex items-center h-15 px-2">
           <Link to="/" className="link-reset p-3 pl-2 mr-2">
             <h1 className="text-xl font-bold">List.community</h1>
           </Link>
@@ -54,7 +54,7 @@ class Topbar extends Component {
           ]}
 
           {!fullName && (
-            <a href="mailto:hello@dmfranc.com" className="link-reset p-3 leading-none">
+            <a href="mailto:hi@robo54.com" className="link-reset p-3 leading-none">
               <EmailIcon width="16" height="16" />
             </a>
           )}

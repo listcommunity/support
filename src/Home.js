@@ -7,7 +7,7 @@ import lists from "./lists";
 
 const Home = () => (
   <div className="min-h-screen bg-grey-lighter font-sans tracking-tight">
-    <Topbar background="#00a453" small />
+    <Topbar />
 
     <div className="max-w-xl mx-auto text-center">
       <img

@@ -22,6 +22,10 @@ img[data-canonical-src*='travis-ci.org'] {
   border-radius: 3px;
 }
 
+.markdown-body a[href^="#"] {
+  color: #888;
+}
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body table th,

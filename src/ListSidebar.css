@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-.ListSidebar li {
+.ListSidebar li,
+.ListSidebar p {
   margin-bottom: 0.5rem;
 }
 
@@ -16,22 +17,8 @@
   white-space: nowrap;
 }
 
-.ListSidebar ul > li > p,
-.ListSidebar ul > li > p > a,
-.ListSidebar ul > li > a {
-  font-size: .875rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #888;
-}
-
-.ListSidebar ul > li > p {
-  margin-bottom: 0.75rem;
-  margin-top: 1.5rem;
-}
-
 .ListSidebar ul > li > ul {
-  margin-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 
 .ListSidebar ul > li > ul > li > p,
@@ -39,13 +26,19 @@
 .ListSidebar ul > li > ul > li > a {
   font-size: 1rem;
   letter-spacing: 0;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
   text-transform: none;
   color: #444;
 }
 
-.ListSidebar ul > li > ul > li > ul {
-  padding-left: 1rem;
-  margin-bottom: 0;
+h1:target::before,
+h2:target::before,
+h3:target::before,
+h4:target::before,
+h5:target::before {
+  display: block;
+  content: " ";
+  margin-top: -20px;
+  height: 20px;
+  visibility: hidden;
+  pointer-events: none;
 }

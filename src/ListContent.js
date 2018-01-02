@@ -21,7 +21,7 @@ class ListContent extends Component {
       .use(slug)
       .use(removeTOC)
       .use(headings)
-      .use(emoji)
+      .use(emoji, { padSpaceAfter: true })
       .use(reactRenderer, {
         sanitize: {
           ...sanitizeGhSchema,
