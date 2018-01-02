@@ -24,7 +24,7 @@ const searchStats = function(batchSize = 1000) {
         callbacks.forEach(callback => callback(hit));
       });
 
-      difference(ids, content.hits.map(hit => hit.objectID)).forEach(objectID => {
+      difference(batch, content.hits.map(hit => hit.objectID)).forEach(objectID => {
         const callbacks = data[objectID] || [];
         callbacks.forEach(callback => callback({ watchers: null, forks: null }));
       });
