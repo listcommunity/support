@@ -1,9 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import { fetchStats } from "./algoliaSearch";
 import { SyncIcon, StarIcon, ForkIcon } from "./Icon";
 import urlJoin from "url-join";
 import isAbsoluteUrl from "is-absolute-url";
+
+import humanizedNumber from "./humanizedNumber";
+
+const thresholds = {
+  stars: 25,
+  forks: 25,
+};
 
 // Receives an URL to GitHub and returns a shorthand
 // (eg: "http://github.com/madebyform/react-parts" becomes "madebyform/react-parts")
@@ -34,15 +41,26 @@ class GitHubLink extends Component {
     } else if (this.state.watchers !== null) {
       // Stats have been loaded and didn't fail
       stats = (
-        <span>
-          {this.state.watchers} <StarIcon width="14" height="12" className="mr-1" />
-          {this.state.forks} <ForkIcon width="10" height="12" />
-        </span>
+        <Fragment>
+          <span
+            className={
+              this.state.watchers > thresholds.stars ? "text-orange-dark" : "text-grey-dark"
+            }>
+            {humanizedNumber(this.state.watchers)}{" "}
+            <StarIcon width="14" height="12" className="mr-1" />
+          </span>
+          <span
+            className={
+              this.state.forks > thresholds.forks ? "text-teal-dark" : "text-grey-dark"
+            }>
+            {humanizedNumber(this.state.forks)} <ForkIcon width="10" height="12" />
+          </span>
+        </Fragment>
       );
     }
 
     return (
-      <span>
+      <span className="whitespace-no-wrap">
         <a
           id={this.props.fullName}
           target="_blank"
@@ -50,7 +68,7 @@ class GitHubLink extends Component {
           href={this.props.href}>
           {this.props.children}
         </a>
-        {stats && <span className="ml-1 shadow border rounded-sm px-1">{stats}</span>}
+        {stats && <span className="ml-1 text-grey-dark">{stats}</span>}
       </span>
     );
   }
