@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { fetchStats } from "./algoliaSearch";
 import { SyncIcon, StarIcon, ForkIcon } from "./Icon";
+import urlJoin from "url-join";
+import isAbsoluteUrl from "is-absolute-url";
 
 // Receives an URL to GitHub and returns a shorthand
 // (eg: "http://github.com/madebyform/react-parts" becomes "madebyform/react-parts")
@@ -28,20 +30,24 @@ class GitHubLink extends Component {
 
     if (Object.keys(this.state).length === 0) {
       // Stats are being loaded
-      stats = <SyncIcon width="12" height="12" className="spin" />;
+      stats = <SyncIcon width="12" height="12" />;
     } else if (this.state.watchers !== null) {
       // Stats have been loaded and didn't fail
       stats = (
         <span>
-          {this.state.watchers} <StarIcon width="14" height="12" />,
+          {this.state.watchers} <StarIcon width="14" height="12" className="mr-1" />
           {this.state.forks} <ForkIcon width="10" height="12" />
         </span>
       );
     }
 
     return (
-      <span id={this.props.fullName}>
-        <a target="_blank" rel="noopener noreferrer" href={this.props.href}>
+      <span>
+        <a
+          id={this.props.fullName}
+          target="_blank"
+          rel="noopener noreferrer"
+          href={this.props.href}>
           {this.props.children}
         </a>
         {stats && <span className="ml-1 shadow border rounded-sm px-1">{stats}</span>}
@@ -51,12 +57,20 @@ class GitHubLink extends Component {
 }
 
 const CustomLink = props => {
-  if (props.href.includes("github.com")) {
+  let moreProps = {};
+  let href =
+    isAbsoluteUrl(props.href) || props.href.startsWith("//") || props.href.startsWith("#")
+      ? props.href
+      : urlJoin(window.location.pathname, props.href);
+
+  if (props.href.includes("github.com") && !props.children[0].type) {
     const fullName = githubUrlToFullName(props.href);
     if (fullName) return <GitHubLink {...props} fullName={fullName} />;
+  } else if (isAbsoluteUrl(props.href) || props.href.startsWith("//")) {
+    moreProps = { target: "_blank", rel: "noopener noreferrer" };
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return <a {...moreProps} {...props} href={href} />;
 };
 
 export default CustomLink;
