@@ -141,6 +141,7 @@ class List extends Component {
 
         <Helmet>
           <title>{config.label}</title>
+          <link rel="icon" type="image/png" href={`${config.logo}?size=32`} />
         </Helmet>
       </div>
     );

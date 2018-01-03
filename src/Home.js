@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Topbar from "./Topbar";
 import octomonkey from "./octomonkey.svg";
@@ -48,6 +49,10 @@ const Home = () => (
         ))}
       </ul>
     </div>
+
+    <Helmet>
+      <link rel="icon" type="image/png" href="/favicon.png" />
+    </Helmet>
   </div>
 );
 
