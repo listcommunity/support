@@ -1,0 +1,37 @@
+.ad {
+  min-height: 130px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#carbonads {
+  bottom: 0;
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.carbon-img img {
+  float: left;
+}
+
+.carbon-text,
+.carbon-poweredby {
+  color: #000;
+  text-decoration: none;
+}
+
+.carbon-text {
+  text-align: left;
+  display: inline-block;
+  width: 155px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+}
+
+.carbon-poweredby {
+  color: #b1b1b1;
+  display: block;
+  font-size: .8em;
+  float: right;
+}

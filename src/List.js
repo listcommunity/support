@@ -9,6 +9,7 @@ import AccessTokenDialog from "./AccessTokenDialog";
 import { resetStats } from "./algoliaSearch";
 import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
+import Advertisement from "./Advertisement";
 import lists from "./lists";
 
 class List extends Component {
@@ -126,10 +127,16 @@ class List extends Component {
           </div>
         </div>
         <div
-          className={`flex-none overflow-y-scroll w-full max-w-xs bg-grey-lightest lg:block lg:h-full lg:static lg:mt-0 ${
+          className={`flex-none w-full max-w-xs bg-grey-lightest lg:flex lg:flex-col lg:relative lg:mt-0 overflow-y-scroll ${
             sidebarOpen ? "fixed pin-r mt-15 pin-t pin-b" : "hidden"
           }`}>
-          <ListSidebar text={text} />
+          <div className="flex-1 overflow-y-scroll">
+            <ListSidebar text={text} />
+          </div>
+
+          <div className="flex-none">
+            <Advertisement />
+          </div>
         </div>
 
         <Helmet>
