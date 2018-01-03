@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import base64 from "base-64";
 import { Helmet } from "react-helmet";
+import equals from "shallow-equals";
 
 import Topbar from "./Topbar";
 import Notification from "./Notification";
@@ -83,6 +84,12 @@ class List extends Component {
     this.setState({ notification: null });
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      !equals(this.props.match.params, nextProps.match.params) || !equals(this.state, nextState)
+    );
+  }
+
   render() {
     const { text, requestAccessToken, sidebarOpen } = this.state;
     const { author, name } = this.props.match.params;
@@ -125,7 +132,9 @@ class List extends Component {
           <ListSidebar text={text} />
         </div>
 
-        <Helmet><title>{config.label}</title></Helmet>
+        <Helmet>
+          <title>{config.label}</title>
+        </Helmet>
       </div>
     );
   }

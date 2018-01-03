@@ -21,7 +21,7 @@ const searchStats = function(batchSize = 1000) {
     index.search({ filters, hitsPerPage: batchSize }, (success, content) => {
       content.hits.forEach(hit => {
         const callbacks = data[hit.objectID] || [];
-        callbacks.forEach(callback => callback(hit));
+        setTimeout(() => callbacks.forEach(callback => callback(hit)), 100);
       });
 
       difference(batch, content.hits.map(hit => hit.objectID)).forEach(objectID => {
