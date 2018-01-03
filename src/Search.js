@@ -5,6 +5,7 @@ import { search } from "./algoliaSearch";
 
 class Search extends Component {
   state = {
+    query: null,
     results: [],
     lastUpdate: new Date(),
   };
@@ -13,18 +14,18 @@ class Search extends Component {
     const lastUpdate = new Date();
 
     if (!query) {
-      this.setState({ results: [], lastUpdate });
+      this.setState({ query: null, results: [], lastUpdate });
     } else {
       search(query, (success, content) => {
         if (this.state.lastUpdate.getTime() < lastUpdate.getTime()) {
-          this.setState({ results: content.hits, lastUpdate });
+          this.setState({ query, results: content.hits, lastUpdate });
         }
       });
     }
   };
 
   render() {
-    const { results } = this.state;
+    const { query, results } = this.state;
 
     return (
       <Fragment>
@@ -48,6 +49,9 @@ class Search extends Component {
               </a>
             ))}
           </div>
+        )}
+        {results.length === 0 && query && (
+          <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">No results</div>
         )}
       </Fragment>
     );
