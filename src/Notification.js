@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Notification = ({ text, onDismiss }) => (
-  <h1 style={{ background: "violet" }} onClick={onDismiss}>
+  <h2 onClick={onDismiss} className="cursor-pointer bg-black p-4 text-lg text-center font-normal text-white">
     {text}
-  </h1>
+  </h2>
 );
 
 Notification.propTypes = {

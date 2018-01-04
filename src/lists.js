@@ -92,7 +92,7 @@ export default {
     slug: "r",
     label: "R",
     shortDescription:
-      "R is a programming language and software environment for statistical computing and graphics.",
+      "R is a free programming language and software environment for statistical computing and graphics.",
     logo: "https://github.com/github/explore/raw/master/topics/r/r.png",
     color: "#198ce7",
     category: "Programming Languages",

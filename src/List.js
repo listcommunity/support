@@ -64,7 +64,10 @@ class List extends Component {
       response => {
         if (response.status === 200) {
           localStorage.setItem("access-token", accessToken);
-          this.setState({ requestAccessToken: false, notification: "Success" });
+          this.setState({
+            requestAccessToken: false,
+            notification: "Success! You can now make 5,000 requests per hour.",
+          });
           this.fetchData();
         } else {
           response.json().then(json =>
@@ -101,26 +104,19 @@ class List extends Component {
       <Notification text={this.state.notification} onDismiss={this.handleNotificationDismiss} />
     );
 
-    if (requestAccessToken) {
-      return (
-        <div className="flex-1">
-          {notification}
-          <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />
-        </div>
-      );
-    }
-
     return (
-      <div className="h-screen flex flex-row overflow-hidden font-sans tracking-tight bg-white">
-        {notification}
+      <div className="h-screen flex flex-row overflow-hidden font-sans text-black tracking-tight bg-white">
+        <div className="flex-1 flex flex-col w-full">
+          {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
 
-        <div className="flex-1 flex flex-col">
           <div className="flex-none">
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
               background={config.color}
+              inverse={config.inverse}
             />
+            {notification}
           </div>
           <div className="flex-1 overflow-y-scroll w-full">
             <ListContent fullName={fullName} text={text} />

@@ -13,12 +13,12 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/:author/:name" component={List} />
 
-        {Object.values(lists).map(list => (
+        {Object.entries(lists).map(([fullName, list]) => (
           <Route
             exact
             key={list.slug}
             path={`/${list.slug}`}
-            component={() => <Redirect to={`/${list.fullName}`} />}
+            component={() => <Redirect to={`/${fullName}`} />}
           />
         ))}
       </Switch>
