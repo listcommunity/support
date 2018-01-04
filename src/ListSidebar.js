@@ -4,6 +4,7 @@ import reactRenderer from "remark-react";
 import slug from "remark-slug";
 
 import Search from "./Search";
+import SearchPoweredBy from "./SearchPoweredBy";
 import { onlyTOC } from "./markdownUtils";
 import "./ListSidebar.css";
 
@@ -37,6 +38,8 @@ class ListSidebar extends Component {
       <div className="ListSidebar m-4">
         <Search />
         <div className="mt-4">{this.state.content || "Loading…"}</div>
+
+        <SearchPoweredBy />
       </div>
     );
   }
