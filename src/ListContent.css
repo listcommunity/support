@@ -18,12 +18,12 @@ img[data-canonical-src*='travis-ci.org'] {
 
 /* Other aesthetic changes */
 
-.markdown-body img {
-  border-radius: 3px;
+.markdown-body {
+  color: #222;
 }
 
-.markdown-body a[href^="#"] {
-  color: #888;
+.markdown-body img {
+  border-radius: 3px;
 }
 
 .markdown-body h1,
@@ -41,4 +41,10 @@ img[data-canonical-src*='travis-ci.org'] {
 .markdown-body pre,
 .markdown-body table tr:nth-child(2n) {
   background-color: #f7f7f7;
+}
+
+/* Rendering with remark is different and includes a <p> for nested lists */
+.markdown-body li p {
+  margin-bottom: 0.25em;
+  margin-top: 0;
 }

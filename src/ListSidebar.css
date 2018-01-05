@@ -17,28 +17,14 @@
   white-space: nowrap;
 }
 
-.ListSidebar ul > li > ul {
+.ListSidebar ul {
+  font-weight: bold;
+}
+
+.ListSidebar ul ul {
+  font-weight: normal;
+}
+
+.ListSidebar ul > li > ul > li > ul {
   padding-left: 1rem;
-}
-
-.ListSidebar ul > li > ul > li > p,
-.ListSidebar ul > li > ul > li > p > a,
-.ListSidebar ul > li > ul > li > a {
-  font-size: 1rem;
-  letter-spacing: 0;
-  text-transform: none;
-  color: #444;
-}
-
-h1:target::before,
-h2:target::before,
-h3:target::before,
-h4:target::before,
-h5:target::before {
-  display: block;
-  content: " ";
-  margin-top: -20px;
-  height: 20px;
-  visibility: hidden;
-  pointer-events: none;
 }

@@ -94,6 +94,7 @@ a:target,
 mark {
   background: rgba(248,231,28,0.25) !important;
   color: inherit;
+  outline: none;
 }
 
 button:focus {
@@ -111,4 +112,17 @@ input:focus {
   box-shadow: 0 0 0 0.25rem rgba(3, 102, 214, 0.2);
   border-color: rgba(3, 102, 214, 0.2);
   outline: none;
+}
+
+h1:target::before,
+h2:target::before,
+h3:target::before,
+h4:target::before,
+h5:target::before {
+  display: block;
+  content: " ";
+  margin-top: -20px;
+  height: 20px;
+  visibility: hidden;
+  pointer-events: none;
 }

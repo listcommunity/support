@@ -50,9 +50,7 @@ class GitHubLink extends Component {
             <StarIcon width="14" height="12" className="mr-1" />
           </span>
           <span
-            className={
-              this.state.forks > thresholds.forks ? "text-teal-dark" : "text-grey-dark"
-            }>
+            className={this.state.forks > thresholds.forks ? "text-teal-dark" : "text-grey-dark"}>
             {humanizedNumber(this.state.forks)} <ForkIcon width="10" height="12" />
           </span>
         </Fragment>
@@ -60,7 +58,7 @@ class GitHubLink extends Component {
     }
 
     return (
-      <span className="whitespace-no-wrap">
+      <Fragment>
         <a
           id={this.props.fullName}
           target="_blank"
@@ -69,7 +67,7 @@ class GitHubLink extends Component {
           {this.props.children}
         </a>
         {stats && <span className="ml-1 text-grey-dark">{stats}</span>}
-      </span>
+      </Fragment>
     );
   }
 }
@@ -81,9 +79,11 @@ const CustomLink = props => {
       ? props.href
       : urlJoin(window.location.pathname, props.href);
 
-  if (props.href.includes("github.com") && !props.children[0].type) {
+  if (props.href.includes("github.com") && props.children && !props.children[0].type) {
     const fullName = githubUrlToFullName(props.href);
-    if (fullName) return <GitHubLink {...props} fullName={fullName} />;
+    if (fullName && !window.location.pathname.includes(fullName)) {
+      return <GitHubLink {...props} fullName={fullName} />;
+    }
   } else if (isAbsoluteUrl(props.href) || props.href.startsWith("//")) {
     moreProps = { target: "_blank", rel: "noopener noreferrer" };
   }

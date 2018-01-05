@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
@@ -50,11 +50,17 @@ class ListContent extends Component {
 
   render() {
     return (
-      <div id="readme" className="markdown-body p-4 xl:py-8 max-w-xl mx-auto">
-        <div id="start-of-content" className="font-sans leading-normal sm:text-lg">
-          {this.state.content || "Loading…"}
+      <Fragment>
+        <div id="table-of-contents" />
+        <div id="start-of-content" />
+        <div id="contents" />
+
+        <div id="readme" className="markdown-body p-4 xl:py-8 max-w-xl mx-auto">
+          <div className="font-sans leading-normal sm:text-lg">
+            {this.state.content || "Loading…"}
+          </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
