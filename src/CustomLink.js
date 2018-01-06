@@ -72,23 +72,23 @@ class GitHubLink extends Component {
   }
 }
 
-const CustomLink = props => {
+const CustomLink = ({ children, ...props }) => {
   let moreProps = {};
   let href =
     isAbsoluteUrl(props.href) || props.href.startsWith("//") || props.href.startsWith("#")
       ? props.href
       : urlJoin(window.location.pathname, props.href);
 
-  if (props.href.includes("github.com") && props.children && !props.children[0].type) {
+  if (props.href.includes("github.com") && children && !children[0].type) {
     const fullName = githubUrlToFullName(props.href);
     if (fullName && !window.location.pathname.includes(fullName)) {
-      return <GitHubLink {...props} fullName={fullName} />;
+      return <GitHubLink {...props} fullName={fullName}>{ children }</GitHubLink>;
     }
   } else if (isAbsoluteUrl(props.href) || props.href.startsWith("//")) {
     moreProps = { target: "_blank", rel: "noopener noreferrer" };
   }
 
-  return <a {...moreProps} {...props} href={href} />;
+  return <a {...moreProps} {...props} href={href}>{ children }</a>;
 };
 
 export default CustomLink;
