@@ -9,65 +9,67 @@ import octomonkey from "./octomonkey.svg";
 import allLists from "./lists";
 
 const Home = () => (
-  <Jungle className="bg-white font-sans text-purple-darker tracking-tight">
-    <div className="max-w-xl mx-auto mb-6 pt-15">
-      <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8">
-        <div className="w-full lg:w-1/3">
-          <img
-            src={octomonkey}
-            draggable="false"
-            className="select-none block mx-auto mb-8 lg:mb-0 lg:max-w-full xl:w-full lg:pl-4"
-            alt="Octomonkey welcomes you!"
-          />
+  <div className="bg-white font-sans text-purple-darker tracking-tight">
+    <Jungle>
+      <div className="max-w-xl mx-auto mb-6 pt-15">
+        <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8 sm:mb-15">
+          <div className="w-full lg:w-1/3">
+            <img
+              src={octomonkey}
+              draggable="false"
+              className="select-none block mx-auto mb-8 lg:mb-0 lg:max-w-full xl:w-full lg:pl-4"
+              alt="Octomonkey welcomes you!"
+            />
+          </div>
+
+          <div className="w-full lg:w-2/3">
+            <h2
+              className="text-2xl sm:text-5xl leading-tight tracking-tight mb-6 text-center lg:text-left mx-auto lg:mx-0"
+              style={{ maxWidth: 520 }}>
+              Navigate through the <br /> information jungle
+            </h2>
+
+            <h3
+              className="text-lg sm:text-3xl leading-normal tracking-tight text-purple-darkest font-normal text-center lg:text-left mx-auto lg:mx-0"
+              style={{ maxWidth: 480 }}>
+              List.community is an easy way to <br /> browse curated lists on GitHub.
+            </h3>
+          </div>
         </div>
 
-        <div className="w-full lg:w-2/3">
-          <h2
-            className="text-2xl sm:text-5xl leading-tight tracking-tight mb-6 text-center lg:text-left mx-auto lg:mx-0"
-            style={{ maxWidth: 520 }}>
-            Navigate through the <br /> information jungle
-          </h2>
+        {Object.entries(groupBy(allLists, "category")).map(([category, lists]) => (
+          <Fragment key={category}>
+            <h2 className="py-6 text-xl px-4 text-center xl:text-left uppercase tracking-normal">
+              {category}
+            </h2>
 
-          <h3
-            className="text-lg sm:text-3xl leading-normal tracking-tight text-purple-darkest font-normal text-center lg:text-left mx-auto lg:mx-0"
-            style={{ maxWidth: 480 }}>
-            List.community is an easy way to <br /> browse curated lists on GitHub.
-          </h3>
-        </div>
+            <ul className="list-reset clearfix pb-6">
+              {lists.map(list => (
+                <li
+                  key={list.slug}
+                  className="w-3/5 md:w-1/2 lg:w-1/3 md:float-left mx-auto"
+                  style={{ minWidth: 320 }}>
+                  <Link
+                    to={list.slug}
+                    className="blue-shadow hover:bg-blue-lightest link-reset py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-md leading-normal">
+                    <img
+                      src={`${list.logo}?size=128`}
+                      width="64"
+                      height="64"
+                      className="mb-4 inline-block"
+                      draggable="false"
+                      alt={`${list.label} logo`}
+                    />
+                    <strong className="mb-1 block">{list.label}</strong>
+                    <span>{list.shortDescription}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Fragment>
+        ))}
       </div>
-
-      {Object.entries(groupBy(allLists, "category")).map(([category, lists]) => (
-        <Fragment key={category}>
-          <h2 className="py-6 text-xl px-4 text-center lg:text-left uppercase tracking-normal">
-            {category}
-          </h2>
-
-          <ul className="list-reset clearfix pb-6">
-            {lists.map(list => (
-              <li
-                key={list.slug}
-                className="w-3/5 md:w-1/2 lg:w-1/3 md:float-left mx-auto"
-                style={{ minWidth: 320 }}>
-                <Link
-                  to={list.slug}
-                  className="blue-shadow link-reset py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden border border-grey-light leading-normal">
-                  <img
-                    src={`${list.logo}?size=128`}
-                    width="64"
-                    height="64"
-                    className="mb-2 inline-block"
-                    draggable="false"
-                    alt={`${list.label} logo`}
-                  />
-                  <strong className="text-xl mb-3 block">{list.label}</strong>
-                  <span>{list.shortDescription}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Fragment>
-      ))}
-    </div>
+    </Jungle>
 
     <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow hidden sm:block">
       <div className="max-w-xl mx-auto flex items-center h-16">
@@ -89,7 +91,7 @@ const Home = () => (
     <Helmet>
       <link rel="icon" type="image/png" href="/favicon.png" />
     </Helmet>
-  </Jungle>
+  </div>
 );
 
 export default Home;

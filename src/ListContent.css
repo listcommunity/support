@@ -16,6 +16,17 @@ img[data-canonical-src*='travis-ci.org'] {
   min-width: 20px;
 }
 
+/* Remove margin from first and last elements.
+ * The content is wrapped in two divs. */
+
+.markdown-body > div > div > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body > div > div > *:first-child {
+  margin-top: 0 !important;
+}
+
 /* Other aesthetic changes */
 
 .markdown-body {
