@@ -1,0 +1,101 @@
+.Jungle {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  padding-top: 60px;
+}
+
+.Jungle-leaf,
+.Jungle-sky {
+  display: block;
+  position: absolute;
+  top: -280px;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.Jungle-leaf--left {
+  left: -180px;
+}
+.Jungle-leaf--right {
+  right: -130px;
+  text-align: right;
+}
+
+.Jungle-sky {
+  width: 100%;
+  top: -290px;
+}
+
+@media (min-width: 576px) {
+  .Jungle {
+    padding-top: 120px;
+  }
+
+  .Jungle-leaf {
+    top: -220px;
+  }
+
+  .Jungle-leaf--left {
+    left: -140px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Jungle {
+    padding-top: 150px;
+  }
+
+  .Jungle-leaf--right {
+    right: -50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Jungle {
+    padding-top: 180px;
+  }
+
+  .Jungle-leaf {
+    top: 0;
+  }
+
+  .Jungle-leaf--left {
+    left: 0;
+  }
+  .Jungle-leaf--right {
+    right: 0;
+  }
+
+  .Jungle-leaf--5 {
+    transform: translateZ(0.4px) scale(0.6);
+    top: -140px;
+  }
+
+  .Jungle-leaf--4 {
+    transform: translateZ(0.5px) scale(0.5);
+    top: -130px;
+  }
+
+  .Jungle-leaf--3,
+  .Jungle-leaf--2 {
+    transform: translateZ(0.6px) scale(0.4);
+    top: -120px;
+  }
+
+  .Jungle-leaf--1 {
+    transform: translateZ(0.7px) scale(0.3);
+    top: -90px;
+  }
+
+  .Jungle-leaf--0 {
+    transform: translateZ(0.8px) scale(0.2);
+    top: -66px;
+  }
+
+  .Jungle-sky {
+    transform: translateZ(0.01px) scale(1.01);
+  }
+}
