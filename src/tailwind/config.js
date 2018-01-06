@@ -111,13 +111,13 @@ let colors = {
   "indigo-lighter": "#b2b7ff",
   "indigo-lightest": "#e6e8ff",
 
-  "purple-darkest": "#1f133f",
-  "purple-darker": "#352465",
-  "purple-dark": "#794acf",
-  purple: "#9561e2",
-  "purple-light": "#a779e9",
-  "purple-lighter": "#d6bbfc",
-  "purple-lightest": "#f3ebff",
+  "purple-darkest": "#5a496c",
+  "purple-darker": "#1d143e",
+  "purple-dark": "#503071",
+  purple: "#8645ca",
+  "purple-light": "#ad76e6",
+  "purple-lighter": "#d9b9fa",
+  "purple-lightest": "#f4eafe",
 
   "pink-darkest": "#45051e",
   "pink-darker": "#72173a",
@@ -289,7 +289,7 @@ module.exports = {
 
   leading: {
     none: 0,
-    tight: 1.25,
+    tight: 1.15,
     normal: 1.35,
     loose: 1.5,
   },
@@ -401,7 +401,7 @@ module.exports = {
   borderRadius: {
     none: "0",
     sm: ".125rem",
-    default: ".25rem",
+    default: ".2rem",
     lg: ".5rem",
     full: "9999px",
   },
@@ -605,6 +605,7 @@ module.exports = {
     "8": "2rem",
     "10": "2.5rem",
     "12": "3rem",
+    "15": "3.75rem",
   },
 
   /*

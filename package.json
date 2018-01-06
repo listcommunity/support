@@ -34,10 +34,10 @@
   },
   "scripts": {
     "start": "npm-run-all -p start:css start:js",
-    "start:css": "watch 'npm run build:css' ./src/css",
+    "start:css": "watch 'npm run build:css' ./src/tailwind",
     "start:js": "react-scripts start",
     "build": "npm-run-all build:css build:js",
-    "build:css": "tailwind build ./src/css/index.pcss -c ./tailwind-config.js -o ./src/index.css",
+    "build:css": "tailwind build ./src/tailwind/index.css -c ./src/tailwind/config.js -o ./src/index.css",
     "build:js": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
