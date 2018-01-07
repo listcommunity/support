@@ -107,4 +107,112 @@ export default {
     category: "Front-End Development",
     inverse: true,
   },
+  "Granze/awesome-polymer": {
+    slug: "polymer",
+    label: "Polymer",
+    shortDescription:
+      "Polymer is an open source JavaScript library for building web applications using Web Components.",
+    logo: "https://avatars.githubusercontent.com/Polymer",
+    color: "#e8345a",
+    category: "Front-End Development",
+  },
+  "gdi2290/awesome-angular": {
+    slug: "angular",
+    label: "Angular",
+    shortDescription:
+      "Angular is an open source JavaScript-based framework for building web applications.",
+    logo: "https://avatars.githubusercontent.com/angular",
+    color: "#dd0031",
+    category: "Front-End Development",
+  },
+  "vuejs/awesome-vue": {
+    slug: "vue",
+    label: "Vue.js",
+    shortDescription: "Vue.js is a JavaScript framework for building interactive web applications.",
+    logo: "https://avatars.githubusercontent.com/vuejs",
+    color: "#4fc08d",
+    category: "Front-End Development",
+  },
+  "webpack-contrib/awesome-webpack": {
+    slug: "webpack",
+    label: "Webpack",
+    shortDescription:
+      "Webpack is a bundler that takes modules with dependencies and creates static assets.",
+    logo: "https://avatars.githubusercontent.com/webpack",
+    color: "#2b3a42",
+    category: "Front-End Development",
+  },
+  "Famolus/awesome-sass": {
+    slug: "sass",
+    label: "Sass",
+    shortDescription:
+      "Sass is an extension of CSS, adding nested rules, variables, selector inheritance and more.",
+    logo: "https://avatars.githubusercontent.com/sass",
+    color: "#c6538c",
+    category: "Front-End Development",
+  },
+  "unicodeveloper/awesome-nextjs": {
+    slug: "next",
+    label: "Next.js",
+    shortDescription:
+      "Next.js is a framework for server-rendered or statically-exported React apps.",
+    logo: "https://avatars.githubusercontent.com/zeit",
+    color: "#222",
+    category: "Front-End Development",
+  },
+  "hyperapp/awesome": {
+    slug: "hyperapp",
+    label: "Hyperapp",
+    shortDescription: "Hyperapp is a 1 KB JavaScript library for building frontend applications.",
+    logo: "https://avatars.githubusercontent.com/hyperapp",
+    color: "#00bbff",
+    category: "Front-End Development",
+  },
+  "rosarior/awesome-django": {
+    slug: "django",
+    label: "Django",
+    shortDescription:
+      "Django is a web application framework for Python. It is designed to prioritize principles of reusability and rapid development.",
+    logo: "https://avatars.githubusercontent.com/django",
+    color: "#0c4b33",
+    category: "Back-End Development",
+  },
+  "ekremkaraca/awesome-rails": {
+    slug: "rails",
+    label: "Rails",
+    shortDescription:
+      "Ruby on Rails is a web application framework written in Ruby. It is meant to help simplify the building of complex websites.",
+    logo: "https://avatars.githubusercontent.com/rails",
+    color: "#cc342d",
+    category: "Back-End Development",
+  },
+  "hothero/awesome-rails-gem": {
+    slug: "rails-gems",
+    label: "Rails Gems",
+    shortDescription:
+      "A collection of Ruby Gems for Rails development. The goal is to help developers build awesome applications.",
+    logo: "https://avatars.githubusercontent.com/rails",
+    color: "#cc342d",
+    category: "Back-End Development",
+  },
+  "chiraggude/awesome-laravel": {
+    slug: "laravel",
+    label: "Laravel",
+    shortDescription:
+      "Laravel is a popular PHP framework, used for the development of MVC web applications.",
+    logo: "https://avatars.githubusercontent.com/laravel",
+    color: "#e74430",
+    category: "Back-End Development",
+  },
+  "viatsko/awesome-vscode": {
+    slug: "vscode",
+    label: "VS Code",
+    shortDescription:
+      "VS Code is a customizable code editor. It includes support for Git, intelligent code completion, code refactoring and more.",
+    logo: "/logos/vscode.png",
+    favicon: "/favicons/vscode.png",
+    color: "#0077c8",
+    category: "Editors",
+    keepTOC: true,
+  },
 };
