@@ -1,10 +1,12 @@
 {
   "name": "listcommunity",
+  "homepage": "https://list.community",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "algoliasearch": "^3.24.8",
     "base-64": "^0.1.0",
+    "gh-pages": "^1.1.0",
     "github-markdown-css": "^2.9.0",
     "hast-util-sanitize": "^1.1.2",
     "is-absolute-url": "^2.1.0",
@@ -38,6 +40,8 @@
     "build": "npm-run-all build:css build:js",
     "build:css": "tailwind build ./src/tailwind/index.css -c ./src/tailwind/config.js -o ./src/index.css",
     "build:js": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
