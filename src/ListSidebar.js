@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
@@ -8,7 +8,16 @@ import SearchPoweredBy from "./SearchPoweredBy";
 import { onlyTOC } from "./markdownUtils";
 import "./ListSidebar.css";
 
-class ListSidebar extends Component {
+const TOCLink = ({ children, href, ...props }) =>
+  window.location.hash === href ? (
+    <strong className="cursor-pointer">{children}</strong>
+  ) : (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  );
+
+class ListSidebar extends PureComponent {
   state = {
     content: null,
   };
@@ -17,7 +26,11 @@ class ListSidebar extends Component {
     remark()
       .use(slug)
       .use(onlyTOC)
-      .use(reactRenderer)
+      .use(reactRenderer, {
+        remarkReactComponents: {
+          a: TOCLink,
+        },
+      })
       .process(text, (e, res) => this.setState({ content: res.contents }));
   }
 

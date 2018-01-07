@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { PureComponent, Fragment } from "react";
 import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
@@ -11,7 +11,7 @@ import { removeTOC } from "./markdownUtils";
 import CustomLink from "./CustomLink";
 import "./ListContent.css";
 
-class ListContent extends Component {
+class ListContent extends PureComponent {
   state = {
     content: null,
   };

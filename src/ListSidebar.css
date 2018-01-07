@@ -17,14 +17,6 @@
   white-space: nowrap;
 }
 
-.ListSidebar ul {
-  font-weight: bold;
-}
-
-.ListSidebar ul ul {
-  font-weight: normal;
-}
-
-.ListSidebar ul > li > ul > li > ul {
+.ListSidebar ul > li > ul {
   padding-left: 1rem;
 }
