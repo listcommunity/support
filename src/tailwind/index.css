@@ -118,7 +118,8 @@ h1:target::before,
 h2:target::before,
 h3:target::before,
 h4:target::before,
-h5:target::before {
+h5:target::before,
+h6:target::before {
   display: block;
   content: " ";
   margin-top: -20px;

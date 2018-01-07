@@ -9,7 +9,17 @@ import "github-markdown-css";
 
 import { removeTOC } from "./markdownUtils";
 import CustomLink from "./CustomLink";
+import { AnchorIcon } from "./Icon";
 import "./ListContent.css";
+
+const Headings = ["h1", "h2", "h3", "h4", "h5", "h6"].map(Heading => ({ children, ...props }) => (
+  <Heading {...props}>
+    <a href={`#${props.id}`} aria-hidden="true" className="anchor">
+      <AnchorIcon aria-hidden="true" className="octicon octicon-link" height="16" width="16" />
+    </a>
+    {children}
+  </Heading>
+));
 
 class ListContent extends PureComponent {
   state = {
@@ -33,6 +43,12 @@ class ListContent extends PureComponent {
         },
         remarkReactComponents: {
           a: CustomLink,
+          h1: Headings[0],
+          h2: Headings[1],
+          h3: Headings[2],
+          h4: Headings[3],
+          h5: Headings[4],
+          h6: Headings[5],
         },
       })
       .process(text, (e, res) => this.setState({ content: res.contents }));
