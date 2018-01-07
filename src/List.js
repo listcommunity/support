@@ -119,7 +119,7 @@ class List extends Component {
             {notification}
           </div>
           <div className="flex-1 overflow-y-scroll w-full">
-            <ListContent fullName={fullName} text={text} />
+            <ListContent {...config} fullName={fullName} text={text} />
           </div>
         </div>
         <div

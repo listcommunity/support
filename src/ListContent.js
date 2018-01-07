@@ -17,9 +17,11 @@ class ListContent extends Component {
   };
 
   renderMarkdown(text) {
-    remark()
-      .use(slug)
-      .use(removeTOC)
+    let mark = remark().use(slug);
+
+    if (!this.props.keepTOC) mark = mark.use(removeTOC);
+
+    mark
       .use(headings)
       .use(emoji, { padSpaceAfter: true })
       .use(reactRenderer, {
