@@ -11,7 +11,9 @@ import "./ListSidebar.css";
 
 const TOCLink = ({ children, href, ...props }) =>
   window.location.hash === href ? (
-    <strong className="cursor-pointer">{children}</strong>
+    <a className="font-bold" href={href} {...props}>
+      {children}
+    </a>
   ) : (
     <a href={href} {...props}>
       {children}

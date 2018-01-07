@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import Home from "./Home";
 import List from "./List";
+import NotFound from "./NotFound";
 import lists from "./lists";
 
 const App = () => (
@@ -21,6 +22,8 @@ const App = () => (
             component={() => <Redirect to={`/${fullName}`} />}
           />
         ))}
+
+        <Route component={NotFound} />
       </Switch>
 
       <Helmet titleTemplate="%s / List.community" defaultTitle="List.community" />
