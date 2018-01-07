@@ -3,7 +3,7 @@ import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
 import headings from "remark-autolink-headings";
-import emoji from "remark-emoji";
+import emoji from "remark-gemoji-to-emoji";
 import sanitizeGhSchema from "hast-util-sanitize/lib/github.json";
 import "github-markdown-css";
 
