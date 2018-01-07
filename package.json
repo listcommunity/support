@@ -29,6 +29,7 @@
     "remark-gemoji-to-emoji": "^1.1.0",
     "remark-react": "^4.0.1",
     "remark-slug": "^5.0.0",
+    "remark-strip-html": "^1.0.0",
     "tailwindcss": "^0.4.0",
     "url-join": "^2.0.2",
     "watch": "^1.0.2"

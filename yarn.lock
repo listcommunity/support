@@ -6496,6 +6496,10 @@ remark-stringify@^4.0.0:
     unherit "^1.0.4"
     xtend "^4.0.1"
 
+remark-strip-html@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/remark-strip-html/-/remark-strip-html-1.0.0.tgz#32d6394157291afebc93268e97d8cf3b690d4746"
+
 remark@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/remark/-/remark-8.0.0.tgz#287b6df2fe1190e263c1d15e486d3fa835594d6d"

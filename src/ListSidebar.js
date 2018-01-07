@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
+import strip from "remark-strip-html";
 
 import Search from "./Search";
 import SearchPoweredBy from "./SearchPoweredBy";
@@ -24,6 +25,7 @@ class ListSidebar extends PureComponent {
 
   renderMarkdown(text) {
     remark()
+      .use(strip)
       .use(slug)
       .use(onlyTOC)
       .use(reactRenderer, {

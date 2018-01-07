@@ -4,6 +4,7 @@ import reactRenderer from "remark-react";
 import slug from "remark-slug";
 import headings from "remark-autolink-headings";
 import emoji from "remark-gemoji-to-emoji";
+import strip from "remark-strip-html";
 import sanitizeGhSchema from "hast-util-sanitize/lib/github.json";
 import "github-markdown-css";
 
@@ -27,7 +28,7 @@ class ListContent extends PureComponent {
   };
 
   renderMarkdown(text) {
-    let mark = remark().use(slug);
+    let mark = remark().use(strip).use(slug);
 
     if (!this.props.keepTOC) mark = mark.use(removeTOC);
 
