@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  List.community lets you browse and search awesome lists more easily.
+  List.community is an easy way to browse curated lists on GitHub.
 </p>
 
 ---
