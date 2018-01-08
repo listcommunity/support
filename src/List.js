@@ -111,12 +111,12 @@ class List extends Component {
             />
             {notification}
           </div>
-          <div className="flex-1 overflow-y-scroll w-full">
+          <div className="flex-1 overflow-y-scroll scrolling-touch w-full">
             <ListContent {...config} fullName={fullName} text={text} />
           </div>
         </div>
         <div
-          className={`flex-none w-full max-w-xs bg-grey-lightest lg:flex lg:flex-col lg:relative lg:mt-0 overflow-y-scroll ${
+          className={`flex-none w-full max-w-xs bg-grey-lightest lg:flex lg:flex-col lg:relative lg:mt-0 overflow-y-scroll scrolling-touch ${
             sidebarOpen ? "fixed pin-r mt-15 pin-t pin-b" : "hidden"
           }`}>
           <div className="flex-1 overflow-y-scroll">
