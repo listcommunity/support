@@ -9,7 +9,7 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <form noValidate role="search" className="flex items-center relative h-8">
+      <div className="flex items-center relative h-8">
         <input
           className="appearance-none bg-transparent py-2 px-8 w-full absolute pin-r pin-l bg-grey-light rounded-sm"
           placeholder="Search for GitHub repositories"
@@ -32,7 +32,7 @@ class SearchBox extends Component {
           type="reset">
             <ClearIcon width="16" height="16" />
         </button>
-      </form>
+      </div>
     );
   }
 }
