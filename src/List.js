@@ -98,11 +98,11 @@ class List extends Component {
     );
 
     return (
-      <div className="h-screen flex flex-row overflow-hidden font-sans text-black tracking-tight bg-white">
+      <div className="flex overflow-x-hidden bg-white mt-15 lg:h-screen lg:overflow-hidden lg:mt-0">
         <div className="flex-1 flex flex-col w-full">
           {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
 
-          <div className="flex-none">
+          <div className="flex-none fixed pin-x pin-t z-20 lg:relative">
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
@@ -111,7 +111,7 @@ class List extends Component {
             />
             {notification}
           </div>
-          <div className="flex-1 overflow-y-scroll scrolling-touch w-full">
+          <div className="flex-1 w-full lg:overflow-y-scroll lg:scrolling-touch">
             <ListContent {...config} fullName={fullName} text={text} />
           </div>
         </div>

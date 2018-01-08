@@ -12,7 +12,7 @@ class Jungle extends Component {
     const { children, className = ``, ...otherProps } = this.props;
 
     return (
-      <div className={`Jungle scrolling-touch ${className}`} {...otherProps} ref={home => (this.home = home)}>
+      <div className={`Jungle ${className}`} {...otherProps} ref={home => (this.home = home)}>
         <svg
           className="Jungle-sky"
           xmlns="http://www.w3.org/2000/svg"

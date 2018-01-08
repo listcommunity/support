@@ -9,8 +9,8 @@ import octomonkey from "./octomonkey.svg";
 import allLists from "./lists";
 
 const Home = () => (
-  <div className="bg-white font-sans text-purple-darker tracking-tight">
-    <Jungle>
+  <Fragment>
+    <Jungle className="bg-white text-purple-darker scrolling-touch">
       <div className="max-w-xl mx-auto mb-6 pt-15">
         <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8 sm:mb-15">
           <div className="w-full lg:w-1/3">
@@ -51,7 +51,10 @@ const Home = () => (
                   style={{ minWidth: 320 }}>
                   <Link
                     to={list.slug}
-                    className="blue-shadow hover:bg-blue-lightest link-reset py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-md leading-normal">
+                    className={
+                      "link-reset hover:custom-outline focus:custom-outline hover:bg-blue-lightest " +
+                      "py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-md leading-normal"
+                    }>
                     <img
                       src={`${list.logo}?size=128`}
                       width="64"
@@ -91,7 +94,7 @@ const Home = () => (
     <Helmet>
       <link rel="icon" type="image/png" href="/favicon.png" />
     </Helmet>
-  </div>
+  </Fragment>
 );
 
 export default Home;

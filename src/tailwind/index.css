@@ -68,6 +68,13 @@ html {
   min-width: 320px;
 }
 
+body {
+  @apply
+    .text-black
+    .font-sans
+    .tracking-tight;
+}
+
 img {
   color: transparent;
   font-size: 0;
@@ -92,7 +99,7 @@ svg {
 
 a:target,
 mark {
-  background: rgba(248,231,28,0.25) !important;
+  background: rgba(248, 231, 28, 0.25) !important;
   color: inherit;
   outline: none;
 }
@@ -107,8 +114,9 @@ input:focus {
   outline: none;
 }
 
-.blue-shadow:focus,
-.blue-shadow:hover {
+.custom-outline,
+.hover\:custom-outline:hover,
+.focus\:custom-outline:focus {
   box-shadow: 0 0 0 0.25rem rgba(3, 102, 214, 0.2);
   border-color: rgba(3, 102, 214, 0.2);
   outline: none;
@@ -122,8 +130,8 @@ h5:target::before,
 h6:target::before {
   display: block;
   content: " ";
-  margin-top: -20px;
-  height: 20px;
+  margin-top: -1.25rem;
+  height: 1.25rem;
   visibility: hidden;
   pointer-events: none;
 }
