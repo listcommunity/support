@@ -6,7 +6,7 @@ import groupBy from "lodash.groupby";
 import Jungle from "./Jungle";
 import { GitHubIcon } from "./Icon";
 import octomonkey from "./octomonkey.svg";
-import allLists from "./lists";
+import allLists from "./lists.json";
 
 const Home = () => (
   <Fragment>
@@ -83,7 +83,7 @@ const Home = () => (
         <div className="flex-1" />
 
         <a
-          href={"https://github.com/listcommunity/support"}
+          href={"https://github.com/listcommunity/support#how-do-i-add-a-list"}
           className="link-reset px-4 py-3 mr-4 bg-purple-dark rounded items-center text-lg flex">
           <span className="mr-3">Submit a list</span>
           <GitHubIcon width="16" height="16" />

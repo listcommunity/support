@@ -13,13 +13,13 @@ class Topbar extends Component {
   };
 
   render() {
-    const { sidebarOpen, inverse, background } = this.props;
+    const { sidebarOpen, invertTextColor, background } = this.props;
     const { author, name } = this.props.match.params;
     const fullName = author && name ? `${author}/${name}` : null;
 
     return (
       <header
-        className={`select-none bg-black ${inverse ? "text-black" : "text-white"}`}
+        className={`select-none bg-black ${invertTextColor ? "text-black" : "text-white"}`}
         style={background ? { background } : {}}>
         <div className="max-w-xl mx-auto flex items-center h-15 px-2">
           <Link to="/" className="link-reset p-3 pl-2 mr-2">

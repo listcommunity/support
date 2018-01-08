@@ -9,7 +9,7 @@ import { resetStats } from "./algoliaSearch";
 import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
-import lists from "./lists";
+import lists from "./lists.json";
 
 class List extends Component {
   state = {
@@ -107,7 +107,7 @@ class List extends Component {
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
               background={config.color}
-              inverse={config.inverse}
+              invertTextColor={config.invertTextColor}
             />
             {notification}
           </div>
