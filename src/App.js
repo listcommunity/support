@@ -12,7 +12,7 @@ const App = () => (
     <Fragment>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/:author/:name" component={List} />
+        <Route exact path="/:author/:name" component={List} />
 
         {Object.entries(lists).map(([fullName, list]) => (
           <Route
