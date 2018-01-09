@@ -59,7 +59,7 @@ const Home = () => (
                       src={`${list.logo}?size=128`}
                       width="64"
                       height="64"
-                      className="mb-4 inline-block"
+                      className="mb-4 inline-block select-none"
                       draggable="false"
                       alt={`${list.label} logo`}
                     />

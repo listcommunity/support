@@ -74,7 +74,7 @@ class ListContent extends PureComponent {
         <div id="start-of-content" />
         <div id="contents" />
 
-        <div id="readme" className="markdown-body p-4 xl:py-8 max-w-xl mx-auto">
+        <div id="readme" className="markdown-body p-4 xl:p-8 max-w-xl mx-auto">
           <div className="font-sans leading-normal sm:text-lg">
             {this.state.content || "Loading…"}
           </div>

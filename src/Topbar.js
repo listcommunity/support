@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
-import { EmailIcon, GitHubIcon, HamburguerIcon, CloseIcon } from "./Icon";
+import { GitHubIcon, HamburguerIcon, CloseIcon } from "./Icon";
 
 class Topbar extends Component {
   openSidebar = () => {
@@ -15,60 +15,42 @@ class Topbar extends Component {
   render() {
     const { sidebarOpen, invertTextColor, background } = this.props;
     const { author, name } = this.props.match.params;
-    const fullName = author && name ? `${author}/${name}` : null;
+    const fullName = `${author}/${name}`;
 
     return (
       <header
         className={`select-none bg-black ${invertTextColor ? "text-black" : "text-white"}`}
         style={background ? { background } : {}}>
-        <div className="max-w-xl mx-auto flex items-center h-15 px-2">
-          <Link to="/" className="link-reset p-3 pl-2 mr-2">
+        <div className="max-w-xl mx-auto flex items-center h-15 px-1 xl:px-5">
+          <Link to="/" className="link-reset p-3 mr-2">
             <h1 className="text-xl font-bold">List.community</h1>
           </Link>
 
-          {fullName && <div className="text-xl hidden xl:block">{fullName}</div>}
+          <div className="text-xl hidden xl:block">{fullName}</div>
 
           <div className="flex-1" />
 
-          {!fullName && (
-            <a
-              href={"https://github.com/listcommunity/support"}
-              className="link-reset p-3 hidden sm:block">
-              Submit a list
-            </a>
-          )}
-
-          {fullName && [
-            <a
-              key="submit"
-              href={`https://github.com/${fullName}`}
-              className="link-reset p-3 hidden sm:block">
-              Submit a resource
-            </a>,
-            <a
-              key="curators"
-              href={`https://github.com/${fullName}/graphs/contributors`}
-              className="link-reset p-3 hidden sm:block">
-              Curators
-            </a>,
-          ]}
-
-          {!fullName && (
-            <a href="mailto:hi@robo54.com" className="link-reset p-3 leading-none">
-              <EmailIcon width="16" height="16" />
-            </a>
-          )}
-
           <a
-            href={`https://github.com/${fullName || "listcommunity/support"}`}
-            className="link-reset p-3 pr-2 leading-none">
+            key="submit"
+            href={`https://github.com/${fullName}`}
+            className="link-reset p-3 hidden sm:block">
+            Submit a resource
+          </a>
+          <a
+            key="curators"
+            href={`https://github.com/${fullName}/graphs/contributors`}
+            className="link-reset p-3 hidden sm:block">
+            Curators
+          </a>
+
+          <a href={`https://github.com/${fullName}`} className="link-reset p-3 leading-none">
             <GitHubIcon width="16" height="16" />
           </a>
 
           {sidebarOpen === false && (
             <div
               onClick={this.openSidebar}
-              className="cursor-pointer lg:hidden p-3 pl-6 leading-none">
+              className="cursor-pointer lg:hidden p-3 leading-none">
               <HamburguerIcon width="16" height="16" />
             </div>
           )}
@@ -78,7 +60,7 @@ class Topbar extends Component {
               onClick={this.closeSidebar}
               className={`${
                 sidebarOpen ? "" : "hidden"
-              } cursor-pointer lg:hidden p-3 pl-6 leading-none`}>
+              } cursor-pointer lg:hidden p-3 leading-none`}>
               <CloseIcon width="16" height="16" />
             </div>
           )}

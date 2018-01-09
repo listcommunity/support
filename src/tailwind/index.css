@@ -135,3 +135,7 @@ h6:target::before {
   visibility: hidden;
   pointer-events: none;
 }
+
+::selection {
+  background: rgba(3, 102, 214, 0.1);
+}
