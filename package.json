@@ -16,6 +16,7 @@
     "lodash.difference": "^4.5.0",
     "lodash.groupby": "^4.6.0",
     "mdast-util-heading-range": "^2.1.0",
+    "mdast-util-to-string": "dmfrancisco/mdast-util-to-string",
     "mdast-util-toc": "^2.0.1",
     "npm-run-all": "^4.1.2",
     "numeral": "^2.0.6",
@@ -34,6 +35,9 @@
     "tailwindcss": "^0.4.0",
     "url-join": "^2.0.2",
     "watch": "^1.0.2"
+  },
+  "resolutions": {
+    "**/mdast-util-to-string": "dmfrancisco/mdast-util-to-string"
   },
   "scripts": {
     "start": "npm-run-all -p start:css start:js",

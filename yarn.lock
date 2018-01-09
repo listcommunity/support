@@ -4809,9 +4809,9 @@ mdast-util-to-hast@^2.0.0:
     unist-util-visit "^1.1.0"
     xtend "^4.0.1"
 
-mdast-util-to-string@^1.0.0, mdast-util-to-string@^1.0.2:
+mdast-util-to-string@^1.0.0, mdast-util-to-string@^1.0.2, mdast-util-to-string@dmfrancisco/mdast-util-to-string:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.0.4.tgz#5c455c878c9355f0c1e7f3e8b719cf583691acfb"
+  resolved "https://codeload.github.com/dmfrancisco/mdast-util-to-string/tar.gz/d631450de7bd9e03435ca9d3078e3878c8adfc79"
 
 mdast-util-toc@^2.0.1:
   version "2.0.1"
