@@ -77,18 +77,28 @@ const CustomLink = ({ children, ...props }) => {
   let href =
     isAbsoluteUrl(props.href) || props.href.startsWith("//") || props.href.startsWith("#")
       ? props.href
-      : urlJoin(window.location.pathname, props.href);
+      : urlJoin("https://github.com", window.location.pathname, "/blob/master/", props.href);
 
   if (props.href.includes("github.com") && children && !children[0].type) {
     const fullName = githubUrlToFullName(props.href);
     if (fullName && !window.location.pathname.includes(fullName)) {
-      return <GitHubLink {...props} fullName={fullName}>{ children }</GitHubLink>;
+      return (
+        <GitHubLink {...props} fullName={fullName}>
+          {children}
+        </GitHubLink>
+      );
     }
-  } else if (isAbsoluteUrl(props.href) || props.href.startsWith("//")) {
+  }
+
+  if (isAbsoluteUrl(href) || href.startsWith("//")) {
     moreProps = { target: "_blank", rel: "noopener noreferrer" };
   }
 
-  return <a {...moreProps} {...props} href={href}>{ children }</a>;
+  return (
+    <a {...moreProps} {...props} href={href}>
+      {children}
+    </a>
+  );
 };
 
 export default CustomLink;
