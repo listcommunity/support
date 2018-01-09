@@ -2,34 +2,12 @@ import React, { Component } from "react";
 
 import "./Advertisement.css";
 
-let initialized = process.env.REACT_APP_SHOW_ADS !== "true";
-let pageViews = 0;
+const hideAds = process.env.REACT_APP_SHOW_ADS !== "true";
+let initialized = false;
 
 class Advertisement extends Component {
   componentDidMount() {
-    this.initialize();
-  }
-
-  shouldComponentUpdate() {
-    if (!initialized) this.initialize();
-
-    pageViews += 1;
-
-    // Refresh the ad from time to time
-    if (typeof window._carbonads !== "undefined" && pageViews % 10 === 0) {
-      window._carbonads.refresh();
-    }
-
-    // The ad updates the DOM by itself, so component doesn't need to re-render
-    return false;
-  }
-
-  initialize() {
-    if (this.isMobile()) return;
-    if (this.isIndex()) return;
-
-    if (initialized) return;
-    initialized = true;
+    if (hideAds || this.isMobile()) return;
 
     const script = document.createElement("script");
     script.setAttribute(
@@ -40,21 +18,28 @@ class Advertisement extends Component {
     script.setAttribute("async", "async");
     script.setAttribute("id", "_carbonads_js");
 
-    this._node.classList.remove("hidden");
-    this._node.innerHTML = "";
-    this._node.appendChild(script);
+    if (initialized) {
+      this._node.innerHTML = script.outerHTML;
+      window._carbonads.refresh();
+    } else {
+      initialized = true;
+      this._node.innerHTML = "";
+      this._node.appendChild(script);
+    }
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {
-    return <div ref={c => (this._node = c)} className="ad border-t shadow-lg hidden p-4" />;
+    return (
+      <div ref={c => (this._node = c)} className="ad border-t shadow-lg hidden lg:block p-4" />
+    );
   }
 
   isMobile() {
-    return typeof window !== "undefined" && window.matchMedia("(max-width: 991px)").matches;
-  }
-
-  isIndex() {
-    return window.location.pathname === "/";
+    return window.matchMedia("(max-width: 991px)").matches;
   }
 }
 
