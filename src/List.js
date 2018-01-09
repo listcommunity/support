@@ -111,7 +111,7 @@ class List extends Component {
             />
             {notification}
           </div>
-          <div className="flex-1 w-full lg:overflow-y-scroll lg:scrolling-touch">
+          <div className="flex-1 min-h-screen w-full lg:min-h-0 lg:overflow-y-scroll lg:scrolling-touch">
             <ListContent {...config} fullName={fullName} text={text} />
           </div>
         </div>

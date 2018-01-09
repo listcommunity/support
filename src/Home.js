@@ -10,8 +10,8 @@ import allLists from "./lists.json";
 
 const Home = () => (
   <Fragment>
-    <Jungle className="bg-white text-purple-darker scrolling-touch">
-      <div className="max-w-xl mx-auto mb-6 pt-15">
+    <Jungle className="bg-white text-purple-darker">
+      <div className="max-w-xl mx-auto pb-6 pt-15">
         <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8 sm:mb-15">
           <div className="w-full lg:w-1/3">
             <img
