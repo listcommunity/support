@@ -5,6 +5,7 @@ import slug from "remark-slug";
 import headings from "remark-autolink-headings";
 import emoji from "remark-gemoji-to-emoji";
 import strip from "remark-strip-html";
+import behead from "remark-behead";
 import sanitizeGhSchema from "hast-util-sanitize/lib/github.json";
 import "github-markdown-css";
 
@@ -14,7 +15,7 @@ import { AnchorIcon } from "./Icon";
 import "./ListContent.css";
 
 const Headings = ["h1", "h2", "h3", "h4", "h5", "h6"].map(Heading => ({ children, ...props }) => (
-  <Heading {...props}>
+  <Heading {...props} className="tracking-tight">
     <a href={`#${props.id}`} aria-hidden="true" className="anchor">
       <AnchorIcon aria-hidden="true" className="octicon octicon-link" height="16" width="16" />
     </a>
@@ -28,11 +29,16 @@ class ListContent extends PureComponent {
   };
 
   renderMarkdown(text) {
-    let mark = remark().use(strip).use(slug);
+    let mark = remark()
+      .use(strip)
+      .use(slug);
 
-    if (!this.props.keepTOC) mark = mark.use(removeTOC);
+    if (this.props.behead) {
+      mark = mark.use(behead, this.props.behead);
+    }
 
     mark
+      .use(removeTOC)
       .use(headings)
       .use(emoji, { padSpaceAfter: true })
       .use(reactRenderer, {
@@ -52,7 +58,7 @@ class ListContent extends PureComponent {
           h6: Headings[5],
         },
       })
-      .process(text, (e, res) => this.setState({ content: res.contents }));
+      .process(text, (e, res) => this.setState({ content: res.contents.props.children }));
   }
 
   componentWillReceiveProps(nextProps) {

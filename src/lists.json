@@ -16,7 +16,8 @@
       "Swift is a modern programming language focused on safety, performance and expressivity.",
     "logo": "https://github.com/github/explore/raw/master/topics/swift/swift.png",
     "color": "#ef5138",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "beheadTOC": { "between": [ -1, "Guides" ], "depth": 5 }
   },
   "vinta/awesome-python": {
     "slug": "python",
@@ -42,7 +43,8 @@
       "Go is a programming language built to resemble a simplified version of the C programming language.",
     "logo": "https://avatars.githubusercontent.com/golang",
     "color": "#375eab",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "beheadTOC": { "between": [ 0, "Audio and Music" ], "depth": 3 }
   },
   "markets/awesome-ruby": {
     "slug": "ruby",
@@ -51,7 +53,8 @@
       "Ruby is a scripting language designed for simplified object-oriented programming.",
     "logo": "https://avatars.githubusercontent.com/ruby",
     "color": "#cc342d",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "beheadTOC": { "between": [ 0, "Services and Apps" ], "depth": -1 }
   },
   "isRuslan/awesome-elm": {
     "slug": "elm",
@@ -105,7 +108,8 @@
     "logo": "https://avatars.githubusercontent.com/react-community",
     "color": "#61dafb",
     "category": "Front-End Development",
-    "invertTextColor": true
+    "invertTextColor": true,
+    "optionsTOC": { "maxDepth": 6 }
   },
   "Granze/awesome-polymer": {
     "slug": "polymer",
@@ -123,7 +127,8 @@
       "Angular is an open source JavaScript-based framework for building web applications.",
     "logo": "https://avatars.githubusercontent.com/angular",
     "color": "#dd0031",
-    "category": "Front-End Development"
+    "category": "Front-End Development",
+    "beheadTOC": { "after": "Current Browser support for Angular:", "depth": -1 }
   },
   "vuejs/awesome-vue": {
     "slug": "vue",
@@ -132,7 +137,8 @@
       "Vue.js is a JavaScript framework for building interactive web applications.",
     "logo": "https://avatars.githubusercontent.com/vuejs",
     "color": "#4fc08d",
-    "category": "Front-End Development"
+    "category": "Front-End Development",
+    "beheadTOC": { "before": "Resources", "depth": -1 }
   },
   "webpack-contrib/awesome-webpack": {
     "slug": "webpack",
@@ -203,7 +209,8 @@
       "Laravel is a popular PHP framework, used for the development of MVC web applications.",
     "logo": "https://avatars.githubusercontent.com/laravel",
     "color": "#e74430",
-    "category": "Back-End Development"
+    "category": "Back-End Development",
+    "beheadTOC": { "between": ["Popular Packages", "Development Setup"], "depth": -2 }
   },
   "viatsko/awesome-vscode": {
     "slug": "vscode",
@@ -214,6 +221,6 @@
     "favicon": "/favicons/vscode.png",
     "color": "#0077c8",
     "category": "Editors",
-    "keepTOC": true
+    "behead": { "before": "Official", "depth": 1 }
   }
 }

@@ -120,7 +120,7 @@ class List extends Component {
             sidebarOpen ? "fixed pin-r mt-15 pin-t pin-b" : "hidden"
           }`}>
           <div className="flex-1 overflow-y-scroll">
-            <ListSidebar text={text} activeItem={window.location.hash} />
+            <ListSidebar {...config} text={text} activeItem={window.location.hash} />
           </div>
 
           <div className="flex-none">

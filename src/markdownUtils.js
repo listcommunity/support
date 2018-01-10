@@ -15,24 +15,15 @@ export const removeTOC = function() {
   }
 };
 
-export const onlyTOC = function() {
+export const onlyTOC = function(options = {}) {
   return transformer;
 
   function transformer(node) {
-    // Make a new TOC with all headings after the existing TOC section
-    let result = utiltoc(node, {
-      heading: tocHeading,
-      maxDepth: 6,
+    const result = utiltoc(node, {
+      maxDepth: 4,
       tight: false,
+      ...options,
     });
-
-    if (result.index === null || result.index === -1 || !result.map) {
-      // Since an existing TOC section was not found, use all headings
-      result = utiltoc(node, {
-        maxDepth: 6,
-        tight: false,
-      });
-    }
 
     node.children = result.map ? [result.map] : [];
   }

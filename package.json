@@ -28,6 +28,7 @@
     "react-scripts": "1.0.17",
     "remark": "^8.0.0",
     "remark-autolink-headings": "^5.0.0",
+    "remark-behead": "dmfrancisco/remark-behead",
     "remark-gemoji-to-emoji": "^1.1.0",
     "remark-react": "^4.0.1",
     "remark-slug": "^5.0.0",

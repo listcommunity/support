@@ -3,10 +3,11 @@ import remark from "remark";
 import reactRenderer from "remark-react";
 import slug from "remark-slug";
 import strip from "remark-strip-html";
+import behead from "remark-behead";
 
 import Search from "./Search";
 import SearchPoweredBy from "./SearchPoweredBy";
-import { onlyTOC } from "./markdownUtils";
+import { removeTOC, onlyTOC } from "./markdownUtils";
 import "./ListSidebar.css";
 
 const TOCLink = ({ children, href, ...props }) =>
@@ -26,16 +27,26 @@ class ListSidebar extends PureComponent {
   };
 
   renderMarkdown(text) {
-    remark()
+    let mark = remark()
       .use(strip)
-      .use(slug)
-      .use(onlyTOC)
+      .use(slug);
+
+    if (this.props.beheadTOC) {
+      mark = mark.use(behead, this.props.beheadTOC);
+    }
+    if (this.props.behead) {
+      mark = mark.use(behead, this.props.behead);
+    }
+
+    mark
+      .use(removeTOC)
+      .use(onlyTOC, this.props.optionsTOC)
       .use(reactRenderer, {
         remarkReactComponents: {
           a: TOCLink,
         },
       })
-      .process(text, (e, res) => this.setState({ content: res.contents }));
+      .process(text, (e, res) => this.setState({ content: res.contents.props.children }));
   }
 
   componentWillReceiveProps(nextProps) {

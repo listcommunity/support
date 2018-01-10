@@ -17,13 +17,13 @@ img[data-canonical-src*='travis-ci.org'] {
 }
 
 /* Remove margin from first and last elements.
- * The content is wrapped in two divs. */
+ * The content is wrapped in a div. */
 
-.markdown-body > div > div > *:last-child {
+.markdown-body > div > *:last-child {
   margin-bottom: 0 !important;
 }
 
-.markdown-body > div > div > *:first-child {
+.markdown-body > div > *:first-child {
   margin-top: 0 !important;
 }
 
