@@ -46,7 +46,15 @@ class ListSidebar extends PureComponent {
           a: TOCLink,
         },
       })
-      .process(text, (e, res) => this.setState({ content: res.contents.props.children }));
+      .process(text, (e, res) => {
+        try {
+          this.setState({ content: res.contents.props.children });
+        } catch (e) {
+          window.Raven.captureException(e);
+          console.error(e);
+          this.setState({ content: "An error has occurred." });
+        }
+      });
   }
 
   componentWillReceiveProps(nextProps) {
