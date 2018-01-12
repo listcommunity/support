@@ -39,6 +39,8 @@ class List extends Component {
       response => {
         if (response.ok) {
           response.text().then(text => this.setState({ text }));
+        } else if (response.status === 404) {
+          window.location.pathname = "/404";
         } else {
           localStorage.removeItem("access-token");
           this.setState({ requestAccessToken: true });

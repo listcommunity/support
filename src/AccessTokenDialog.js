@@ -31,7 +31,7 @@ class AccessTokenDialog extends Component {
                 className="text-blue">
                 Create a new access token
               </a>{" "}
-              without any scopes and paste it back here:
+              without scopes and paste it back here:
             </p>
             <div className="flex mt-4">
               <input
