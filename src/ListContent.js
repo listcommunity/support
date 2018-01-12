@@ -63,10 +63,29 @@ class ListContent extends PureComponent {
           this.setState({ content: res.contents.props.children });
         } catch (e) {
           window.Raven.captureException(e);
-          console.error(e);
           this.setState({ content: "An error has occurred." });
         }
       });
+  }
+
+  componentDidUpdate() {
+    if (this.props.hide) {
+      try {
+        document.querySelectorAll(this.props.hide).forEach(node => (node.style.display = "none"));
+      } catch (e) {
+        window.Raven.captureException(e);
+      }
+    }
+
+    if (this.props.hideTextNodes) {
+      try {
+        document.getElementById("readme").childNodes.forEach(node => {
+          if (node.nodeType === 3 && node.data.trim() !== "") node.data = "";
+        });
+      } catch (e) {
+        window.Raven.captureException(e);
+      }
+    }
   }
 
   componentWillReceiveProps(nextProps) {

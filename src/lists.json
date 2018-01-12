@@ -7,7 +7,8 @@
     "logo": "https://avatars.githubusercontent.com/tc39",
     "color": "#f7df1e",
     "category": "Programming Languages",
-    "invertTextColor": true
+    "invertTextColor": true,
+    "hide": "#readme > ul:first-of-type"
   },
   "matteocrippa/awesome-swift": {
     "slug": "swift",
@@ -25,7 +26,8 @@
     "shortDescription": "Python is a dynamically typed programming language.",
     "logo": "https://github.com/github/explore/raw/master/topics/python/python.png",
     "color": "#3572a5",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "hide": "#readme > ul:first-of-type"
   },
   "h4cc/awesome-elixir": {
     "slug": "elixir",
@@ -34,7 +36,8 @@
       "Elixir is a dynamic, functional language designed for building scalable and maintainable applications.",
     "logo": "https://avatars.githubusercontent.com/elixir-lang",
     "color": "#4e2a8e",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "hide": "#readme > ul:first-of-type, #readme > h1:first-of-type"
   },
   "avelino/awesome-go": {
     "slug": "go",
@@ -54,7 +57,9 @@
     "logo": "https://avatars.githubusercontent.com/ruby",
     "color": "#cc342d",
     "category": "Programming Languages",
-    "beheadTOC": { "between": [ 0, "Services and Apps" ], "depth": -1 }
+    "beheadTOC": { "between": [ 0, "Services and Apps" ], "depth": -1 },
+    "hide": "#readme > ul:first-of-type",
+    "hideTextNodes": true
   },
   "isRuslan/awesome-elm": {
     "slug": "elm",
@@ -89,7 +94,8 @@
     "shortDescription": "Crystal is a self-hosted, general purpose programming language.",
     "logo": "https://avatars.githubusercontent.com/crystal-lang",
     "color": "#222222",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "hide": "#readme > ul:first-of-type"
   },
   "qinwf/awesome-R": {
     "slug": "r",
@@ -98,7 +104,9 @@
       "R is a free programming language and software environment for statistical computing and graphics.",
     "logo": "https://github.com/github/explore/raw/master/topics/r/r.png",
     "color": "#198ce7",
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "hide": "#readme > ul:first-of-type",
+    "hideTextNodes": true
   },
   "enaqx/awesome-react": {
     "slug": "react",
@@ -109,7 +117,8 @@
     "color": "#61dafb",
     "category": "Front-End Development",
     "invertTextColor": true,
-    "optionsTOC": { "maxDepth": 6 }
+    "optionsTOC": { "maxDepth": 6 },
+    "hide": "#readme > ul:first-of-type"
   },
   "Granze/awesome-polymer": {
     "slug": "polymer",
@@ -128,7 +137,8 @@
     "logo": "https://avatars.githubusercontent.com/angular",
     "color": "#dd0031",
     "category": "Front-End Development",
-    "beheadTOC": { "after": "Current Browser support for Angular:", "depth": -1 }
+    "beheadTOC": { "after": "Current Browser support for Angular:", "depth": -1 },
+    "hide": "#readme > ul:first-of-type"
   },
   "vuejs/awesome-vue": {
     "slug": "vue",
@@ -138,7 +148,8 @@
     "logo": "https://avatars.githubusercontent.com/vuejs",
     "color": "#4fc08d",
     "category": "Front-End Development",
-    "beheadTOC": { "before": "Resources", "depth": -1 }
+    "beheadTOC": { "before": "Resources", "depth": -1 },
+    "hide": "#readme > ul:first-of-type"
   },
   "webpack-contrib/awesome-webpack": {
     "slug": "webpack",
@@ -173,16 +184,18 @@
     "shortDescription": "Hyperapp is a 1 KB JavaScript library for building frontend applications.",
     "logo": "https://avatars.githubusercontent.com/hyperapp",
     "color": "#00bbff",
-    "category": "Front-End Development"
+    "category": "Front-End Development",
+    "hide": "#readme > ul:first-of-type"
   },
   "rosarior/awesome-django": {
     "slug": "django",
     "label": "Django",
     "shortDescription":
-      "Django is a web application framework for Python. It is designed to prioritize principles of reusability and rapid development.",
+      "Django is a web application framework for Python. It is meant to prioritize reusability and rapid development.",
     "logo": "https://avatars.githubusercontent.com/django",
     "color": "#0c4b33",
-    "category": "Back-End Development"
+    "category": "Back-End Development",
+    "hide": "#readme > ul:first-of-type"
   },
   "ekremkaraca/awesome-rails": {
     "slug": "rails",
@@ -200,7 +213,8 @@
       "A collection of Ruby Gems for Rails development. The goal is to help developers build awesome applications.",
     "logo": "https://avatars.githubusercontent.com/rails",
     "color": "#cc342d",
-    "category": "Back-End Development"
+    "category": "Back-End Development",
+    "hide": "#readme > ul:first-of-type"
   },
   "chiraggude/awesome-laravel": {
     "slug": "laravel",
