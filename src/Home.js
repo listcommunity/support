@@ -13,7 +13,7 @@ const Home = () => (
     <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow hidden sm:block">
       <div className="max-w-xl mx-auto flex items-center h-16">
         <Link to="/" className="link-reset p-4">
-          <h1 className="text-2xl font-bold text-purple-darker">List.community</h1>
+          <h1 className="text-2xl font-sans tracking-normal font-bold text-purple-darker pb-1">List.community</h1>
         </Link>
 
         <div className="flex-1" />

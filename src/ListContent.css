@@ -16,21 +16,11 @@ img[data-canonical-src*='travis-ci.org'] {
   min-width: 20px;
 }
 
-/* Remove margin from first and last elements.
- * The content is wrapped in a div. */
-
-.markdown-body > div > *:last-child {
-  margin-bottom: 0 !important;
-}
-
-.markdown-body > div > *:first-child {
-  margin-top: 0 !important;
-}
-
 /* Other aesthetic changes */
 
 .markdown-body {
   color: inherit;
+  font-family: inherit;
 }
 
 .markdown-body a {
@@ -39,11 +29,11 @@ img[data-canonical-src*='travis-ci.org'] {
 }
 
 .markdown-body a:visited {
-  color: #a6a9d6;
+  color: #8645ca;
 }
 
 .markdown-body a[href^="#"] {
-  color: #666;
+  color: #5661b3;
 }
 
 .markdown-body ul {
@@ -66,7 +56,7 @@ img[data-canonical-src*='travis-ci.org'] {
 .markdown-body h2 {
   border: none;
   padding-bottom: 0;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -83,6 +73,11 @@ img[data-canonical-src*='travis-ci.org'] {
 .markdown-body pre,
 .markdown-body table tr:nth-child(2n) {
   background-color: #f7f7f7;
+}
+
+.markdown-body h6,
+.markdown-body blockquote {
+  color: #666666;
 }
 
 /* Rendering with remark is different and includes a <p> for nested lists */

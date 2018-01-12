@@ -109,7 +109,7 @@ mark {
   outline: none;
 }
 
-.markdown-body a:focus,
+#readme a:focus,
 button:focus {
   outline: 0.15rem solid rgba(3, 102, 214, 0.2);
   outline-offset: 0.15rem;

@@ -89,9 +89,7 @@ class ListContent extends PureComponent {
         <div id="contents" />
 
         <div id="readme" className="markdown-body p-4 xl:p-8 max-w-xl mx-auto">
-          <div className="font-sans sm:text-lg">
-            {this.state.content || "Loading…"}
-          </div>
+          {this.state.content || "Loading…"}
         </div>
       </Fragment>
     );
