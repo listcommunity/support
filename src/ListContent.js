@@ -15,7 +15,7 @@ import { AnchorIcon } from "./Icon";
 import "./ListContent.css";
 
 const Headings = ["h1", "h2", "h3", "h4", "h5", "h6"].map(Heading => ({ children, ...props }) => (
-  <Heading {...props} className="tracking-tight">
+  <Heading {...props}>
     <a href={`#${props.id}`} aria-hidden="true" className="anchor">
       <AnchorIcon aria-hidden="true" className="octicon octicon-link" height="16" width="16" />
     </a>
@@ -89,7 +89,7 @@ class ListContent extends PureComponent {
         <div id="contents" />
 
         <div id="readme" className="markdown-body p-4 xl:p-8 max-w-xl mx-auto">
-          <div className="font-sans leading-normal sm:text-lg">
+          <div className="font-sans sm:text-lg">
             {this.state.content || "Loading…"}
           </div>
         </div>

@@ -45,7 +45,7 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 let colors = {
   transparent: "transparent",
 
-  black: "#222222",
+  black: "#000000",
   "grey-darkest": "#444444",
   "grey-darker": "#666666",
   "grey-dark": "#888888",
@@ -190,7 +190,6 @@ module.exports = {
 
   fonts: {
     sans: [
-      "Karla",
       "-apple-system",
       "BlinkMacSystemFont",
       "Segoe UI",
@@ -203,17 +202,19 @@ module.exports = {
       "Helvetica Neue",
       "sans-serif",
     ],
-    serif: [
-      "Constantia",
-      "Lucida Bright",
-      "Lucidabright",
-      "Lucida Serif",
-      "Lucida",
-      "DejaVu Serif",
-      "Bitstream Vera Serif",
-      "Liberation Serif",
-      "Georgia",
-      "serif",
+    headings: [
+      "Karla",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      "Segoe UI",
+      "Roboto",
+      "Oxygen",
+      "Ubuntu",
+      "Cantarell",
+      "Fira Sans",
+      "Droid Sans",
+      "Helvetica Neue",
+      "sans-serif",
     ],
     mono: ["Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
   },
@@ -239,7 +240,7 @@ module.exports = {
 
   textSizes: {
     xs: ".75rem", // 12px
-    sm: ".875rem", // 14px
+    sm: ".9375rem", // 15px
     base: "1rem", // 16px
     lg: "1.125rem", // 18px
     xl: "1.25rem", // 20px
@@ -307,7 +308,7 @@ module.exports = {
   */
 
   tracking: {
-    tight: "-0.02em",
+    tight: "-0.03em",
     normal: "0",
     wide: "0.02em",
   },

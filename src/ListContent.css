@@ -30,7 +30,32 @@ img[data-canonical-src*='travis-ci.org'] {
 /* Other aesthetic changes */
 
 .markdown-body {
-  color: #222;
+  color: inherit;
+}
+
+.markdown-body a {
+  /* autoprefixer disable */
+  text-decoration-skip: ink;
+}
+
+.markdown-body a:visited {
+  color: #a6a9d6;
+}
+
+.markdown-body a[href^="#"] {
+  color: #666;
+}
+
+.markdown-body ul {
+  list-style-type: none;
+  padding-left: 1.2em;
+}
+
+.markdown-body ul li:before {
+  float: left;
+  margin: 0 0 0 -1.1em;
+  width: 1.1em;
+  content: '-';
 }
 
 .markdown-body img {
@@ -38,7 +63,13 @@ img[data-canonical-src*='travis-ci.org'] {
 }
 
 .markdown-body h1,
-.markdown-body h2,
+.markdown-body h2 {
+  border: none;
+  padding-bottom: 0;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .markdown-body table th,
 .markdown-body table td {
   border-color: #e6e6e6;

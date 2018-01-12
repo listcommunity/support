@@ -21,9 +21,9 @@ class Topbar extends Component {
       <header
         className={`select-none bg-black ${invertTextColor ? "text-black" : "text-white"}`}
         style={background ? { background } : {}}>
-        <div className="max-w-xl mx-auto flex items-center h-15 px-1 xl:px-5">
+        <div className="max-w-xl mx-auto flex items-center h-15 pb-1 px-1 xl:px-5">
           <Link to="/" className="link-reset p-3 mr-2">
-            <h1 className="text-xl font-bold">List.community</h1>
+            <h1 className="text-xl font-semibold font-sans tracking-wide">List.community</h1>
           </Link>
 
           <div className="text-xl hidden xl:block">{fullName}</div>
