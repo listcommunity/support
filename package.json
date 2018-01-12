@@ -37,9 +37,6 @@
     "url-join": "^2.0.2",
     "watch": "^1.0.2"
   },
-  "resolutions": {
-    "**/mdast-util-to-string": "dmfrancisco/mdast-util-to-string"
-  },
   "scripts": {
     "start": "npm-run-all -p start:css start:js",
     "start:css": "watch 'npm run build:css' ./src/tailwind",
