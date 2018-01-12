@@ -47,7 +47,7 @@ export const search = debounce(function(query, callback) {
     .join(" OR ");
 
   index.search(
-    { query, filters, hitsPerPage: 40, highlightPreTag: "<mark>", highlightPostTag: "</mark>" },
+    { query, filters, hitsPerPage: 25, highlightPreTag: "<mark>", highlightPostTag: "</mark>" },
     callback
   );
 }, 500);

@@ -8,24 +8,27 @@ class Search extends Component {
     query: null,
     results: [],
     lastUpdate: new Date(),
+    searching: false
   };
 
   handleChange = query => {
     const lastUpdate = new Date();
 
     if (!query) {
-      this.setState({ query: null, results: [], lastUpdate });
+      this.setState({ query: null, results: [], lastUpdate, searching: false });
     } else {
+      this.setState({ searching: true });
+
       search(query, (success, content) => {
         if (this.state.lastUpdate.getTime() < lastUpdate.getTime()) {
-          this.setState({ query, results: content.hits, lastUpdate });
+          this.setState({ query, results: content.hits, lastUpdate, searching: false });
         }
       });
     }
   };
 
   render() {
-    const { query, results } = this.state;
+    const { query, results, searching } = this.state;
 
     return (
       <Fragment>
@@ -50,7 +53,10 @@ class Search extends Component {
             ))}
           </div>
         )}
-        {results.length === 0 && query && (
+        {results.length === 0 && searching && (
+          <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">Searching…</div>
+        )}
+        {results.length === 0 && !searching && query && (
           <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">No results</div>
         )}
       </Fragment>
