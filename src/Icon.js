@@ -56,3 +56,9 @@ export const AnchorIcon = props => (
     />
   </svg>
 );
+
+export const ArrowUpIcon = props => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" {...props}>
+    <path fillRule="evenodd" d="M5 3L0 9h3v4h4V9h3z" />
+  </svg>
+);

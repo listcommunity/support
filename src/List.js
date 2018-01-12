@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import base64 from "base-64";
 import { Helmet } from "react-helmet";
+import ScrollToTop from "react-scroll-up";
 
 import Topbar from "./Topbar";
 import Notification from "./Notification";
@@ -9,6 +10,7 @@ import { resetStats } from "./algoliaSearch";
 import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
+import { ArrowUpIcon } from "./Icon";
 import lists from "./lists.json";
 
 class List extends Component {
@@ -127,6 +129,12 @@ class List extends Component {
             <Advertisement />
           </div>
         </div>
+
+        <ScrollToTop showUnder={160} style={{ bottom: 30, right: 350, zIndex: 999 }}>
+          <div className="bg-grey-light p-2 rounded hidden lg:block">
+            <ArrowUpIcon className="block" width="32" height="32" />
+          </div>
+        </ScrollToTop>
 
         <Helmet>
           <title>{config.label}</title>
