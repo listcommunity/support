@@ -103,13 +103,13 @@ svg {
   fill: currentColor;
 }
 
-a:target,
 mark {
   background: rgba(248, 231, 28, 0.25) !important;
   color: inherit;
   outline: none;
 }
 
+.markdown-body a:focus,
 button:focus {
   outline: 0.15rem solid rgba(3, 102, 214, 0.2);
   outline-offset: 0.15rem;
@@ -126,20 +126,6 @@ input:focus {
   box-shadow: 0 0 0 0.25rem rgba(3, 102, 214, 0.2);
   border-color: rgba(3, 102, 214, 0.2);
   outline: none;
-}
-
-h1:target::before,
-h2:target::before,
-h3:target::before,
-h4:target::before,
-h5:target::before,
-h6:target::before {
-  display: block;
-  content: " ";
-  margin-top: -1.25rem;
-  height: 1.25rem;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 ::selection {

@@ -104,7 +104,7 @@ class List extends Component {
         <div className="flex flex-col lg:mr-80">
           {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
 
-          <div className="flex-none fixed pin-x pin-t z-20 lg:mr-80">
+          <div className="flex-none fixed pin-x pin-t z-20 lg:mr-80" data-scroll-header>
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
