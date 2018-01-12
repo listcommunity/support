@@ -9,9 +9,9 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <div className="flex items-center relative h-8">
+      <div className="relative h-8">
         <input
-          className="appearance-none bg-transparent py-2 px-8 w-full absolute pin-r pin-l bg-grey-light rounded-sm text-sm"
+          className="appearance-none bg-transparent py-2 px-8 w-full bg-grey-light rounded-sm text-sm"
           placeholder="Search for GitHub repositories"
           type="search"
           autoCapitalize="off"

@@ -46,18 +46,32 @@ img[data-canonical-src*='travis-ci.org'] {
   margin: 0 0 0 -1.1em;
   width: 1.1em;
   content: '-';
+  color: #0366d6;
 }
 
 .markdown-body img {
   border-radius: 3px;
 }
 
-.markdown-body h1,
+.markdown-body h1 {
+  font-size: 2.2em;
+}
+
 .markdown-body h2 {
-  border: none;
-  padding-bottom: 0;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.75em;
+}
+
+.markdown-body h3 {
+  font-size: 1.4em;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-size: 1.1em;
 }
 
 .markdown-body table th,

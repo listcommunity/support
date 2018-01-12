@@ -66,7 +66,7 @@ class GitHubLink extends Component {
           href={this.props.href}>
           {this.props.children}
         </a>
-        {stats && <span className="ml-1 text-grey-dark">{stats}</span>}
+        {stats && <span className="ml-1 text-grey-dark whitespace-no-wrap">{stats}</span>}
       </Fragment>
     );
   }

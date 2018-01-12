@@ -685,7 +685,8 @@ module.exports = {
 
   shadows: {
     default: "0 2px 4px 0 rgba(0,0,0,0.10)",
-    md: "0 1px 6px 0 rgba(0,0,0,0.2)",
+    sm: "0 0 30px 0 rgba(0,0,0,0.11)",
+    md: "0 0 60px 0 rgba(0,0,0,0.11)",
     lg: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
     inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
     none: "none",

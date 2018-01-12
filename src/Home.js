@@ -10,7 +10,7 @@ import allLists from "./lists.json";
 
 const Home = () => (
   <Fragment>
-    <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow hidden sm:block">
+    <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow-md hidden sm:block">
       <div className="max-w-xl mx-auto flex items-center h-16">
         <Link to="/" className="link-reset p-4">
           <h1 className="text-2xl font-sans tracking-normal font-bold text-purple-darker pb-1">List.community</h1>
@@ -70,7 +70,7 @@ const Home = () => (
                     to={list.slug}
                     className={
                       "link-reset hover:custom-outline focus:custom-outline hover:bg-blue-lightest " +
-                      "py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-md"
+                      "py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-sm"
                     }>
                     <img
                       src={`${list.logo}?size=128`}
