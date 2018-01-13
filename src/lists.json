@@ -226,6 +226,16 @@
     "category": "Back-End Development",
     "beheadTOC": { "between": ["Popular Packages", "Development Setup"], "depth": -2 }
   },
+  "JStumpp/awesome-android": {
+    "slug": "android",
+    "label": "Android",
+    "shortDescription":
+      "Android is an operating system built by Google designed for mobile applications.",
+    "logo": "https://avatars.githubusercontent.com/android",
+    "color": "#6ab344",
+    "category": "Platforms",
+    "hide": "#readme > h1:nth-of-type(2), #readme > ul:first-of-type"
+  },
   "viatsko/awesome-vscode": {
     "slug": "vscode",
     "label": "VS Code",
