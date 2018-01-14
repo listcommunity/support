@@ -18,7 +18,7 @@
     "logo": "https://github.com/github/explore/raw/master/topics/swift/swift.png",
     "color": "#ef5138",
     "category": "Programming Languages",
-    "beheadTOC": { "between": [ -1, "Guides" ], "depth": 5 }
+    "beheadTOC": { "between": [-1, "Guides"], "depth": 5 }
   },
   "vinta/awesome-python": {
     "slug": "python",
@@ -47,7 +47,7 @@
     "logo": "https://avatars.githubusercontent.com/golang",
     "color": "#375eab",
     "category": "Programming Languages",
-    "beheadTOC": { "between": [ 0, "Audio and Music" ], "depth": 3 }
+    "beheadTOC": { "between": [0, "Audio and Music"], "depth": 3 }
   },
   "markets/awesome-ruby": {
     "slug": "ruby",
@@ -57,7 +57,7 @@
     "logo": "https://avatars.githubusercontent.com/ruby",
     "color": "#cc342d",
     "category": "Programming Languages",
-    "beheadTOC": { "between": [ 0, "Services and Apps" ], "depth": -1 },
+    "beheadTOC": { "between": [0, "Services and Apps"], "depth": -1 },
     "hide": "#readme > ul:first-of-type",
     "hideTextNodes": true
   },
@@ -235,6 +235,15 @@
     "color": "#6ab344",
     "category": "Platforms",
     "hide": "#readme > h1:nth-of-type(2), #readme > ul:first-of-type"
+  },
+  "vsouza/awesome-ios": {
+    "slug": "ios",
+    "label": "iOS",
+    "shortDescription": "iOS is the operating system for Apple's mobile products.",
+    "logo": "https://avatars.githubusercontent.com/apple",
+    "color": "#ef5138",
+    "category": "Platforms",
+    "beheadTOC": { "before": "About", "depth": 4 }
   },
   "viatsko/awesome-vscode": {
     "slug": "vscode",

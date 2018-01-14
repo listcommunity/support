@@ -1,7 +1,7 @@
 import heading from "mdast-util-heading-range";
 import utiltoc from "mdast-util-toc";
 
-const tocHeading = "contents|toc|table[ -]of[ -]contents?";
+const tocHeading = "content|contents|toc|table[ -]of[ -]contents?";
 
 export const removeTOC = function() {
   return transformer;
