@@ -15,7 +15,7 @@
     "label": "Swift",
     "shortDescription":
       "Swift is a modern programming language focused on safety, performance and expressivity.",
-    "logo": "https://github.com/github/explore/raw/master/topics/swift/swift.png",
+    "logo": "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
     "color": "#ef5138",
     "category": "Programming Languages",
     "beheadTOC": { "between": [-1, "Guides"], "depth": 5 }
@@ -24,7 +24,7 @@
     "slug": "python",
     "label": "Python",
     "shortDescription": "Python is a dynamically typed programming language.",
-    "logo": "https://github.com/github/explore/raw/master/topics/python/python.png",
+    "logo": "https://raw.githubusercontent.com/github/explore/master/topics/python/python.png",
     "color": "#3572a5",
     "category": "Programming Languages",
     "hide": "#readme > ul:first-of-type"
@@ -113,7 +113,7 @@
     "label": "R",
     "shortDescription":
       "R is a free programming language and software environment for statistical computing and graphics.",
-    "logo": "https://github.com/github/explore/raw/master/topics/r/r.png",
+    "logo": "https://raw.githubusercontent.com/github/explore/master/topics/r/r.png",
     "color": "#198ce7",
     "category": "Programming Languages",
     "hide": "#readme > ul:first-of-type",
@@ -270,7 +270,8 @@
   "sindresorhus/awesome-electron": {
     "slug": "electron",
     "label": "Electron",
-    "shortDescription": "Electron is a framework for building cross-platform desktop applications with web technology.",
+    "shortDescription":
+      "Electron is a framework for building cross-platform desktop applications with web technology.",
     "logo": "https://avatars.githubusercontent.com/electron",
     "color": "#2f3241",
     "category": "Platforms"
