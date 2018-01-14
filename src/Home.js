@@ -76,7 +76,7 @@ const Home = () => (
                       src={`${list.logo}?size=128`}
                       width="64"
                       height="64"
-                      className="mb-4 inline-block select-none"
+                      className="mb-4 inline-block select-none rounded-sm"
                       draggable="false"
                       alt={`${list.label} logo`}
                     />

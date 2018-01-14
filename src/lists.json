@@ -256,6 +256,14 @@
     "hide": "#readme > ul:first-of-type",
     "hideTextNodes": true
   },
+  "sindresorhus/awesome-electron": {
+    "slug": "electron",
+    "label": "Electron",
+    "shortDescription": "Electron is a framework for building cross-platform desktop applications with web technology.",
+    "logo": "https://avatars.githubusercontent.com/electron",
+    "color": "#2f3241",
+    "category": "Platforms"
+  },
   "viatsko/awesome-vscode": {
     "slug": "vscode",
     "label": "VS Code",
