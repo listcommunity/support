@@ -70,6 +70,17 @@
     "color": "#60b5cc",
     "category": "Programming Languages"
   },
+  "akullpp/awesome-java": {
+    "slug": "java",
+    "label": "Java",
+    "shortDescription":
+      "Java is an object-oriented programming language used mainly for desktop and mobile applications.",
+    "logo": "/logos/java.png",
+    "favicon": "/favicons/java.png",
+    "color": "#5382a1",
+    "category": "Programming Languages",
+    "hide": "#readme > ul:first-of-type"
+  },
   "rizo/awesome-ocaml": {
     "slug": "ocaml",
     "label": "OCaml",
