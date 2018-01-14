@@ -64,7 +64,7 @@ class GitHubLink extends Component {
           target="_blank"
           rel="noopener noreferrer"
           href={this.props.href}>
-          {this.props.children}
+          {this.props.children[0].replace(/\s★.+$/, "")}
         </a>
         {stats && <span className="ml-1 text-grey-dark whitespace-no-wrap">{stats}</span>}
       </Fragment>

@@ -245,6 +245,17 @@
     "category": "Platforms",
     "beheadTOC": { "before": "About", "depth": 4 }
   },
+  "jondot/awesome-react-native": {
+    "slug": "react-native",
+    "label": "React Native",
+    "shortDescription": "React Native is a JavaScript mobile framework developed by Facebook.",
+    "logo": "https://avatars.githubusercontent.com/react-community",
+    "color": "#61dafb",
+    "category": "Platforms",
+    "invertTextColor": true,
+    "hide": "#readme > ul:first-of-type",
+    "hideTextNodes": true
+  },
   "viatsko/awesome-vscode": {
     "slug": "vscode",
     "label": "VS Code",
