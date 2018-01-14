@@ -33,24 +33,24 @@ class Topbar extends Component {
           <a
             key="submit"
             href={`https://github.com/${fullName}`}
-            className="link-reset p-3 hidden sm:block">
+            className="link-reset p-3 pt-4 hidden sm:block">
             Submit a resource
           </a>
           <a
             key="curators"
             href={`https://github.com/${fullName}/graphs/contributors`}
-            className="link-reset p-3 hidden sm:block">
+            className="link-reset p-3 pt-4 hidden sm:block">
             Curators
           </a>
 
-          <a href={`https://github.com/${fullName}`} className="link-reset p-3 leading-none">
+          <a href={`https://github.com/${fullName}`} className="link-reset p-3 pt-4 leading-none">
             <GitHubIcon width="16" height="16" />
           </a>
 
           {sidebarOpen === false && (
             <div
               onClick={this.openSidebar}
-              className="cursor-pointer lg:hidden p-3 leading-none">
+              className="cursor-pointer lg:hidden p-3 pt-4 leading-none">
               <HamburguerIcon width="16" height="16" />
             </div>
           )}
@@ -60,7 +60,7 @@ class Topbar extends Component {
               onClick={this.closeSidebar}
               className={`${
                 sidebarOpen ? "" : "hidden"
-              } cursor-pointer lg:hidden p-3 leading-none`}>
+              } cursor-pointer lg:hidden p-3 pt-4 leading-none`}>
               <CloseIcon width="16" height="16" />
             </div>
           )}
