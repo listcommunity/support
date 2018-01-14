@@ -264,6 +264,14 @@
     "color": "#2f3241",
     "category": "Platforms"
   },
+  "sindresorhus/awesome-nodejs": {
+    "slug": "nodejs",
+    "label": "Node.js",
+    "shortDescription": "Node.js is a tool for executing JavaScript in a variety of environments.",
+    "logo": "https://avatars.githubusercontent.com/nodejs",
+    "color": "#43853d",
+    "category": "Platforms"
+  },
   "viatsko/awesome-vscode": {
     "slug": "vscode",
     "label": "VS Code",
