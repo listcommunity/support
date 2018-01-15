@@ -230,6 +230,21 @@ export default {
       hide("#toc-contents");
     },
   },
+  "chentsulin/awesome-graphql": {
+    slug: "graphql",
+    label: "GraphQL & Relay",
+    shortDescription:
+      "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.",
+    logo: "/logos/graphql.svg",
+    favicon: "/favicons/graphql.png",
+    color: "#d64292",
+    category: "Front-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "Famolus/awesome-sass": {
     slug: "sass",
     label: "Sass",
