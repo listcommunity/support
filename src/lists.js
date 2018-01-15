@@ -282,6 +282,19 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "wbkd/awesome-d3": {
+    slug: "d3js",
+    label: "D3.js",
+    shortDescription:
+      "D3.js is a JavaScript library for manipulating documents based on data. D3 brings data to life using HTML, SVG and CSS.",
+    logo: "https://avatars.githubusercontent.com/d3",
+    color: "#f79045",
+    category: "Front-End Development",
+    mutate() {
+      hide("#toc-third-party");
+      hide("#toc-third-party-1");
+    },
+  },
   "addyosmani/es6-tools": {
     slug: "es6-tools",
     label: "ECMAScript 6 Tools",
