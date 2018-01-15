@@ -279,6 +279,19 @@ export default {
     category: "Front-End Development",
     invertTextColor: true
   },
+  "mateusortiz/webcomponents-the-right-way": {
+    slug: "webcomponents",
+    label: "Web Components",
+    shortDescription:
+      "Web Components are a set of features that allow for the creation of reusable components in web applications.",
+    logo: "https://avatars.githubusercontent.com/webcomponents",
+    color: "#e6e6e6",
+    category: "Front-End Development",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "sotayamashita/awesome-css": {
     slug: "css",
     label: "CSS",
