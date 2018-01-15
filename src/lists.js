@@ -346,6 +346,15 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "ChromeDevTools/awesome-chrome-devtools": {
+    slug: "chrome-devtools",
+    label: "Chrome DevTools",
+    shortDescription:
+      "Chrome DevTools is a set of authoring, debugging, and profiling tools built into Google Chrome.",
+    logo: "https://avatars.githubusercontent.com/ChromeDevTools",
+    color: "#307eff",
+    category: "Front-End Development",
+  },
   "rosarior/awesome-django": {
     slug: "django",
     label: "Django",
