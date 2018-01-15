@@ -19,7 +19,7 @@ class Topbar extends Component {
 
     return (
       <header
-        className={`select-none bg-black ${invertTextColor ? "text-black" : "text-white"}`}
+        className={`select-none bg-black shadow-md ${invertTextColor ? "text-black" : "text-white"}`}
         style={background ? { background } : {}}>
         <div className="max-w-xl mx-auto flex items-center h-15 pb-1 px-1 xl:px-5">
           <Link to="/" className="link-reset p-3 mr-2">

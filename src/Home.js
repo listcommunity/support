@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import groupBy from "lodash.groupby";
 
 import Jungle from "./Jungle";
-import { GitHubIcon } from "./Icon";
+import { GitHubIcon, TelescopeIcon } from "./Icon";
 import octomonkey from "./octomonkey.svg";
 import allLists from "./lists";
 
@@ -77,14 +77,23 @@ const Home = () => {
                         "link-reset hover:custom-outline focus:custom-outline hover:bg-blue-lightest " +
                         "py-8 px-6 m-4 md:h-64 block text-center rounded-lg overflow-hidden shadow-sm"
                       }>
-                      <img
-                        src={`${list.logo}?size=128`}
-                        width="64"
-                        height="64"
-                        className="mb-4 inline-block select-none rounded-sm"
-                        draggable="false"
-                        alt={`${list.label} logo`}
-                      />
+                      {list.logo && (
+                        <img
+                          src={`${list.logo}?size=128`}
+                          width="64"
+                          height="64"
+                          className="mb-4 inline-block select-none rounded-sm"
+                          draggable="false"
+                          alt={`${list.label} logo`}
+                        />
+                      )}
+                      {!list.logo && (
+                        <TelescopeIcon
+                          width="64"
+                          height="64"
+                          className="mb-4 inline-block select-none"
+                        />
+                      )}
                       <strong className="mb-1 block">{list.label}</strong>
                       <span className="text-sm">{list.shortDescription}</span>
                     </Link>
