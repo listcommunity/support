@@ -494,6 +494,20 @@ export default {
       hide("#toc-contents");
     },
   },
+  "jbhuang0604/awesome-computer-vision": {
+    slug: "computer-vision",
+    label: "Computer Vision",
+    shortDescription:
+      "Computer vision deals with the extraction, analysis and understanding of information from images and videos.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "viatsko/awesome-vscode": {
     slug: "vscode",
     label: "VS Code",
