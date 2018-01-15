@@ -11,7 +11,7 @@ import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
 import { ArrowUpIcon } from "./Icon";
-import lists from "./lists.json";
+import lists from "./lists";
 
 class List extends Component {
   state = {
@@ -28,7 +28,7 @@ class List extends Component {
   fetchData() {
     const { author, name } = this.props.match.params;
     const endpoint = `https://api.github.com/repos/${author}/${name}/readme`;
-    const headers = { Accept: "application/vnd.github.v3.raw" };
+    const headers = { Accept: "application/vnd.github.v3.html" };
     const accessToken = localStorage.getItem("access-token");
 
     if (accessToken) {
@@ -50,6 +50,27 @@ class List extends Component {
         console.error(error.message);
       }
     );
+  }
+
+  // Scroll to the right header
+  // Based on https://gist.github.com/9859e63700d19d443878
+  componentDidUpdate() {
+    if (!window.location.hash) {
+      return;
+    }
+
+    // Don't do anything if the current target exists.
+    if (document.querySelector(":target")) {
+      return;
+    }
+
+    const id = "user-content-" + decodeURIComponent(window.location.hash.slice(1));
+    const target = document.getElementById(id);
+    if (target != null) target.scrollIntoView();
+
+    // Give space for the fixed header
+    const scrollY = window.scrollY;
+    if (scrollY) window.scroll(0, scrollY - 80);
   }
 
   componentDidMount() {

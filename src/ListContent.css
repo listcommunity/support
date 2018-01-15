@@ -16,24 +16,33 @@ img[data-canonical-src*='travis-ci.org'] {
   min-width: 20px;
 }
 
+/* Hack to fix whitespace from rendering HTML into components with htmr */
+.markdown-body a:before {
+  content: " ";
+}
+
 /* Other aesthetic changes */
+
+.markdown-body .anchor {
+  margin-left: -1.5rem;
+  outline: none !important;
+}
 
 .markdown-body {
   color: inherit;
   font-family: inherit;
 }
 
-.markdown-body a {
-  /* autoprefixer disable */
-  text-decoration-skip: ink;
+.markdown-body a:hover {
+  text-decoration: none;
 }
 
 .markdown-body a:visited {
-  color: #8645ca;
+  color: #5661b3;
 }
 
 .markdown-body a[href^="#"] {
-  color: #5661b3;
+  color: #38a89d;
 }
 
 .markdown-body ul {
@@ -92,10 +101,4 @@ img[data-canonical-src*='travis-ci.org'] {
 .markdown-body h6,
 .markdown-body blockquote {
   color: #666666;
-}
-
-/* Rendering with remark is different and includes a <p> for nested lists */
-.markdown-body li p {
-  margin-bottom: 0.25em;
-  margin-top: 0;
 }

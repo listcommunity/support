@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-
 import { fetchStats } from "./algoliaSearch";
 import { SyncIcon, StarIcon, ForkIcon } from "./Icon";
 import urlJoin from "url-join";
@@ -50,7 +49,7 @@ class GitHubLink extends Component {
             <StarIcon width="14" height="12" className="mr-1" />
           </span>
           <span
-            className={this.state.forks > thresholds.forks ? "text-teal-dark" : "text-grey-dark"}>
+            className={this.state.forks > thresholds.forks ? "text-green-dark" : "text-grey-dark"}>
             {humanizedNumber(this.state.forks)} <ForkIcon width="10" height="12" />
           </span>
         </Fragment>

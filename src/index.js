@@ -4,7 +4,6 @@ import "core-js/fn/object/entries";
 
 import React from "react";
 import ReactDOM from "react-dom";
-import SmoothScroll from "smooth-scroll";
 
 import App from "./App";
 import "./index.css";
@@ -14,10 +13,3 @@ if (process.env.REACT_APP_USE_SENTRY === "true") {
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-
-new SmoothScroll('a[href^="#"]', {
-  ignore: "[data-scroll-ignore]",
-  header: "[data-scroll-header]",
-  speed: 300,
-  offset: 24,
-});

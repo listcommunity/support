@@ -1,22 +1,15 @@
-.ListSidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.ListSidebar li,
-.ListSidebar p {
-  margin-bottom: 0.5rem;
-}
-
-.ListSidebar a {
+.toc a {
   color: #666;
   display: block;
   overflow: hidden;
   text-decoration: none;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-bottom: 0.5rem;
 }
 
-.ListSidebar ul > li > ul {
-  padding-left: 1rem;
-}
+.toc-h2 { padding-left: 1rem; }
+.toc-h3 { padding-left: 2rem; }
+.toc-h4 { padding-left: 3rem; }
+.toc-h5 { padding-left: 4rem; }
+.toc-h6 { padding-left: 5rem; }

@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Home from "./Home";
 import List from "./List";
 import NotFound from "./NotFound";
-import lists from "./lists.json";
+import lists from "./lists";
 
 const App = () => (
   <Router>

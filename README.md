@@ -17,7 +17,7 @@ Feel free to submit pull requests too.
 
 ### How do I add a list?
 
-Please add your list [to this file](https://github.com/listcommunity/support/blob/master/src/lists.json)
+Please add your list [to this file](https://github.com/listcommunity/support/blob/master/src/lists.js)
 and submit a pull request. Please follow this format and indentation:
 
 ```js
