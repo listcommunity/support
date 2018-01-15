@@ -509,6 +509,20 @@ export default {
       hide("#toc-contents");
     },
   },
+  "sobolevn/awesome-cryptography": {
+    slug: "cryptography",
+    label: "Cryptography",
+    shortDescription:
+      "Cryptography is the practice and study of techniques for secure communication in the presence of third parties.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "jbhuang0604/awesome-computer-vision": {
     slug: "computer-vision",
     label: "Computer Vision",
