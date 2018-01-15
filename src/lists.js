@@ -269,6 +269,19 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "Urigo/awesome-meteor": {
+    slug: "meteor",
+    label: "Meteor",
+    shortDescription:
+      "Meteor is an open source platform for developing web, mobile and desktop applications.",
+    logo: "/logos/meteor.png",
+    favicon: "/favicons/meteor.png",
+    color: "#de4f4f",
+    category: "Front-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "addyosmani/es6-tools": {
     slug: "es6-tools",
     label: "ECMAScript 6 Tools",
@@ -277,7 +290,7 @@ export default {
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
     category: "Front-End Development",
-    invertTextColor: true
+    invertTextColor: true,
   },
   "mateusortiz/webcomponents-the-right-way": {
     slug: "webcomponents",
