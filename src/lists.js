@@ -568,7 +568,8 @@ export default {
   "fasouto/awesome-dataviz": {
     slug: "data-visualization",
     label: "Data Visualization",
-    shortDescription: "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
+    shortDescription:
+      "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
     color: "#ffffff",
     category: "Miscellaneous",
     invertTextColor: true,
@@ -576,6 +577,19 @@ export default {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
       hide("#toc-contents");
+    },
+  },
+  "mfornos/awesome-microservices": {
+    slug: "microservices",
+    label: "Microservices",
+    shortDescription:
+      "Microservices is an architecture that structures an application as a collection of loosely coupled services.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme strong:first-of-type");
     },
   },
 };
