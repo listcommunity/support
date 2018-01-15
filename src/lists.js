@@ -521,6 +521,19 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "mre/awesome-static-analysis": {
+    slug: "static-analysis",
+    label: "Static Analysis",
+    shortDescription: "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "viatsko/awesome-vscode": {
     slug: "vscode",
     label: "VS Code",
