@@ -511,7 +511,8 @@ export default {
   "ChristosChristofidis/awesome-deep-learning": {
     slug: "deep-learning",
     label: "Deep Learning",
-    shortDescription: "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
+    shortDescription:
+      "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
     color: "#ffffff",
     category: "Computer Science",
     invertTextColor: true,
@@ -524,7 +525,22 @@ export default {
   "mre/awesome-static-analysis": {
     slug: "static-analysis",
     label: "Static Analysis",
-    shortDescription: "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
+    shortDescription:
+      "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
+  "bulutyazilim/awesome-datascience": {
+    slug: "data-science",
+    label: "Data Science",
+    shortDescription:
+      "Data Science applies scientific methods, processes, and systems to extract knowledge and insights from data.",
     color: "#ffffff",
     category: "Computer Science",
     invertTextColor: true,
