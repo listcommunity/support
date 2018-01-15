@@ -508,6 +508,19 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "ChristosChristofidis/awesome-deep-learning": {
+    slug: "deep-learning",
+    label: "Deep Learning",
+    shortDescription: "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "viatsko/awesome-vscode": {
     slug: "vscode",
     label: "VS Code",
