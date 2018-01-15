@@ -279,6 +279,20 @@ export default {
     category: "Front-End Development",
     invertTextColor: true
   },
+  "sotayamashita/awesome-css": {
+    slug: "css",
+    label: "CSS",
+    shortDescription:
+      "Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.",
+    logo: "https://raw.githubusercontent.com/github/explore/master/topics/css/css.png",
+    color: "#563d7c",
+    category: "Front-End Development",
+    mutate() {
+      hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "rosarior/awesome-django": {
     slug: "django",
     label: "Django",
