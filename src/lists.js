@@ -269,6 +269,16 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "addyosmani/es6-tools": {
+    slug: "es6-tools",
+    label: "ECMAScript 6 Tools",
+    shortDescription:
+      "An aggregation of tooling for using ES6 today. EcmaScript 6 is the sixth release of the ECMAScript language.",
+    logo: "https://avatars.githubusercontent.com/tc39",
+    color: "#f7df1e",
+    category: "Front-End Development",
+    invertTextColor: true
+  },
   "rosarior/awesome-django": {
     slug: "django",
     label: "Django",
