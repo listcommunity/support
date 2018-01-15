@@ -549,4 +549,17 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "fasouto/awesome-dataviz": {
+    slug: "data-visualization",
+    label: "Data Visualization",
+    shortDescription: "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
 };
