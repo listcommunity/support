@@ -410,6 +410,22 @@ export default {
         .forEach(h => (h.className = h.className.replace(/h[54]/, "h3")));
     },
   },
+  "veggiemonk/awesome-docker": {
+    slug: "docker",
+    label: "Docker",
+    shortDescription: "Docker is a platform built for developers to build and run applications.",
+    logo: "https://avatars.githubusercontent.com/docker",
+    color: "#066da5",
+    category: "Back-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+      hide(
+        "#toc-if-you-see-a-link-here-that-is-not-any-longer-a-good-fit-you-can-fix-it-by-submitting-a-pull-request-to-improve-this-file-thank-you"
+      );
+    },
+  },
   "JStumpp/awesome-android": {
     slug: "android",
     label: "Android",
