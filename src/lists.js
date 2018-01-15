@@ -298,10 +298,24 @@ export default {
     shortDescription:
       "Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.",
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/css/css.png",
-    color: "#563d7c",
+    color: "#026fbb",
     category: "Front-End Development",
     mutate() {
       hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
+  "afonsopacifer/awesome-flexbox": {
+    slug: "flexbox",
+    label: "Flexbox",
+    shortDescription:
+      "The CSS Flexible Box Module is a layout model and method that offers powerful space distribution and alignment capabilities.",
+    logo: "https://raw.githubusercontent.com/github/explore/master/topics/css/css.png",
+    color: "#026fbb",
+    category: "Front-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
       hide("#toc-table-of-contents");
     },
