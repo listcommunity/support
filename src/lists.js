@@ -538,6 +538,15 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "dreikanter/sublime-bookmarks": {
+    slug: "sublime-text",
+    label: "Sublime Text",
+    shortDescription:
+      "Sublime Text is a customizable proprietary cross-platform source code editor.",
+    logo: "https://avatars.githubusercontent.com/SublimeText",
+    color: "#ff8100",
+    category: "Editors",
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
