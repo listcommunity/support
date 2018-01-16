@@ -523,6 +523,18 @@ export default {
       hide("#toc-table-of-content");
     },
   },
+  "emacs-tw/awesome-emacs": {
+    slug: "emacs",
+    label: "Emacs",
+    shortDescription:
+      "Emacs is an extensible, customizable, free text editor and computing environment.",
+    logo: "https://avatars.githubusercontent.com/emacs",
+    color: "#7f5ab6",
+    category: "Editors",
+    mutate() {
+      hide("#readme > blockquote:first-of-type");
+    },
+  },
   "viatsko/awesome-vscode": {
     slug: "vscode",
     label: "VS Code",
