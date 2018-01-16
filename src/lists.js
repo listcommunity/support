@@ -523,6 +523,19 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "Awesome-Windows/Awesome": {
+    slug: "windows",
+    label: "Windows",
+    shortDescription: "Windows is Microsoft's GUI-based operating system.",
+    logo: "https://avatars.githubusercontent.com/Microsoft",
+    color: "#e6e6e6",
+    invertTextColor: true,
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme > h1:nth-of-type(2)");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
