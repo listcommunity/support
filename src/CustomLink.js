@@ -74,11 +74,14 @@ class GitHubLink extends Component {
 const CustomLink = ({ children, ...props }) => {
   let moreProps = {};
   let href =
-    isAbsoluteUrl(props.href) || props.href.startsWith("//") || props.href.startsWith("#")
+    typeof props.href !== "string" ||
+    isAbsoluteUrl(props.href) ||
+    props.href.startsWith("//") ||
+    props.href.startsWith("#")
       ? props.href
       : urlJoin("https://github.com", window.location.pathname, "/blob/master/", props.href);
 
-  if (props.href.includes("github.com") && children && !children[0].type) {
+  if (children && !children[0].type && props.href.includes("github.com")) {
     const fullName = githubUrlToFullName(props.href);
     if (fullName && !window.location.pathname.includes(fullName)) {
       return (
@@ -89,7 +92,7 @@ const CustomLink = ({ children, ...props }) => {
     }
   }
 
-  if (isAbsoluteUrl(href) || href.startsWith("//")) {
+  if (typeof props.href !== "string" || isAbsoluteUrl(href) || href.startsWith("//")) {
     moreProps = { target: "_blank", rel: "noopener noreferrer" };
   }
 
