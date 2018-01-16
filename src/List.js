@@ -66,7 +66,10 @@ class List extends Component {
 
     const id = "user-content-" + decodeURIComponent(window.location.hash.slice(1));
     const target = document.getElementById(id);
-    if (target != null) target.scrollIntoView();
+    if (target != null) {
+      target.scrollIntoView();
+      target.focus();
+    }
 
     // Give space for the fixed header
     const scrollY = window.scrollY;
@@ -141,7 +144,7 @@ class List extends Component {
           </div>
         </div>
         <div
-          className={`w-full max-w-xs bg-grey-lightest fixed pin-r pin-t pin-b mt-15 lg:mt-0 lg:flex flex-col overflow-hidden ${
+          className={`w-full max-w-xs bg-grey-lightest fixed pin-r pin-t pin-b mt-15 lg:mt-0 lg:flex flex-col overflow-hidden z-20 ${
             sidebarOpen ? "flex" : "hidden"
           }`}>
           <div className="flex-1 overflow-y-scroll scrolling-touch -mr-8 pr-8">
@@ -153,7 +156,7 @@ class List extends Component {
           </div>
         </div>
 
-        <ScrollToTop showUnder={160} style={{ bottom: 30, right: 350, zIndex: 999 }}>
+        <ScrollToTop showUnder={160} style={{ bottom: 30, right: 350, zIndex: 20 }}>
           <div className="bg-grey-light p-2 rounded hidden lg:block">
             <ArrowUpIcon className="block" width="32" height="32" />
           </div>

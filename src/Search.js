@@ -35,13 +35,12 @@ class Search extends Component {
         <SearchBox handleChange={this.handleChange} />
 
         {results.length > 0 && (
-          <div className="px-3 py-2 bg-white rounded shadow mt-2">
+          <div className="px-3 py-2 bg-white rounded shadow mt-2 text-sm">
             {results.map(result => (
               <a
-                style={{ display: "block" }}
                 href={`#${result.full_name}`}
                 key={result.full_name}
-                className="block py-1">
+                className="block py-1 link-reset truncate">
                 <strong
                   className="mr-2"
                   dangerouslySetInnerHTML={{ __html: result._highlightResult.name.value }}

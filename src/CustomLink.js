@@ -59,7 +59,7 @@ class GitHubLink extends Component {
     return (
       <Fragment>
         <a
-          id={this.props.fullName}
+          id={`user-content-${this.props.fullName}`}
           target="_blank"
           rel="noopener noreferrer"
           href={this.props.href}>
