@@ -559,6 +559,20 @@ export default {
     color: "#ff8100",
     category: "Editors",
   },
+  "akrawchyk/awesome-vim": {
+    slug: "vim",
+    label: "Vim",
+    shortDescription:
+      "Vim is a console-run text editor program. Bram Moolenaar is credited with the development, which began in 1988.",
+    logo: "https://avatars.githubusercontent.com/vim",
+    color: "#199f4b",
+    category: "Editors",
+    mutate() {
+      hide("#readme > ol:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
