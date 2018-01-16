@@ -456,7 +456,7 @@ export default {
   "vsouza/awesome-ios": {
     slug: "ios",
     label: "iOS",
-    shortDescription: "iOS is the operating system for Apple's mobile products.",
+    shortDescription: "iOS is the operating system for all of Apple’s mobile products.",
     logo: "https://avatars.githubusercontent.com/apple",
     color: "#ef5138",
     category: "Platforms",
@@ -507,6 +507,20 @@ export default {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
       hide("#toc-contents");
+    },
+  },
+  "iCHAIT/awesome-macOS": {
+    slug: "macos",
+    label: "macOS",
+    shortDescription: "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
+    logo: "https://avatars.githubusercontent.com/apple",
+    color: "#ffffff",
+    invertTextColor: true,
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
     },
   },
   "mehcode/awesome-atom": {
