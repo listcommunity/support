@@ -509,6 +509,35 @@ export default {
       hide("#toc-contents");
     },
   },
+  "mehcode/awesome-atom": {
+    slug: "atom",
+    label: "Atom",
+    shortDescription:
+      "Atom is a text editor developed by GitHub. It is designed to be approachable out of the box yet highly customizable.",
+    logo: "https://avatars.githubusercontent.com/atom",
+    color: "#5fb57d",
+    category: "Editors",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-content", { parent: true });
+      hide("#toc-table-of-content");
+    },
+  },
+  "viatsko/awesome-vscode": {
+    slug: "vscode",
+    label: "VS Code",
+    shortDescription:
+      "VS Code is a customizable code editor. It includes support for Git, intelligent code completion, code refactoring and more.",
+    logo: "/logos/vscode.png",
+    favicon: "/favicons/vscode.png",
+    color: "#0077c8",
+    category: "Editors",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
@@ -573,21 +602,6 @@ export default {
     color: "#ffffff",
     category: "Computer Science",
     invertTextColor: true,
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
-    },
-  },
-  "viatsko/awesome-vscode": {
-    slug: "vscode",
-    label: "VS Code",
-    shortDescription:
-      "VS Code is a customizable code editor. It includes support for Git, intelligent code completion, code refactoring and more.",
-    logo: "/logos/vscode.png",
-    favicon: "/favicons/vscode.png",
-    color: "#0077c8",
-    category: "Editors",
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
