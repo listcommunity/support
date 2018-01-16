@@ -621,4 +621,18 @@ export default {
       hide("#readme strong:first-of-type");
     },
   },
+  "folkswhocode/awesome-diversity": {
+    slug: "diversity",
+    label: "Diversity",
+    shortDescription:
+      "A curated list of amazingly awesome articles, websites and resources about diversity in technology.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
 };
