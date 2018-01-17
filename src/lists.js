@@ -565,6 +565,18 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "deephacks/awesome-jvm": {
+    slug: "jvm",
+    label: "JVM",
+    shortDescription: "A curated list of low-level, performance and non-framework related resources for the Java virtual machine.",
+    logo: "/logos/java.png",
+    favicon: "/favicons/java.png",
+    color: "#5382a1",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
