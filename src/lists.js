@@ -811,6 +811,19 @@ export default {
     color: "#2f3a43",
     category: "Development Environment",
   },
+  "unixorn/awesome-zsh-plugins": {
+    slug: "zsh",
+    label: "Zsh",
+    shortDescription:
+      "Zsh is a shell designed for interactive use, although it is also a powerful scripting language.",
+    logo: "https://avatars.githubusercontent.com/zsh-users",
+    color: "#000000",
+    category: "Development Environment",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme > p:nth-of-type(4)");
+    },
+  },
   "alebcay/awesome-shell": {
     slug: "shell",
     label: "Shell",
