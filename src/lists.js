@@ -478,6 +478,20 @@ export default {
       );
     },
   },
+  "jdauphant/awesome-ansible": {
+    slug: "ansible",
+    label: "Ansible",
+    shortDescription:
+      "Ansible is a powerful automation engine used for configuration management, application deployment and task automation.",
+    logo: "/logos/ansible.svg",
+    favicon: "/favicons/ansible.png",
+    color: "#333333",
+    category: "Back-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme strong:first-of-type");
+    },
+  },
   "anaibol/awesome-serverless": {
     slug: "serverless",
     label: "Serverless",
