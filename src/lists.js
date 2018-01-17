@@ -14,20 +14,6 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
-  "matteocrippa/awesome-swift": {
-    slug: "swift",
-    label: "Swift",
-    shortDescription:
-      "Swift is a modern programming language focused on safety, performance and expressivity.",
-    logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
-    color: "#ef5138",
-    category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
-    },
-  },
   "vinta/awesome-python": {
     slug: "python",
     label: "Python",
@@ -81,6 +67,34 @@ export default {
       hide("#readme > ul:first-of-type");
       const h = document.getElementById("toc-awesome-ruby");
       if (h != null) h.className = h.className.replace("h3", "h1");
+    },
+  },
+  "matteocrippa/awesome-swift": {
+    slug: "swift",
+    label: "Swift",
+    shortDescription:
+      "Swift is a modern programming language focused on safety, performance and expressivity.",
+    logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
+    color: "#ef5138",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
+  "uraimo/Awesome-Swift-Playgrounds": {
+    slug: "swift-playgrounds",
+    label: "Swift Playgrounds",
+    shortDescription:
+      "Swift Playgrounds make learning the Swift programming language interactive and fun.",
+    logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
+    color: "#ef5138",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
     },
   },
   "isRuslan/awesome-elm": {
