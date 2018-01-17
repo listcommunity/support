@@ -619,7 +619,8 @@ export default {
   "deephacks/awesome-jvm": {
     slug: "jvm",
     label: "JVM",
-    shortDescription: "A curated list of low-level, performance and non-framework related resources for the Java virtual machine.",
+    shortDescription:
+      "A curated list of low-level, performance and non-framework related resources for the Java virtual machine.",
     logo: "/logos/java.png",
     favicon: "/favicons/java.png",
     color: "#5382a1",
@@ -631,7 +632,8 @@ export default {
   "donnemartin/awesome-aws": {
     slug: "aws",
     label: "AWS",
-    shortDescription: "Amazon Web Services provides on-demand cloud computing platforms on a subscription basis.",
+    shortDescription:
+      "Amazon Web Services provides on-demand cloud computing platforms on a subscription basis.",
     logo: "https://avatars.githubusercontent.com/aws",
     color: "#ffa93f",
     invertTextColor: true,
@@ -646,7 +648,8 @@ export default {
   "ianstormtaylor/awesome-heroku": {
     slug: "heroku",
     label: "Heroku",
-    shortDescription: "Heroku is a cloud platform as a service supporting several programming languages that is used as a deployment model.",
+    shortDescription:
+      "Heroku is a cloud platform as a service supporting several programming languages that is used as a deployment model.",
     logo: "https://avatars.githubusercontent.com/heroku",
     color: "#624eaf",
     category: "Platforms",
@@ -657,7 +660,8 @@ export default {
   "ipfs/awesome-ipfs": {
     slug: "ipfs",
     label: "IPFS",
-    shortDescription: "IPFS is a peer-to-peer protocol for content-addressed sharing of data via a distributed file system.",
+    shortDescription:
+      "IPFS is a peer-to-peer protocol for content-addressed sharing of data via a distributed file system.",
     logo: "/logos/ipfs.svg",
     favicon: "/favicons/ipfs.png",
     color: "#6acad1",
@@ -671,7 +675,8 @@ export default {
   "thibmaek/awesome-raspberry-pi": {
     slug: "raspberry-pi",
     label: "Raspberry Pi",
-    shortDescription: "A Raspberry Pi is a popular piece of hardware called a micro-controller. Its use ranges from robotics to home automation.",
+    shortDescription:
+      "A Raspberry Pi is a popular piece of hardware called a micro-controller. Its use ranges from robotics to home automation.",
     logo: "https://avatars.githubusercontent.com/raspberrypi",
     color: "#d6264f",
     category: "Platforms",
@@ -684,7 +689,8 @@ export default {
   "JesseTG/awesome-qt": {
     slug: "qt",
     label: "Qt",
-    shortDescription: "Qt is a powerful cross-platform application development framework, for use primarily (but not exclusively) in C++.",
+    shortDescription:
+      "Qt is a powerful cross-platform application development framework, for use primarily (but not exclusively) in C++.",
     logo: "https://avatars.githubusercontent.com/qt",
     color: "#41cd52",
     category: "Platforms",
@@ -697,7 +703,8 @@ export default {
   "Kazhnuz/awesome-gnome": {
     slug: "gnome",
     label: "GNOME",
-    shortDescription: "GNOME is a desktop environment composed of free and open-source software that runs on Linux and most BSD derivatives.",
+    shortDescription:
+      "GNOME is a desktop environment composed of free and open-source software that runs on Linux and most BSD derivatives.",
     logo: "https://avatars.githubusercontent.com/GNOME",
     color: "#4a86cf",
     category: "Platforms",
@@ -844,8 +851,7 @@ export default {
   "tayllan/awesome-algorithms": {
     slug: "algorithms",
     label: "Algorithms",
-    shortDescription:
-      "Algorithms are self-contained sequences that carry out a variety of tasks.",
+    shortDescription: "Algorithms are self-contained sequences that carry out a variety of tasks.",
     color: "#ffffff",
     category: "Computer Science",
     invertTextColor: true,
