@@ -617,6 +617,19 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "thibmaek/awesome-raspberry-pi": {
+    slug: "raspberry-pi",
+    label: "Raspberry Pi",
+    shortDescription: "A Raspberry Pi is a popular piece of hardware called a micro-controller. Its use ranges from robotics to home automation.",
+    logo: "https://avatars.githubusercontent.com/raspberrypi",
+    color: "#d6264f",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
