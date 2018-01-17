@@ -811,6 +811,17 @@ export default {
     color: "#2f3a43",
     category: "Development Environment",
   },
+  "alebcay/awesome-shell": {
+    slug: "shell",
+    label: "Shell",
+    shortDescription:
+      "A shell is a text-based terminal, used for manipulating programs and files. Shell scripts typically manage program execution.",
+    color: "#000000",
+    category: "Development Environment",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
