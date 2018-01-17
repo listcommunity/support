@@ -592,6 +592,17 @@ export default {
       hide("#toc-awesome-aws-python-module");
     },
   },
+  "ianstormtaylor/awesome-heroku": {
+    slug: "heroku",
+    label: "Heroku",
+    shortDescription: "Heroku is a cloud platform as a service supporting several programming languages that is used as a deployment model.",
+    logo: "https://avatars.githubusercontent.com/heroku",
+    color: "#624eaf",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "ipfs/awesome-ipfs": {
     slug: "ipfs",
     label: "IPFS",
