@@ -161,6 +161,15 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "parro-it/awesome-micro-npm-packages": {
+    slug: "micro-npm",
+    label: "Micro npm Packages",
+    shortDescription:
+      "A curated list of small, focused npm packages. npm is a package manager for JavaScript included with Node.js.",
+    logo: "https://avatars.githubusercontent.com/npm",
+    color: "#cb3837",
+    category: "Programming Languages",
+  },
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
