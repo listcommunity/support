@@ -870,6 +870,19 @@ export default {
       hide("#user-content-table-of-contents");
     },
   },
+  "abhishekbanthia/Public-APIs": {
+    slug: "public-apis-2",
+    label: "Public APIs",
+    shortDescription: "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
+    color: "#ffffff",
+    category: "APIs and Datasets",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "toddmotto/public-apis": {
     slug: "public-apis",
     label: "Public APIs",
