@@ -357,6 +357,16 @@ export default {
     category: "Front-End Development",
     invertTextColor: true,
   },
+  "babel/awesome-babel": {
+    slug: "babel",
+    label: "Babel",
+    shortDescription:
+      "Babel is a compiler for writing next generation JavaScript, today.",
+    logo: "https://avatars.githubusercontent.com/babel",
+    color: "#f5da55",
+    category: "Front-End Development",
+    invertTextColor: true,
+  },
   "mateusortiz/webcomponents-the-right-way": {
     slug: "webcomponents",
     label: "Web Components",
