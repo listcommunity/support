@@ -801,6 +801,16 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "awesome-lists/awesome-bash": {
+    slug: "bash",
+    label: "Bash",
+    shortDescription:
+      "Bash is a shell and command language interpreter for the GNU operating system.",
+    logo: "/logos/bash.svg",
+    favicon: "/favicons/bash.png",
+    color: "#2f3a43",
+    category: "Development Environment",
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
