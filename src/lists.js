@@ -554,6 +554,17 @@ export default {
       hide("#readme > h1:nth-of-type(2)");
     },
   },
+  "benoitjadinon/awesome-xamarin": {
+    slug: "xamarin",
+    label: "Xamarin",
+    shortDescription: "Xamarin is a platform for developing iOS and Android applications.",
+    logo: "https://avatars.githubusercontent.com/xamarin",
+    color: "#2c3e50",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
