@@ -441,6 +441,23 @@ export default {
       );
     },
   },
+  "anaibol/awesome-serverless": {
+    slug: "serverless",
+    label: "Serverless",
+    shortDescription:
+      "Serverless refers to apps that depend on third-party services (backend as a service) or custom code (functions as a service).",
+    color: "#ffffff",
+    invertTextColor: true,
+    category: "Back-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+      hide(
+        "#toc-a-curated-list-of-awesome-services-solutions-and-resources-for-serverless--nobackend-applications"
+      );
+    },
+  },
   "JStumpp/awesome-android": {
     slug: "android",
     label: "Android",
@@ -512,7 +529,8 @@ export default {
   "iCHAIT/awesome-macOS": {
     slug: "macos",
     label: "macOS",
-    shortDescription: "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
+    shortDescription:
+      "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
     logo: "https://avatars.githubusercontent.com/apple",
     color: "#ffffff",
     invertTextColor: true,
