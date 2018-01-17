@@ -360,8 +360,7 @@ export default {
   "babel/awesome-babel": {
     slug: "babel",
     label: "Babel",
-    shortDescription:
-      "Babel is a compiler for writing next generation JavaScript, today.",
+    shortDescription: "Babel is a compiler for writing next generation JavaScript, today.",
     logo: "https://avatars.githubusercontent.com/babel",
     color: "#f5da55",
     category: "Front-End Development",
@@ -699,7 +698,8 @@ export default {
   "Lembed/Awesome-arduino": {
     slug: "arduino",
     label: "Arduino",
-    shortDescription: "Arduino is an open source hardware and software company and maker community.",
+    shortDescription:
+      "Arduino is an open source hardware and software company and maker community.",
     logo: "https://avatars.githubusercontent.com/arduino",
     color: "#00979d",
     category: "Platforms",
@@ -906,7 +906,8 @@ export default {
   "awesomedata/awesome-public-datasets": {
     slug: "public-datasets",
     label: "Public Datasets",
-    shortDescription: "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
+    shortDescription:
+      "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
     color: "#ffffff",
     category: "APIs and Datasets",
     invertTextColor: true,
@@ -917,7 +918,8 @@ export default {
   "abhishekbanthia/Public-APIs": {
     slug: "public-apis-2",
     label: "Public APIs",
-    shortDescription: "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
+    shortDescription:
+      "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
     color: "#ffffff",
     category: "APIs and Datasets",
     invertTextColor: true,
