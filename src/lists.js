@@ -592,6 +592,20 @@ export default {
       hide("#toc-awesome-aws-python-module");
     },
   },
+  "ipfs/awesome-ipfs": {
+    slug: "ipfs",
+    label: "IPFS",
+    shortDescription: "IPFS is a peer-to-peer protocol for content-addressed sharing of data via a distributed file system.",
+    logo: "/logos/ipfs.svg",
+    favicon: "/favicons/ipfs.png",
+    color: "#6acad1",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
