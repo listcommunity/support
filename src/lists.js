@@ -630,6 +630,19 @@ export default {
       hide("#toc-contents");
     },
   },
+  "JesseTG/awesome-qt": {
+    slug: "qt",
+    label: "Qt",
+    shortDescription: "Qt is a powerful cross-platform application development framework, for use primarily (but not exclusively) in C++.",
+    logo: "https://avatars.githubusercontent.com/qt",
+    color: "#41cd52",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
