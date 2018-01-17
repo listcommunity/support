@@ -686,6 +686,19 @@ export default {
       hide("#toc-contents");
     },
   },
+  "Lembed/Awesome-arduino": {
+    slug: "arduino",
+    label: "Arduino",
+    shortDescription: "Arduino is an open source hardware and software company and maker community.",
+    logo: "https://avatars.githubusercontent.com/arduino",
+    color: "#00979d",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme pre:last-of-type");
+      hide("#user-content-usage", { parent: true });
+    },
+  },
   "JesseTG/awesome-qt": {
     slug: "qt",
     label: "Qt",
