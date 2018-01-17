@@ -170,6 +170,20 @@ export default {
     color: "#cb3837",
     category: "Programming Languages",
   },
+  "dustinspecker/awesome-eslint": {
+    slug: "eslint",
+    label: "ESLint",
+    shortDescription:
+      "ESLint is an extensible static-analysis tool for JavaScript and related languages that helps catch errors.",
+    logo: "https://avatars.githubusercontent.com/eslint",
+    color: "#463fd4",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
