@@ -827,6 +827,18 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "tayllan/awesome-algorithms": {
+    slug: "algorithms",
+    label: "Algorithms",
+    shortDescription:
+      "Algorithms are self-contained sequences that carry out a variety of tasks.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "fasouto/awesome-dataviz": {
     slug: "data-visualization",
     label: "Data Visualization",
