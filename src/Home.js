@@ -33,7 +33,7 @@ const Home = () => {
       </header>
 
       <Jungle className="bg-white text-purple-darker">
-        <div className="max-w-xl mx-auto pb-6 pt-15">
+        <div className="max-w-xl mx-auto py-15">
           <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8 sm:mb-15">
             <div className="w-full lg:w-1/3">
               <img
@@ -103,6 +103,21 @@ const Home = () => {
             </Fragment>
           ))}
         </div>
+
+        <footer className="bg-grey-lighter p-6 text-center leading-loose">
+          <div className="max-w-xl mx-auto">
+            This project is only possible thanks to the{" "}
+            <a href="https://github.com/sindresorhus/awesome" className="link-reset font-bold">
+              Awesome List
+            </a>{" "}
+            and{" "}
+            <a href="https://github.com/github/explore" className="link-reset font-bold">
+              GitHub Explore
+            </a>{" "}
+            projects and thanks to all the people who maintain these lists and contribute to them.
+            List.community is not affiliated with&nbsp;GitHub.
+          </div>
+        </footer>
       </Jungle>
 
       <Helmet>

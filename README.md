@@ -35,4 +35,6 @@ and submit a pull request. Please follow this format and indentation:
 
 ### Contributors
 
-This project is only possible thanks to all the people who maintain these lists and contribute to them.
+This project is only possible thanks to the [Awesome List](https://github.com/sindresorhus/awesome)
+and [GitHub Explore](https://github.com/github/explore) projects and thanks to all the people who maintain
+these lists and contribute to them.
