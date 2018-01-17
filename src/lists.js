@@ -870,6 +870,19 @@ export default {
       hide("#user-content-table-of-contents");
     },
   },
+  "toddmotto/public-apis": {
+    slug: "public-apis",
+    label: "Public APIs",
+    shortDescription: "A collective list of free and public APIs for use in web development.",
+    color: "#ffffff",
+    category: "APIs and Datasets",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-index", { parent: true });
+      hide("#toc-index");
+    },
+  },
   "fasouto/awesome-dataviz": {
     slug: "data-visualization",
     label: "Data Visualization",
