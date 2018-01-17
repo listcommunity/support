@@ -859,6 +859,17 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "awesomedata/awesome-public-datasets": {
+    slug: "public-datasets",
+    label: "Public Datasets",
+    shortDescription: "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
+    color: "#ffffff",
+    category: "APIs and Datasets",
+    invertTextColor: true,
+    mutate() {
+      hide("#user-content-table-of-contents");
+    },
+  },
   "fasouto/awesome-dataviz": {
     slug: "data-visualization",
     label: "Data Visualization",
