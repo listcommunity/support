@@ -577,6 +577,21 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "donnemartin/awesome-aws": {
+    slug: "aws",
+    label: "AWS",
+    shortDescription: "Amazon Web Services provides on-demand cloud computing platforms on a subscription basis.",
+    logo: "https://avatars.githubusercontent.com/aws",
+    color: "#ffa93f",
+    invertTextColor: true,
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-index", { parent: true });
+      hide("#toc-index");
+      hide("#toc-awesome-aws-python-module");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
