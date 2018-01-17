@@ -643,6 +643,19 @@ export default {
       hide("#toc-contents");
     },
   },
+  "Kazhnuz/awesome-gnome": {
+    slug: "gnome",
+    label: "GNOME",
+    shortDescription: "GNOME is a desktop environment composed of free and open-source software that runs on Linux and most BSD derivatives.",
+    logo: "https://avatars.githubusercontent.com/GNOME",
+    color: "#4a86cf",
+    category: "Platforms",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
