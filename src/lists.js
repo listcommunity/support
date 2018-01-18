@@ -765,6 +765,20 @@ export default {
       hide("#toc-contents");
     },
   },
+  "ramnes/awesome-mongodb": {
+    slug: "mongodb",
+    label: "MongoDB",
+    shortDescription:
+      "MongoDB is a NoSQL cross-platform database. It is designed for scalability and performance.",
+    logo: "https://avatars.githubusercontent.com/mongodb",
+    color: "#218e38",
+    category: "Databases",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "emacs-tw/awesome-emacs": {
     slug: "emacs",
     label: "Emacs",
