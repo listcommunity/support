@@ -877,6 +877,20 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "josephmisiti/awesome-machine-learning": {
+    slug: "machine-learning",
+    label: "Machine Learning",
+    shortDescription:
+      "Machine learning is a way of modeling and interpreting data that allows a piece of software to respond intelligently.",
+    color: "#ffffff",
+    category: "Computer Science",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:nth-of-type(3)");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+    },
+  },
   "mre/awesome-static-analysis": {
     slug: "static-analysis",
     label: "Static Analysis",
