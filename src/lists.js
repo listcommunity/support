@@ -751,6 +751,20 @@ export default {
       hide("#toc-table-of-content");
     },
   },
+  "dhamaniasad/awesome-postgres": {
+    slug: "postgresql",
+    label: "PostgreSQL",
+    shortDescription:
+      "PostgreSQL is an open source database management system that is object-relational.",
+    logo: "https://avatars.githubusercontent.com/postgres",
+    color: "#336791",
+    category: "Databases",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "emacs-tw/awesome-emacs": {
     slug: "emacs",
     label: "Emacs",
