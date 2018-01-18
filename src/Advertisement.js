@@ -18,13 +18,17 @@ class Advertisement extends Component {
     script.setAttribute("async", "async");
     script.setAttribute("id", "_carbonads_js");
 
-    if (initialized) {
-      this._node.innerHTML = script.outerHTML;
-      window._carbonads.refresh();
-    } else {
-      initialized = true;
-      this._node.innerHTML = "";
-      this._node.appendChild(script);
+    try {
+      if (initialized) {
+        this._node.innerHTML = script.outerHTML;
+        window._carbonads.refresh();
+      } else {
+        initialized = true;
+        this._node.innerHTML = "";
+        this._node.appendChild(script);
+      }
+    } catch (e) {
+      window.Raven.captureException(e);
     }
   }
 
