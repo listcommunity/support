@@ -1038,4 +1038,14 @@ export default {
       hide("#toc-contents");
     },
   },
+  "sotayamashita/awesome-css": { 
+    slug: "css",
+    label: "CSS",
+    shortDescription:
+      "A curated contents of amazing CSS Ever :)",
+    logo: "https://avatars.githubusercontent.com/css",
+    color: "#3672b5",
+    category: "CSS",
+    invertTextColor: true,
+  },
 };
