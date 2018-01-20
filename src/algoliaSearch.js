@@ -19,15 +19,19 @@ const searchStats = function(batchSize = 1000) {
     const filters = batch.map(f => `objectID:${f}`).join(" OR ");
 
     index.search({ filters, hitsPerPage: batchSize }, (success, content) => {
-      content.hits.forEach(hit => {
-        const callbacks = data[hit.objectID] || [];
-        setTimeout(() => callbacks.forEach(callback => callback(hit)), 100);
-      });
+      try {
+        content.hits.forEach(hit => {
+          const callbacks = data[hit.objectID] || [];
+          setTimeout(() => callbacks.forEach(callback => callback(hit)), 100);
+        });
 
-      difference(batch, content.hits.map(hit => hit.objectID)).forEach(objectID => {
-        const callbacks = data[objectID] || [];
-        callbacks.forEach(callback => callback({ watchers: null, forks: null }));
-      });
+        difference(batch, content.hits.map(hit => hit.objectID)).forEach(objectID => {
+          const callbacks = data[objectID] || [];
+          callbacks.forEach(callback => callback({ watchers: null, forks: null }));
+        });
+      } catch (e) {
+        window.Raven.captureException(e);
+      }
     });
   });
 };
