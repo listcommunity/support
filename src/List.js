@@ -29,7 +29,13 @@ class List extends Component {
     const { author, name } = this.props.match.params;
     const endpoint = `https://api.github.com/repos/${author}/${name}/readme`;
     const headers = { Accept: "application/vnd.github.v3.html" };
-    const accessToken = localStorage.getItem("access-token");
+    let accessToken;
+
+    try {
+      accessToken = localStorage.getItem("access-token");
+    } catch (e) {
+      window.Raven.captureException(e);
+    }
 
     if (accessToken) {
       headers["Authorization"] = `Basic ${base64.encode(accessToken + ":")}`;
