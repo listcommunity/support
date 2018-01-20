@@ -384,8 +384,8 @@ export default {
     label: "CSS",
     shortDescription:
       "Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.",
-    logo: "https://raw.githubusercontent.com/github/explore/master/topics/css/css.png",
-    color: "#026fbb",
+    logo: "https://avatars.githubusercontent.com/css",
+    color: "#256bdc",
     category: "Front-End Development",
     mutate() {
       hide("#readme > ul:nth-of-type(2)");
@@ -398,8 +398,8 @@ export default {
     label: "Flexbox",
     shortDescription:
       "The CSS Flexible Box Module is a layout model and method that offers powerful space distribution and alignment capabilities.",
-    logo: "https://raw.githubusercontent.com/github/explore/master/topics/css/css.png",
-    color: "#026fbb",
+    logo: "https://avatars.githubusercontent.com/css",
+    color: "#256bdc",
     category: "Front-End Development",
     mutate() {
       hide("#readme > ul:first-of-type");
