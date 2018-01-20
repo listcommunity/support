@@ -54,7 +54,7 @@ export const search = debounce(function(query, callback) {
     { query, filters, hitsPerPage: 25, highlightPreTag: "<mark>", highlightPostTag: "</mark>" },
     callback
   );
-}, 500);
+}, 250);
 
 export const resetStats = function() {
   data = {};
