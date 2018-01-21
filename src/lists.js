@@ -958,6 +958,20 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "monostable/awesome-electronics": {
+    slug: "electronics",
+    label: "Electronics",
+    shortDescription:
+      "Electronic engineering is the practice of understanding, designing and building electronic circuits.",
+    color: "#ffffff",
+    category: "Hardware",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "awesomedata/awesome-public-datasets": {
     slug: "public-datasets",
     label: "Public Datasets",
