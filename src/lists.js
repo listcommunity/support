@@ -972,6 +972,20 @@ export default {
       hide("#toc-contents");
     },
   },
+  "phodal/awesome-iot": {
+    slug: "iot",
+    label: "IoT",
+    shortDescription:
+      "IoT refers to the network of physical devices embedded in everyday objects, enabling them to send and receive data.",
+    color: "#ffffff",
+    category: "Hardware",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-toc", { parent: true });
+      hide("#toc-toc");
+    },
+  },
   "awesomedata/awesome-public-datasets": {
     slug: "public-datasets",
     label: "Public Datasets",
