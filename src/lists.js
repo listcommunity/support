@@ -1050,6 +1050,19 @@ export default {
       hide("#readme strong:first-of-type");
     },
   },
+  "Kickball/awesome-selfhosted": {
+    slug: "self-hosted",
+    label: "Self-Hosted",
+    shortDescription:
+      "Self-hosting is the process of locally hosting and managing applications instead of renting from SaaS providers.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme > hr:first-of-type");
+    },
+  },
   "folkswhocode/awesome-diversity": {
     slug: "diversity",
     label: "Diversity",
