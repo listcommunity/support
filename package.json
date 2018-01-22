@@ -9,7 +9,7 @@
     "core-js": "^2.5.3",
     "gh-pages": "^1.1.0",
     "github-markdown-css": "^2.9.0",
-    "htmr": "^0.4.10",
+    "htmr": "github:listcommunity/htmr#dist",
     "is-absolute-url": "^2.1.0",
     "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",

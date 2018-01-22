@@ -16,11 +16,6 @@ img[data-canonical-src*='travis-ci.org'] {
   min-width: 20px;
 }
 
-/* Hack to fix whitespace from rendering HTML into components with htmr */
-.markdown-body a:before {
-  content: " ";
-}
-
 /* Other aesthetic changes */
 
 .markdown-body .anchor {

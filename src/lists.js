@@ -705,8 +705,6 @@ export default {
     category: "Platforms",
     mutate() {
       hide("#readme > ul:first-of-type");
-      hide("#readme pre:last-of-type");
-      hide("#user-content-usage", { parent: true });
     },
   },
   "JesseTG/awesome-qt": {
