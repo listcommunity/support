@@ -1077,4 +1077,18 @@ export default {
       hide("#toc-contents");
     },
   },
+  "cristianoliveira/awesome4girls": {
+    slug: "for-girls",
+    label: "Awesome4Girls",
+    shortDescription:
+      "A curated list of inclusive events/projects/initiatives for women in the tech area. 💝",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
 };
