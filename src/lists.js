@@ -37,6 +37,18 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "fsprojects/awesome-fsharp":{
+    slug: "fsharp",
+    label: "Fsharp",
+    shortDescription:
+      "F# is a crossplatform functional first programming language built on the .NET Framework.",
+    logo: "https://avatars.githubusercontent.com/fsharp",
+    color: "#378bba",
+    category: "Programming Languages",
+    mutate(){
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "avelino/awesome-go": {
     slug: "go",
     label: "Go",
