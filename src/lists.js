@@ -37,6 +37,18 @@ export default {
       hide("#readme > ul:first-of-type");
     },
   },
+  "razum2um/awesome-clojure": {
+    slug: "clojure",
+    label: "Clojure",
+    shortDescription:
+      "Clojure is a functional, dynamic, general-purpose programming language.",
+    logo: "https://avatars.githubusercontent.com/clojure",
+    color: "#26324b",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
   "avelino/awesome-go": {
     slug: "go",
     label: "Go",
