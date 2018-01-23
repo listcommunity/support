@@ -16,6 +16,20 @@ img[data-canonical-src*='travis-ci.org'] {
   min-width: 20px;
 }
 
+.markdown-body img {
+  opacity: 0.3;
+  filter: grayscale(0.9);
+  position: relative;
+}
+
+.markdown-body img:hover,
+.markdown-body img:focus,
+.markdown-body img:active {
+  opacity: 1;
+  filter: none;
+  transition: opacity 200ms;
+}
+
 /* Other aesthetic changes */
 
 .markdown-body .anchor {
