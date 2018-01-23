@@ -224,6 +224,15 @@ export default {
       hide("#toc-contents");
     },
   },
+  "rust-unofficial/awesome-rust": {
+    slug: "rust",
+    label: "Rust",
+    shortDescription:
+      "Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
+    logo: "https://avatars.githubusercontent.com/rust-lang",
+    color: "#dea584",
+    category: "Programming Languages",
+  },
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
