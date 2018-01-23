@@ -1118,4 +1118,18 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "mislavcimpersak/awesome-dev-fun": {
+    slug: "dev-fun",
+    label: "Dev Fun",
+    shortDescription:
+      "A list of libraries, packages and languages that have no real purpose but to make a developer chuckle.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
 };
