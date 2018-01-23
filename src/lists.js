@@ -41,7 +41,7 @@ export default {
     slug: "clojure",
     label: "Clojure",
     shortDescription:
-      "Clojure is a robust, practical, and fast programming language with a set of useful features that together form a simple, coherent, and powerful tool.",
+      "Clojure is a functional, dynamic, general-purpose programming language.",
     logo: "https://avatars.githubusercontent.com/clojure",
     color: "#26324b",
     category: "Programming Languages",
