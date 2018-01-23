@@ -198,6 +198,32 @@ export default {
       hide("#toc-contents");
     },
   },
+  "fffaraz/awesome-cpp": {
+    slug: "cpp",
+    label: "C and C++",
+    shortDescription:
+      "C++ is a general purpose and object-oriented programming language. It was designed as an extension of the C language.",
+    logo: "https://avatars.githubusercontent.com/isocpp",
+    color: "#00589c",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+    },
+  },
+  "hachiojipm/awesome-perl": {
+    slug: "perl",
+    label: "Perl",
+    shortDescription:
+      "Perl is a highly capable and feature-rich programming language with over 29 years of development.",
+    logo: "https://avatars.githubusercontent.com/Perl",
+    color: "#0073a1",
+    category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:nth-of-type(2)");
+      hide("#user-content-contents", { parent: true });
+      hide("#toc-contents");
+    },
+  },
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
