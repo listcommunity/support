@@ -1092,4 +1092,13 @@ export default {
       hide("#toc-table-of-contents");
     },
   },
+  "mislavcimpersak/awesome-dev-fun": {
+    "slug": "dev-fun",
+    "label": "Dev Fun",
+    "shortDescription":
+        "A list of fun libs/packages/languages that have no real purpose but to make a developer chuckle.",
+    "color": "#ffffff",
+    "category": "Miscellaneous",
+    "invertTextColor": true,
+  },
 };
