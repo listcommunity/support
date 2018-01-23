@@ -228,10 +228,16 @@ export default {
     slug: "rust",
     label: "Rust",
     shortDescription:
-      "Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
+      "Rust is a systems programming language. It is designed for improved memory safety without sacrificing performance.",
     logo: "https://avatars.githubusercontent.com/rust-lang",
-    color: "#dea584",
+    color: "#428bca",
     category: "Programming Languages",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-table-of-contents", { parent: true });
+      hide("#toc-table-of-contents");
+      document.querySelectorAll("li img").forEach(h => (h.style.verticalAlign = "-4px"));
+    },
   },
   "enaqx/awesome-react": {
     slug: "react",
