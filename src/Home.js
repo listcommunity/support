@@ -5,7 +5,7 @@ import groupBy from "lodash.groupby";
 
 import Jungle from "./Jungle";
 import { GitHubIcon, TelescopeIcon } from "./Icon";
-import octomonkey from "./octomonkey.svg";
+import { Octomonkey } from "./Images";
 import allLists from "./lists";
 
 const Home = () => {
@@ -36,11 +36,9 @@ const Home = () => {
         <div className="max-w-xl mx-auto py-15">
           <div className="px-4 max-w-lg xl:max-w-full flex flex-wrap flex-row-reverse mx-auto flex items-center mb-8 sm:mb-15">
             <div className="w-full lg:w-1/3">
-              <img
-                src={octomonkey}
-                draggable="false"
-                className="select-none block mx-auto mb-8 lg:mb-0 lg:max-w-full xl:w-full lg:pl-4"
-                alt="Octomonkey welcomes you!"
+              <Octomonkey
+                className="select-none block mx-auto mb-8 lg:mb-0 lg:w-full lg:pl-4"
+                width="178"
               />
             </div>
 

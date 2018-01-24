@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://list.community/">
-    <img alt="Octomonkey welcomes you!" src="src/octomonkey.svg" width="190" height="190">
+    <img alt="Octomonkey welcomes you!" src="public/octomonkey.svg" width="190" height="190">
   </a>
 </p>
 
