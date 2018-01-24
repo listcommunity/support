@@ -540,6 +540,19 @@ export default {
       );
     },
   },
+  "ramitsurana/awesome-kubernetes": {
+    slug: "kubernetes",
+    label: "Kubernetes",
+    shortDescription: "Production-Grade Container Scheduling and Management.",
+    logo: "https://avatars.githubusercontent.com/kubernetes",
+    color: "#2754e0",
+    category: "Back-End Development",
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#user-content-menu", { parent: true });
+      hide("#toc-menu");
+    },
+  },
   "jdauphant/awesome-ansible": {
     slug: "ansible",
     label: "Ansible",
