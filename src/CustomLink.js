@@ -81,7 +81,7 @@ const CustomLink = ({ children, ...props }) => {
       ? props.href
       : urlJoin("https://github.com", window.location.pathname, "/blob/master/", props.href);
 
-  if (children && !children[0].type && props.href.includes("github.com")) {
+  if (children && !children[0].type && props.href && props.href.includes("github.com")) {
     const fullName = githubUrlToFullName(props.href);
     if (fullName && !window.location.pathname.includes(fullName)) {
       return (
