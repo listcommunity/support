@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import contrast from "contrast";
 
-import { GitHubIcon, HamburguerIcon, CloseIcon } from "./Icon";
+import { GitHubIcon, HamburguerIcon, CloseIcon } from "./Icons";
 
 class Topbar extends Component {
   openSidebar = () => {

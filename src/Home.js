@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import groupBy from "lodash.groupby";
 
 import Jungle from "./Jungle";
-import { GitHubIcon, TelescopeIcon } from "./Icon";
+import { GitHubIcon, TelescopeIcon } from "./Icons";
 import { Octomonkey } from "./Images";
 import allLists from "./lists";
 

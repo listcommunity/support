@@ -10,7 +10,7 @@ import { resetStats } from "./algoliaSearch";
 import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
-import { ArrowUpIcon } from "./Icon";
+import { ArrowUpIcon } from "./Icons";
 import lists from "./lists";
 
 class List extends Component {

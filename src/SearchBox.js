@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { SearchIcon, ClearIcon } from "./Icon";
+import { SearchIcon, ClearIcon } from "./Icons";
 
 class SearchBox extends Component {
   shouldComponentUpdate() {

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { fetchStats } from "./algoliaSearch";
-import { SyncIcon, StarIcon, ForkIcon } from "./Icon";
+import { SyncIcon, StarIcon, ForkIcon } from "./Icons";
 import urlJoin from "url-join";
 import isAbsoluteUrl from "is-absolute-url";
 
