@@ -64,7 +64,7 @@
 /* Global styles */
 
 html {
-  background: config('colors.grey-light');
+  background: config('colors.grey-lighter');
   min-width: 320px;
 }
 

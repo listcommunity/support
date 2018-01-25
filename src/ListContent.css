@@ -19,7 +19,15 @@ img[data-canonical-src*='travis-ci.org'] {
 .markdown-body img {
   opacity: 0.3;
   filter: grayscale(0.9);
-  position: relative;
+}
+
+/* Firefox supports the -webkit prefix too, but this
+ * targets Firefox only. We disable the filter as it
+ * degrades the performance in lists with many images */
+@supports (-moz-appearance:none) {
+  .markdown-body img {
+    filter: none;
+  }
 }
 
 .markdown-body img:hover,
