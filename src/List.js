@@ -139,7 +139,7 @@ class List extends Component {
         <div className="lg:mr-80">
           {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
 
-          <div className="fixed pin-x pin-t z-20 lg:mr-80" data-scroll-header>
+          <div className="fixed pin-x pin-t z-20 lg:mr-80">
             <Topbar
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}

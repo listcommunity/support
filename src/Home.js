@@ -9,8 +9,6 @@ import { Octomonkey } from "./Images";
 import allLists from "./lists";
 
 const Home = () => {
-  window.scrollTo(0, 0);
-
   return (
     <Fragment>
       <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow-md hidden sm:block">
