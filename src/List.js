@@ -13,6 +13,9 @@ import Advertisement from "./Advertisement";
 import { ArrowUpIcon } from "./Icons";
 import lists from "./lists";
 
+const serverAccessToken =
+  navigator.userAgent === "ReactSnap" ? process.env.REACT_APP_ACCESS_TOKEN : null;
+
 class List extends Component {
   state = {
     text: null,
@@ -32,7 +35,7 @@ class List extends Component {
     let accessToken;
 
     try {
-      accessToken = localStorage.getItem("access-token");
+      accessToken = serverAccessToken || localStorage.getItem("access-token");
     } catch (e) {
       window.Raven.captureException(e);
     }

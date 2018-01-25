@@ -25,6 +25,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "react-scroll-up": "^1.3.3",
+    "react-snap": "^1.10.0",
     "tailwindcss": "^0.4.0",
     "url-join": "^2.0.2",
     "watch": "^1.0.2"
@@ -36,6 +37,7 @@
     "build": "npm-run-all build:css build:js",
     "build:css": "tailwind build ./src/tailwind/index.css -c ./src/tailwind/config.js -o ./src/index.css",
     "build:js": "react-scripts build",
+    "postbuild": "react-snap",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
@@ -45,5 +47,11 @@
     "printWidth": 100,
     "trailingComma": "es5",
     "jsxBracketSameLine": true
+  },
+  "reactSnap": {
+    "waitFor": 10000,
+    "minifyHtml": {
+      "collapseWhitespace": false
+    }
   }
 }
