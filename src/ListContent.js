@@ -18,7 +18,7 @@ class ListContent extends PureComponent {
   }
 
   render() {
-    let content = <div>Loading…</div>;
+    let content = <div>Loading updates…</div>;
 
     if (this.props.text) {
       const wrapper = convert(this.props.text, {

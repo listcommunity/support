@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 
 import Search from "./Search";
 import SearchPoweredBy from "./SearchPoweredBy";
+import isSnapshot from "./isSnapshot";
 import "./ListSidebar.css";
 
 class ListSidebar extends PureComponent {
@@ -61,6 +62,16 @@ class ListSidebar extends PureComponent {
   }
 
   render() {
+    if (isSnapshot) {
+      return (
+        <div className="m-4 text-grey leading-loose text-center text-sm">
+          <noscript>
+            Enable JavaScript for more features
+          </noscript>
+        </div>
+      );
+    }
+
     return (
       <div className="m-4">
         <Search />

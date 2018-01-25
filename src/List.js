@@ -11,10 +11,10 @@ import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
 import { ArrowUpIcon } from "./Icons";
+import isSnapshot from "./isSnapshot";
 import lists from "./lists";
 
-const serverAccessToken =
-  navigator.userAgent === "ReactSnap" ? process.env.REACT_APP_ACCESS_TOKEN : null;
+const serverAccessToken = isSnapshot ? process.env.REACT_APP_ACCESS_TOKEN : null;
 
 class List extends Component {
   state = {
