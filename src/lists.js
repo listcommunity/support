@@ -1159,4 +1159,26 @@ export default {
       hide("#toc-contents");
     },
   },
+  "GetStoryline/awesome-bots": {
+    slug: "bots",
+    label: "Bots",
+    shortDescription:
+      "A list of newsletters, tools, podcasts and more information about bots.",
+    color: "#ffffff",
+    category: "Miscellaneous",
+    invertTextColor: true,
+    mutate() {
+      hide("#readme > ul:first-of-type");
+      hide("#readme > ul:first-of-type + h2");
+      hide("#readme > p:first-of-type");
+      hide("#readme > blockquote:first-of-type");
+      hide("#readme > h2:first-of-type");
+      hide("#readme > h3:first-of-type");
+      hide("#readme > h3:first-of-type ~ p");
+      hide("#readme > ol:first-of-type");
+      hide("#toc-table-of-contents");
+      hide("#toc-contents");
+      hide("#toc-we-also-run-one-of-the-most-active-facebook-communities-900-members-and-telegram-channel-1500-members-about-bots")
+    },
+  },
 };
