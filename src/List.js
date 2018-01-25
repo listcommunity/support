@@ -141,7 +141,6 @@ class List extends Component {
               sidebarOpen={sidebarOpen}
               onSidebarToggle={this.handleSidebarToggle}
               background={config.color}
-              invertTextColor={config.invertTextColor}
             />
             {notification}
           </div>

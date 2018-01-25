@@ -6,6 +6,7 @@
   "dependencies": {
     "algoliasearch": "^3.24.8",
     "base-64": "^0.1.0",
+    "contrast": "^1.0.1",
     "core-js": "^2.5.3",
     "gh-pages": "^1.1.0",
     "github-markdown-css": "^2.9.0",

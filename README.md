@@ -29,7 +29,6 @@ and submit a pull request. Please follow this format and indentation:
   logo: "https://avatars.githubusercontent.com/tc39", // The logo, ideally a GitHub avatar so that we can pass a `size` param
   color: "#f7df1e", // Color used in the topbar
   category: "Programming Languages", // Ideally, one of the categories from https://github.com/sindresorhus/awesome
-  invertTextColor: true, // If necessary for better readability, true will make the text in the topbar black instead of white
 }
 ```
 

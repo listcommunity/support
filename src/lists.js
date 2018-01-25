@@ -9,7 +9,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
     category: "Programming Languages",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
     },
@@ -40,8 +39,7 @@ export default {
   "razum2um/awesome-clojure": {
     slug: "clojure",
     label: "Clojure",
-    shortDescription:
-      "Clojure is a functional, dynamic, general-purpose programming language.",
+    shortDescription: "Clojure is a functional, dynamic, general-purpose programming language.",
     logo: "https://avatars.githubusercontent.com/clojure",
     color: "#26324b",
     category: "Programming Languages",
@@ -259,7 +257,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Front-End Development",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       const h = document.getElementsByClassName("toc")[0];
@@ -408,7 +405,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
     category: "Front-End Development",
-    invertTextColor: true,
   },
   "babel/awesome-babel": {
     slug: "babel",
@@ -417,7 +413,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/babel",
     color: "#f5da55",
     category: "Front-End Development",
-    invertTextColor: true,
   },
   "mateusortiz/webcomponents-the-right-way": {
     slug: "webcomponents",
@@ -427,7 +422,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/webcomponents",
     color: "#e6e6e6",
     category: "Front-End Development",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
     },
@@ -560,7 +554,6 @@ export default {
     shortDescription:
       "Serverless refers to apps that depend on third-party services (backend as a service) or custom code (functions as a service).",
     color: "#ffffff",
-    invertTextColor: true,
     category: "Back-End Development",
     mutate() {
       hide("#readme > ul:first-of-type");
@@ -604,7 +597,6 @@ export default {
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Platforms",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
     },
@@ -646,7 +638,6 @@ export default {
       "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
     logo: "https://avatars.githubusercontent.com/apple",
     color: "#ffffff",
-    invertTextColor: true,
     category: "Platforms",
     mutate() {
       hide("#readme > ul:first-of-type");
@@ -660,7 +651,6 @@ export default {
     shortDescription: "Windows is Microsoft's GUI-based operating system.",
     logo: "https://avatars.githubusercontent.com/Microsoft",
     color: "#e6e6e6",
-    invertTextColor: true,
     category: "Platforms",
     mutate() {
       hide("#readme > ul:first-of-type");
@@ -698,7 +688,6 @@ export default {
       "Amazon Web Services provides on-demand cloud computing platforms on a subscription basis.",
     logo: "https://avatars.githubusercontent.com/aws",
     color: "#ffa93f",
-    invertTextColor: true,
     category: "Platforms",
     mutate() {
       hide("#readme > ul:nth-of-type(2)");
@@ -921,7 +910,6 @@ export default {
       "Cryptography is the practice and study of techniques for secure communication in the presence of third parties.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
@@ -935,7 +923,6 @@ export default {
       "Computer vision deals with the extraction, analysis and understanding of information from images and videos.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
@@ -949,7 +936,6 @@ export default {
       "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
@@ -963,7 +949,6 @@ export default {
       "Machine learning is a way of modeling and interpreting data that allows a piece of software to respond intelligently.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:nth-of-type(3)");
       hide("#user-content-table-of-contents", { parent: true });
@@ -977,7 +962,6 @@ export default {
       "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
@@ -991,7 +975,6 @@ export default {
       "Data Science applies scientific methods, processes, and systems to extract knowledge and insights from data.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
@@ -1004,7 +987,6 @@ export default {
     shortDescription: "Algorithms are self-contained sequences that carry out a variety of tasks.",
     color: "#ffffff",
     category: "Computer Science",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
     },
@@ -1016,7 +998,6 @@ export default {
       "Electronic engineering is the practice of understanding, designing and building electronic circuits.",
     color: "#ffffff",
     category: "Hardware",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
@@ -1030,7 +1011,6 @@ export default {
       "IoT refers to the network of physical devices embedded in everyday objects, enabling them to send and receive data.",
     color: "#ffffff",
     category: "Hardware",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:nth-of-type(2)");
       hide("#user-content-toc", { parent: true });
@@ -1044,7 +1024,6 @@ export default {
       "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
     color: "#ffffff",
     category: "APIs and Datasets",
-    invertTextColor: true,
     mutate() {
       hide("#user-content-table-of-contents");
     },
@@ -1056,7 +1035,6 @@ export default {
       "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
     color: "#ffffff",
     category: "APIs and Datasets",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-table-of-contents", { parent: true });
@@ -1069,7 +1047,6 @@ export default {
     shortDescription: "A collective list of free and public APIs for use in web development.",
     color: "#ffffff",
     category: "APIs and Datasets",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-index", { parent: true });
@@ -1083,7 +1060,6 @@ export default {
       "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
@@ -1097,7 +1073,6 @@ export default {
       "Microservices is an architecture that structures an application as a collection of loosely coupled services.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#readme strong:first-of-type");
@@ -1110,7 +1085,6 @@ export default {
       "Self-hosting is the process of locally hosting and managing applications instead of renting from SaaS providers.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#readme > hr:first-of-type");
@@ -1123,7 +1097,6 @@ export default {
       "A curated list of amazingly awesome articles, websites and resources about diversity in technology.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });
@@ -1137,7 +1110,6 @@ export default {
       "A curated list of inclusive events, projects and initiatives for women in the tech area.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#readme > hr:first-of-type");
@@ -1152,7 +1124,6 @@ export default {
       "A list of libraries, packages and languages that have no real purpose but to make a developer chuckle.",
     color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutate() {
       hide("#readme > ul:first-of-type");
       hide("#user-content-contents", { parent: true });

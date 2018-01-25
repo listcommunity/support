@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import contrast from "contrast";
 
 import { GitHubIcon, HamburguerIcon, CloseIcon } from "./Icon";
 
@@ -13,14 +14,16 @@ class Topbar extends Component {
   };
 
   render() {
-    const { sidebarOpen, invertTextColor, background } = this.props;
+    const { sidebarOpen, background = "#fff" } = this.props;
     const { author, name } = this.props.match.params;
     const fullName = `${author}/${name}`;
 
     return (
       <header
-        className={`select-none bg-black shadow-md ${invertTextColor ? "text-black" : "text-white"}`}
-        style={background ? { background } : {}}>
+        className={`select-none bg-black shadow-md ${
+          contrast(background) === "light" ? "text-black" : "text-white"
+        }`}
+        style={{ background }}>
         <div className="max-w-xl mx-auto flex items-center h-15 pb-1 px-1 xl:px-5">
           <Link to="/" className="link-reset p-3 mr-2">
             <h1 className="text-xl font-semibold font-sans tracking-wide">List.community</h1>
@@ -43,7 +46,9 @@ class Topbar extends Component {
             Curators
           </a>
 
-          <a href={`https://github.com/${fullName}`} className="link-reset p-3 pt-4 leading-none flex-none">
+          <a
+            href={`https://github.com/${fullName}`}
+            className="link-reset p-3 pt-4 leading-none flex-none">
             <GitHubIcon width="16" height="16" />
           </a>
 
