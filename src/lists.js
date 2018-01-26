@@ -1,4 +1,4 @@
-import { hide } from "./helpers";
+import hide from "./hideNodes";
 
 export default {
   "sorrycc/awesome-javascript": {
