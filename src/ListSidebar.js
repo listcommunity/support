@@ -3,7 +3,6 @@ import React, { PureComponent } from "react";
 import Search from "./Search";
 import SearchPoweredBy from "./SearchPoweredBy";
 import { isSnapshot } from "./snapshots";
-import "./ListSidebar.css";
 
 class ListSidebar extends PureComponent {
   state = {

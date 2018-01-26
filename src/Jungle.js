@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./Jungle.css";
-
 class Jungle extends Component {
   render() {
     const { children, className = ``, ...otherProps } = this.props;

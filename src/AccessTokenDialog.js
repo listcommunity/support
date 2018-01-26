@@ -15,7 +15,7 @@ class AccessTokenDialog extends Component {
   render() {
     return (
       <div className="fixed pin overflow-auto z-30">
-        <div className="fixed bg-black pin opacity-90" />
+        <div className="fixed bg-black pin opacity-75" />
 
         <div className="relative mx-auto max-w-md">
           <div className="my-6 mx-2 shadow-lg p-6 bg-white rounded leading-loose text-lg">

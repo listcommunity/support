@@ -17,7 +17,7 @@
 
 .carbon-text,
 .carbon-poweredby {
-  color: #000;
+  color: config("colors.black");
   text-decoration: none;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .carbon-poweredby {
-  color: #b1b1b1;
+  color: config("colors.grey");
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   float: right;
 }

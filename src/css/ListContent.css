@@ -1,17 +1,17 @@
 /* A placeholder for while images are loading. It has the same height of badges.
  * List from `marky-markdown (http://git.io/vEzmx) `*/
-img[data-canonical-src*='badge.fury.io'],
-img[data-canonical-src*='badges.github.io'],
-img[data-canonical-src*='badges.gitter.im'],
-img[data-canonical-src*='ci.testling.com'],
-img[data-canonical-src*='coveralls.io'],
-img[data-canonical-src*='david-dm.org'],
-img[data-canonical-src*='img.shields.io'],
-img[data-canonical-src*='nodei.co'],
-img[data-canonical-src*='saucelabs.com'],
-img[data-canonical-src*='secure.travis-ci.org'],
-img[data-canonical-src*='travis-ci.org'] {
-  background: #f7f7f7;
+.markdown-body img[data-canonical-src*="badge.fury.io"],
+.markdown-body img[data-canonical-src*="badges.github.io"],
+.markdown-body img[data-canonical-src*="badges.gitter.im"],
+.markdown-body img[data-canonical-src*="ci.testling.com"],
+.markdown-body img[data-canonical-src*="coveralls.io"],
+.markdown-body img[data-canonical-src*="david-dm.org"],
+.markdown-body img[data-canonical-src*="img.shields.io"],
+.markdown-body img[data-canonical-src*="nodei.co"],
+.markdown-body img[data-canonical-src*="saucelabs.com"],
+.markdown-body img[data-canonical-src*="secure.travis-ci.org"],
+.markdown-body img[data-canonical-src*="travis-ci.org"] {
+  background: config("colors.grey-lightest");
   min-height: 20px;
   min-width: 20px;
 }
@@ -24,7 +24,7 @@ img[data-canonical-src*='travis-ci.org'] {
 /* Firefox supports the -webkit prefix too, but this
  * targets Firefox only. We disable the filter as it
  * degrades the performance in lists with many images */
-@supports (-moz-appearance:none) {
+@supports (-moz-appearance: none) {
   .markdown-body img {
     filter: none;
   }
@@ -71,7 +71,7 @@ img[data-canonical-src*='travis-ci.org'] {
   float: left;
   margin: 0 0 0 -1.1em;
   width: 1.1em;
-  content: '-';
+  content: "-";
   color: #0366d6;
 }
 
@@ -102,20 +102,20 @@ img[data-canonical-src*='travis-ci.org'] {
 
 .markdown-body table th,
 .markdown-body table td {
-  border-color: #e6e6e6;
+  border-color: config("colors.grey-light");
 }
 
 .markdown-body hr {
-  background-color: #e6e6e6;
+  background-color: config("colors.grey-light");
 }
 
 .markdown-body .highlight pre,
 .markdown-body pre,
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f7f7f7;
+  background-color: config("colors.grey-lightest");
 }
 
 .markdown-body h6,
 .markdown-body blockquote {
-  color: #666666;
+  color: config("colors.grey-darker");
 }

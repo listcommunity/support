@@ -1,0 +1,6 @@
+@tailwind utilities;
+
+.link-reset {
+  @apply .no-underline;
+  color: inherit;
+}

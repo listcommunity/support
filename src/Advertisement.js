@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./Advertisement.css";
-
 const hideAds = process.env.REACT_APP_SHOW_ADS !== "true";
 let initialized = false;
 

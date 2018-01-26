@@ -22,7 +22,7 @@
   text-align: right;
 }
 
-@media (min-width: 576px) {
+@media (min-width: config("screens.sm")) {
   .Jungle {
     padding-top: 120px;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: config("screens.lg")) {
   .Jungle {
     padding-top: 150px;
   }
@@ -46,7 +46,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: config("screens.xl")) {
   .Jungle {
     padding-top: 180px;
   }

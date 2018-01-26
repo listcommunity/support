@@ -1,10 +1,8 @@
 import React, { PureComponent, Fragment } from "react";
-import "github-markdown-css";
 import convert from "htmr/lib/module";
 
 import CustomLink from "./CustomLink";
 import CustomImg from "./CustomImg";
-import "./ListContent.css";
 
 class ListContent extends PureComponent {
   componentDidUpdate() {
