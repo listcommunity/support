@@ -11,7 +11,7 @@ import ListContent from "./ListContent";
 import ListSidebar from "./ListSidebar";
 import Advertisement from "./Advertisement";
 import { ArrowUpIcon } from "./Icons";
-import isSnapshot from "./isSnapshot";
+import { replaceRoot, isSnapshot } from "./snapshots";
 import lists from "./lists";
 
 const serverAccessToken = isSnapshot ? process.env.REACT_APP_ACCESS_TOKEN : null;
@@ -63,7 +63,7 @@ class List extends Component {
 
   // Scroll to the right header
   // Based on https://gist.github.com/9859e63700d19d443878
-  componentDidUpdate() {
+  scrollToHeader() {
     if (!window.location.hash) {
       return;
     }
@@ -83,6 +83,13 @@ class List extends Component {
     // Give space for the fixed header
     const scrollY = window.scrollY;
     if (scrollY) window.scroll(0, scrollY - 80);
+  }
+
+  componentDidUpdate() {
+    if (this.state.text || this.state.requestAccessToken) {
+      replaceRoot();
+    }
+    this.scrollToHeader();
   }
 
   componentDidMount() {
