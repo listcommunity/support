@@ -15,7 +15,8 @@ export default {
     slug: "python",
     label: "Python",
     shortDescription: "Python is a dynamically typed programming language.",
-    logo: "https://raw.githubusercontent.com/github/explore/master/topics/python/python.png",
+    logo: "/logos/python.svg",
+    favicon: "/favicons/python.png",
     color: "#3572a5",
     category: "Programming Languages",
     mutateContent() {
