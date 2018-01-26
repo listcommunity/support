@@ -1,6 +1,7 @@
 import "core-js/fn/string/includes";
 import "core-js/fn/string/starts-with";
 import "core-js/fn/object/entries";
+import "element-qsa-scope";
 
 import React from "react";
 

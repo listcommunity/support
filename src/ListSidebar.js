@@ -10,6 +10,10 @@ class ListSidebar extends PureComponent {
     content: [],
   };
 
+  getAnchorNodes() {
+    return document.querySelectorAll("#readme .anchor");
+  }
+
   // Generate the table of contents based on the data fetched from GitHub
   // Based on https://github.com/Mottie/GitHub-userscripts/wiki/GitHub-table-of-contents
   generateTOC = () => {
@@ -18,7 +22,7 @@ class ListSidebar extends PureComponent {
       header,
       text,
       content = [],
-      anchors = document.querySelectorAll("#readme .anchor");
+      anchors = this.getAnchorNodes();
 
     for (i in anchors) {
       anchor = anchors[i];
@@ -43,9 +47,9 @@ class ListSidebar extends PureComponent {
       this.generateTOC();
     }
 
-    if (this.props.mutate) {
+    if (this.props.mutateTOC) {
       try {
-        this.props.mutate();
+        this.props.mutateTOC.call(this.node);
       } catch (e) {
         window.Raven.captureException(e);
       }
@@ -54,7 +58,7 @@ class ListSidebar extends PureComponent {
 
   componentDidMount() {
     this.timer = setInterval(() => {
-      if (document.querySelectorAll("#readme .anchor").length !== 0) {
+      if (this.getAnchorNodes().length !== 0) {
         clearInterval(this.timer);
         this.generateTOC();
       }
@@ -74,7 +78,7 @@ class ListSidebar extends PureComponent {
       <div className="m-4">
         <Search />
 
-        <div className="toc mt-4">
+        <div className="toc mt-4" ref={node => (this.node = node)}>
           {!this.props.text && "Loading…"}
 
           {this.state.content.map(item => (

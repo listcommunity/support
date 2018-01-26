@@ -8,9 +8,9 @@ import "./ListContent.css";
 
 class ListContent extends PureComponent {
   componentDidUpdate() {
-    if (this.props.mutate) {
+    if (this.props.mutateContent) {
       try {
-        this.props.mutate();
+        this.props.mutateContent.call(this.node);
       } catch (e) {
         window.Raven.captureException(e);
       }
@@ -34,7 +34,10 @@ class ListContent extends PureComponent {
         <div id="start-of-content" />
         <div id="contents" />
 
-        <div id="readme" className="markdown-body p-4 xl:p-8 max-w-xl mx-auto">
+        <div
+          id="readme"
+          ref={node => (this.node = node)}
+          className="markdown-body p-4 xl:p-8 max-w-xl mx-auto">
           {content.props.children}
         </div>
       </Fragment>

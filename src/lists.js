@@ -1,5 +1,3 @@
-import hide from "./hideNodes";
-
 export default {
   "sorrycc/awesome-javascript": {
     slug: "javascript",
@@ -9,8 +7,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "vinta/awesome-python": {
@@ -20,8 +18,8 @@ export default {
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/python/python.png",
     color: "#3572a5",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "h4cc/awesome-elixir": {
@@ -32,8 +30,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/elixir-lang",
     color: "#4e2a8e",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "razum2um/awesome-clojure": {
@@ -43,8 +41,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/clojure",
     color: "#26324b",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "avelino/awesome-go": {
@@ -55,14 +53,16 @@ export default {
     logo: "https://avatars.githubusercontent.com/golang",
     color: "#375eab",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
-      hide("#toc-contributing");
-      hide(
-        "#toc-if-you-see-a-package-or-project-here-that-is-no-longer-maintained-or-is-not-a-good-fit-please-submit-a-pull-request-to-improve-this-file-thank-you"
-      );
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
+      this.querySelector("#toc-contributing").style.display = "none";
+      const selector =
+        "#toc-if-you-see-a-package-or-project-here-that-is-no-longer-maintained-or-is-not-a-good-fit-please-submit-a-pull-request-to-improve-this-file-thank-you";
+      this.querySelector(selector).style.display = "none";
     },
   },
   "markets/awesome-ruby": {
@@ -73,10 +73,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/ruby",
     color: "#cc342d",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      const h = document.getElementById("toc-awesome-ruby");
-      if (h != null) h.className = h.className.replace("h3", "h1");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+    },
+    mutateTOC() {
+      const h = this.querySelector("#toc-awesome-ruby");
+      h.className = h.className.replace("h3", "h1");
     },
   },
   "matteocrippa/awesome-swift": {
@@ -87,10 +89,12 @@ export default {
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
     color: "#ef5138",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "uraimo/Awesome-Swift-Playgrounds": {
@@ -101,10 +105,12 @@ export default {
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
     color: "#ef5138",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "isRuslan/awesome-elm": {
@@ -115,10 +121,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/elm-lang",
     color: "#60b5cc",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "akullpp/awesome-java": {
@@ -130,8 +138,8 @@ export default {
     favicon: "/favicons/java.png",
     color: "#5382a1",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "rizo/awesome-ocaml": {
@@ -142,10 +150,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/ocaml",
     color: "#c97928",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "ziadoz/awesome-php": {
@@ -156,10 +166,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/php",
     color: "#4f5d95",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "veelenga/awesome-crystal": {
@@ -169,8 +181,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/crystal-lang",
     color: "#222222",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "qinwf/awesome-R": {
@@ -181,8 +193,8 @@ export default {
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/r/r.png",
     color: "#198ce7",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "parro-it/awesome-micro-npm-packages": {
@@ -202,10 +214,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/eslint",
     color: "#463fd4",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "fffaraz/awesome-cpp": {
@@ -216,8 +230,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/isocpp",
     color: "#00589c",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "hachiojipm/awesome-perl": {
@@ -228,10 +242,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/Perl",
     color: "#0073a1",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "rust-unofficial/awesome-rust": {
@@ -242,11 +258,13 @@ export default {
     logo: "https://avatars.githubusercontent.com/rust-lang",
     color: "#428bca",
     category: "Programming Languages",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
-      document.querySelectorAll("li img").forEach(h => (h.style.verticalAlign = "-4px"));
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+      this.querySelectorAll("li img").forEach(h => (h.style.verticalAlign = "-4px"));
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "enaqx/awesome-react": {
@@ -257,10 +275,11 @@ export default {
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      const h = document.getElementsByClassName("toc")[0];
-      if (h != null) h.style.marginLeft = "-32px";
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+    },
+    mutateTOC() {
+      this.style.marginLeft = "-32px";
     },
   },
   "Granze/awesome-polymer": {
@@ -280,14 +299,15 @@ export default {
     logo: "https://avatars.githubusercontent.com/angular",
     color: "#dd0031",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > p:first-of-type");
-      hide("#toc-current-angular-version");
-      hide("#toc-current-browser-support-for-angular");
-      hide("#toc-awesome-angular--");
-      const h = document.getElementsByClassName("toc")[0];
-      if (h != null) h.style.marginLeft = "-16px";
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > p:first-of-type").style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-current-angular-version").style.display = "none";
+      this.querySelector("#toc-current-browser-support-for-angular").style.display = "none";
+      this.querySelector("#toc-awesome-angular--").style.display = "none";
+      this.style.marginLeft = "-16px";
     },
   },
   "vuejs/awesome-vue": {
@@ -297,10 +317,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/vuejs",
     color: "#4fc08d",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > p:first-of-type");
-      hide("#toc-awesome-vuejs-");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > p:first-of-type").style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-awesome-vuejs-").style.display = "none";
     },
   },
   "webpack-contrib/awesome-webpack": {
@@ -311,10 +333,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/webpack",
     color: "#2b3a42",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "chentsulin/awesome-graphql": {
@@ -326,10 +350,12 @@ export default {
     favicon: "/favicons/graphql.png",
     color: "#d64292",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "Famolus/awesome-sass": {
@@ -340,10 +366,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/sass",
     color: "#c6538c",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "unicodeveloper/awesome-nextjs": {
@@ -354,10 +382,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/zeit",
     color: "#222",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "hyperapp/awesome": {
@@ -367,8 +397,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/hyperapp",
     color: "#00bbff",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "Urigo/awesome-meteor": {
@@ -380,8 +410,8 @@ export default {
     favicon: "/favicons/meteor.png",
     color: "#de4f4f",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "wbkd/awesome-d3": {
@@ -392,9 +422,9 @@ export default {
     logo: "https://avatars.githubusercontent.com/d3",
     color: "#f79045",
     category: "Front-End Development",
-    mutate() {
-      hide("#toc-third-party");
-      hide("#toc-third-party-1");
+    mutateTOC() {
+      this.querySelector("#toc-third-party").style.display = "none";
+      this.querySelector("#toc-third-party-1").style.display = "none";
     },
   },
   "addyosmani/es6-tools": {
@@ -422,8 +452,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/webcomponents",
     color: "#e6e6e6",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "sotayamashita/awesome-css": {
@@ -434,10 +464,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/css",
     color: "#256bdc",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "afonsopacifer/awesome-flexbox": {
@@ -448,10 +480,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/css",
     color: "#256bdc",
     category: "Front-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "ChromeDevTools/awesome-chrome-devtools": {
@@ -471,8 +505,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/django",
     color: "#0c4b33",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "ekremkaraca/awesome-rails": {
@@ -483,10 +517,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/rails",
     color: "#cc342d",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "hothero/awesome-rails-gem": {
@@ -497,8 +533,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/rails",
     color: "#cc342d",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "chiraggude/awesome-laravel": {
@@ -509,13 +545,15 @@ export default {
     logo: "https://avatars.githubusercontent.com/laravel",
     color: "#e74430",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
-      document
-        .querySelectorAll(".toc-h5, .toc-h4")
-        .forEach(h => (h.className = h.className.replace(/h[54]/, "h3")));
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
+      this.querySelectorAll(".toc-h5, .toc-h4").forEach(
+        h => (h.className = h.className.replace(/h[54]/, "h3"))
+      );
     },
   },
   "veggiemonk/awesome-docker": {
@@ -525,13 +563,15 @@ export default {
     logo: "https://avatars.githubusercontent.com/docker",
     color: "#066da5",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
-      hide(
-        "#toc-if-you-see-a-link-here-that-is-not-any-longer-a-good-fit-you-can-fix-it-by-submitting-a-pull-request-to-improve-this-file-thank-you"
-      );
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
+      const selector =
+        "#toc-if-you-see-a-link-here-that-is-not-any-longer-a-good-fit-you-can-fix-it-by-submitting-a-pull-request-to-improve-this-file-thank-you";
+      this.querySelector(selector).style.display = "none";
     },
   },
   "jdauphant/awesome-ansible": {
@@ -543,9 +583,9 @@ export default {
     favicon: "/favicons/ansible.png",
     color: "#333333",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme strong:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("strong:first-of-type").style.display = "none";
     },
   },
   "anaibol/awesome-serverless": {
@@ -554,13 +594,15 @@ export default {
     shortDescription:
       "Serverless refers to apps that depend on third-party services (backend as a service) or custom code (functions as a service).",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
-      hide(
-        "#toc-a-curated-list-of-awesome-services-solutions-and-resources-for-serverless--nobackend-applications"
-      );
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
+      const selector =
+        "#toc-a-curated-list-of-awesome-services-solutions-and-resources-for-serverless--nobackend-applications";
+      this.querySelector(selector).style.display = "none";
     },
   },
   "JStumpp/awesome-android": {
@@ -571,8 +613,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/android",
     color: "#6ab344",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "vsouza/awesome-ios": {
@@ -582,11 +624,13 @@ export default {
     logo: "https://avatars.githubusercontent.com/apple",
     color: "#ef5138",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:nth-of-type(3)");
-      hide("#user-content-content", { parent: true });
-      hide("#toc-content");
-      hide("#toc-weve-launched-our-newsletter-");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(3)").style.display = "none";
+      this.querySelector("#user-content-content").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-content").style.display = "none";
+      this.querySelector("#toc-weve-launched-our-newsletter-").style.display = "none";
     },
   },
   "jondot/awesome-react-native": {
@@ -596,8 +640,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "sindresorhus/awesome-electron": {
@@ -608,13 +652,15 @@ export default {
     logo: "https://avatars.githubusercontent.com/electron",
     color: "#2f3241",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
-      document
-        .querySelectorAll(".toc-h6")
-        .forEach(h => (h.className = h.className.replace(/h6/, "h4")));
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
+      this.querySelectorAll(".toc-h6").forEach(
+        h => (h.className = h.className.replace(/h6/, "h4"))
+      );
     },
   },
   "sindresorhus/awesome-nodejs": {
@@ -624,10 +670,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/nodejs",
     color: "#43853d",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "iCHAIT/awesome-macOS": {
@@ -637,10 +685,12 @@ export default {
       "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
     logo: "https://avatars.githubusercontent.com/apple",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "Awesome-Windows/Awesome": {
@@ -650,9 +700,9 @@ export default {
     logo: "https://avatars.githubusercontent.com/Microsoft",
     color: "#e6e6e6",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > h1:nth-of-type(2)");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > h1:nth-of-type(2)").style.display = "none";
     },
   },
   "benoitjadinon/awesome-xamarin": {
@@ -662,8 +712,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/xamarin",
     color: "#2c3e50",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "deephacks/awesome-jvm": {
@@ -675,8 +725,8 @@ export default {
     favicon: "/favicons/java.png",
     color: "#5382a1",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "donnemartin/awesome-aws": {
@@ -687,11 +737,13 @@ export default {
     logo: "https://avatars.githubusercontent.com/aws",
     color: "#ffa93f",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-index", { parent: true });
-      hide("#toc-index");
-      hide("#toc-awesome-aws-python-module");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-index").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-index").style.display = "none";
+      this.querySelector("#toc-awesome-aws-python-module").style.display = "none";
     },
   },
   "ianstormtaylor/awesome-heroku": {
@@ -702,8 +754,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/heroku",
     color: "#624eaf",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "ipfs/awesome-ipfs": {
@@ -715,10 +767,12 @@ export default {
     favicon: "/favicons/ipfs.png",
     color: "#6acad1",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "thibmaek/awesome-raspberry-pi": {
@@ -729,10 +783,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/raspberrypi",
     color: "#d6264f",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "Lembed/Awesome-arduino": {
@@ -743,8 +799,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/arduino",
     color: "#00979d",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "JesseTG/awesome-qt": {
@@ -755,10 +811,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/qt",
     color: "#41cd52",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "Kazhnuz/awesome-gnome": {
@@ -769,10 +827,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/GNOME",
     color: "#4a86cf",
     category: "Platforms",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "mehcode/awesome-atom": {
@@ -783,10 +843,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/atom",
     color: "#5fb57d",
     category: "Editors",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-content", { parent: true });
-      hide("#toc-table-of-content");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-content").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-content").style.display = "none";
     },
   },
   "dhamaniasad/awesome-postgres": {
@@ -797,10 +859,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/postgres",
     color: "#336791",
     category: "Databases",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "ramnes/awesome-mongodb": {
@@ -811,10 +875,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/mongodb",
     color: "#218e38",
     category: "Databases",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "emacs-tw/awesome-emacs": {
@@ -825,8 +891,8 @@ export default {
     logo: "https://avatars.githubusercontent.com/emacs",
     color: "#7f5ab6",
     category: "Editors",
-    mutate() {
-      hide("#readme > blockquote:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > blockquote:first-of-type").style.display = "none";
     },
   },
   "viatsko/awesome-vscode": {
@@ -838,10 +904,12 @@ export default {
     favicon: "/favicons/vscode.png",
     color: "#0077c8",
     category: "Editors",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "dreikanter/sublime-bookmarks": {
@@ -861,10 +929,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/vim",
     color: "#199f4b",
     category: "Editors",
-    mutate() {
-      hide("#readme > ol:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ol:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "awesome-lists/awesome-bash": {
@@ -885,9 +955,9 @@ export default {
     logo: "https://avatars.githubusercontent.com/zsh-users",
     color: "#000000",
     category: "Development Environment",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > p:nth-of-type(4)");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > p:nth-of-type(4)").style.display = "none";
     },
   },
   "alebcay/awesome-shell": {
@@ -897,8 +967,8 @@ export default {
       "A shell is a text-based terminal, used for manipulating programs and files. Shell scripts typically manage program execution.",
     color: "#000000",
     category: "Development Environment",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "sobolevn/awesome-cryptography": {
@@ -907,10 +977,12 @@ export default {
     shortDescription:
       "Cryptography is the practice and study of techniques for secure communication in the presence of third parties.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "jbhuang0604/awesome-computer-vision": {
@@ -919,10 +991,12 @@ export default {
     shortDescription:
       "Computer vision deals with the extraction, analysis and understanding of information from images and videos.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "ChristosChristofidis/awesome-deep-learning": {
@@ -931,10 +1005,12 @@ export default {
     shortDescription:
       "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "josephmisiti/awesome-machine-learning": {
@@ -943,10 +1019,12 @@ export default {
     shortDescription:
       "Machine learning is a way of modeling and interpreting data that allows a piece of software to respond intelligently.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:nth-of-type(3)");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(3)").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "mre/awesome-static-analysis": {
@@ -955,10 +1033,12 @@ export default {
     shortDescription:
       "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "bulutyazilim/awesome-datascience": {
@@ -967,10 +1047,12 @@ export default {
     shortDescription:
       "Data Science applies scientific methods, processes, and systems to extract knowledge and insights from data.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "tayllan/awesome-algorithms": {
@@ -978,8 +1060,8 @@ export default {
     label: "Algorithms",
     shortDescription: "Algorithms are self-contained sequences that carry out a variety of tasks.",
     category: "Computer Science",
-    mutate() {
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
   "monostable/awesome-electronics": {
@@ -988,10 +1070,12 @@ export default {
     shortDescription:
       "Electronic engineering is the practice of understanding, designing and building electronic circuits.",
     category: "Hardware",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "phodal/awesome-iot": {
@@ -1000,10 +1084,12 @@ export default {
     shortDescription:
       "IoT refers to the network of physical devices embedded in everyday objects, enabling them to send and receive data.",
     category: "Hardware",
-    mutate() {
-      hide("#readme > ul:nth-of-type(2)");
-      hide("#user-content-toc", { parent: true });
-      hide("#toc-toc");
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
+      this.querySelector("#user-content-toc").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-toc").style.display = "none";
     },
   },
   "awesomedata/awesome-public-datasets": {
@@ -1012,8 +1098,8 @@ export default {
     shortDescription:
       "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
     category: "APIs and Datasets",
-    mutate() {
-      hide("#user-content-table-of-contents");
+    mutateContent() {
+      this.querySelector("#user-content-table-of-contents").style.display = "none";
     },
   },
   "abhishekbanthia/Public-APIs": {
@@ -1022,10 +1108,12 @@ export default {
     shortDescription:
       "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
     category: "APIs and Datasets",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "toddmotto/public-apis": {
@@ -1033,10 +1121,12 @@ export default {
     label: "Public APIs",
     shortDescription: "A collective list of free and public APIs for use in web development.",
     category: "APIs and Datasets",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-index", { parent: true });
-      hide("#toc-index");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-index").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-index").style.display = "none";
     },
   },
   "fasouto/awesome-dataviz": {
@@ -1045,10 +1135,12 @@ export default {
     shortDescription:
       "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "mfornos/awesome-microservices": {
@@ -1057,9 +1149,9 @@ export default {
     shortDescription:
       "Microservices is an architecture that structures an application as a collection of loosely coupled services.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme strong:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("strong:first-of-type").style.display = "none";
     },
   },
   "Kickball/awesome-selfhosted": {
@@ -1068,9 +1160,9 @@ export default {
     shortDescription:
       "Self-hosting is the process of locally hosting and managing applications instead of renting from SaaS providers.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > hr:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > hr:first-of-type").style.display = "none";
     },
   },
   "folkswhocode/awesome-diversity": {
@@ -1079,10 +1171,12 @@ export default {
     shortDescription:
       "A curated list of amazingly awesome articles, websites and resources about diversity in technology.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
   "cristianoliveira/awesome4girls": {
@@ -1091,11 +1185,13 @@ export default {
     shortDescription:
       "A curated list of inclusive events, projects and initiatives for women in the tech area.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#readme > hr:first-of-type");
-      hide("#user-content-table-of-contents", { parent: true });
-      hide("#toc-table-of-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > hr:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "mislavcimpersak/awesome-dev-fun": {
@@ -1104,10 +1200,12 @@ export default {
     shortDescription:
       "A list of libraries, packages and languages that have no real purpose but to make a developer chuckle.",
     category: "Miscellaneous",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-contents", { parent: true });
-      hide("#toc-contents");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
     },
   },
 };
