@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import groupBy from "lodash.groupby";
 
+import HomeHelmet from "./HomeHelmet";
 import { replaceRoot } from "./snapshots";
 import Jungle from "./Jungle";
 import { GitHubIcon, TelescopeIcon } from "./Icons";
@@ -16,6 +17,8 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
+        <HomeHelmet />
+
         <header className="fixed z-20 pin-t pin-x select-none antialiased text-white bg-white shadow-md hidden sm:block">
           <div className="max-w-xl mx-auto flex items-center h-16">
             <Link to="/" className="link-reset p-4">

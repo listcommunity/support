@@ -9,7 +9,6 @@ const AppHelmet = ({ label, logo, favicon }) => {
 
   return (
     <Helmet titleTemplate="%s / List.community" defaultTitle="List.community">
-      <link rel="icon" type="image/png" href="/favicon.png" />
       <meta name="description" content={metaDesc} />
 
       <meta property="og:url" content="https://list.community" />
