@@ -9,6 +9,7 @@
     "contrast": "^1.0.1",
     "core-js": "^2.5.3",
     "element-qsa-scope": "^1.0.1",
+    "ganalytics": "^3.0.0",
     "gh-pages": "^1.1.0",
     "github-markdown-css": "^2.9.0",
     "htmr": "^0.5.0",
@@ -52,6 +53,7 @@
   },
   "reactSnap": {
     "waitFor": 10000,
+    "preconnectThirdParty": false,
     "minifyHtml": {
       "collapseWhitespace": false
     }

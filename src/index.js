@@ -7,6 +7,7 @@ import React from "react";
 
 import { render } from "./snapshots";
 import App from "./App";
+import "./analytics";
 import "./index.css";
 
 if (process.env.REACT_APP_USE_SENTRY === "true") {

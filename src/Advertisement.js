@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
-const hideAds = process.env.REACT_APP_SHOW_ADS !== "true";
+import { isSnapshot } from "./snapshots";
+
+const hideAds = process.env.REACT_APP_SHOW_ADS !== "true" || isSnapshot;
 let initialized = false;
 
 class Advertisement extends Component {
