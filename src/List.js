@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import base64 from "base-64";
-import { Helmet } from "react-helmet";
 import ScrollToTop from "react-scroll-up";
 
+import ListHelmet from "./ListHelmet";
 import Topbar from "./Topbar";
 import Notification from "./Notification";
 import AccessTokenDialog from "./AccessTokenDialog";
@@ -143,6 +143,8 @@ class List extends Component {
 
     return (
       <div className="overflow-x-hidden bg-white min-h-screen pt-15 lg:pt-0">
+        <ListHelmet {...config} />
+
         <div className="lg:mr-80">
           {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
 
@@ -176,15 +178,6 @@ class List extends Component {
             <ArrowUpIcon className="block" width="32" height="32" />
           </div>
         </ScrollToTop>
-
-        <Helmet>
-          <title>{config.label}</title>
-          <link
-            rel="icon"
-            type="image/png"
-            href={`${config.favicon || config.logo || "/favicon.png"}?size=32`}
-          />
-        </Helmet>
       </div>
     );
   }

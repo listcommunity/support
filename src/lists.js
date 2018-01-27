@@ -15,7 +15,7 @@ export default {
     slug: "python",
     label: "Python",
     shortDescription: "Python is a dynamically typed programming language.",
-    logo: "/logos/python.svg",
+    logo: "/logos/python.png",
     favicon: "/favicons/python.png",
     color: "#3572a5",
     category: "Programming Languages",
@@ -347,7 +347,7 @@ export default {
     label: "GraphQL & Relay",
     shortDescription:
       "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.",
-    logo: "/logos/graphql.svg",
+    logo: "/logos/graphql.png",
     favicon: "/favicons/graphql.png",
     color: "#d64292",
     category: "Front-End Development",
@@ -580,7 +580,7 @@ export default {
     label: "Ansible",
     shortDescription:
       "Ansible is a powerful automation engine used for configuration management, application deployment and task automation.",
-    logo: "/logos/ansible.svg",
+    logo: "/logos/ansible.png",
     favicon: "/favicons/ansible.png",
     color: "#333333",
     category: "Back-End Development",
@@ -764,7 +764,7 @@ export default {
     label: "IPFS",
     shortDescription:
       "IPFS is a peer-to-peer protocol for content-addressed sharing of data via a distributed file system.",
-    logo: "/logos/ipfs.svg",
+    logo: "/logos/ipfs.png",
     favicon: "/favicons/ipfs.png",
     color: "#6acad1",
     category: "Platforms",
@@ -943,7 +943,7 @@ export default {
     label: "Bash",
     shortDescription:
       "Bash is a shell and command language interpreter for the GNU operating system.",
-    logo: "/logos/bash.svg",
+    logo: "/logos/bash.png",
     favicon: "/favicons/bash.png",
     color: "#2f3a43",
     category: "Development Environment",

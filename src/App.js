@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
+import AppHelmet from "./AppHelmet";
 import Home from "./Home";
 import List from "./List";
 import NotFound from "./NotFound";
@@ -10,6 +10,8 @@ import lists from "./lists";
 const App = () => (
   <Router>
     <Fragment>
+      <AppHelmet />
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/:author/:name" component={List} />
@@ -25,8 +27,6 @@ const App = () => (
 
         <Route component={NotFound} />
       </Switch>
-
-      <Helmet titleTemplate="%s / List.community" defaultTitle="List.community" />
     </Fragment>
   </Router>
 );

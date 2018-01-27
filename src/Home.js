@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import groupBy from "lodash.groupby";
 
 import { replaceRoot } from "./snapshots";
@@ -121,10 +120,6 @@ class Home extends Component {
             </div>
           </footer>
         </Jungle>
-
-        <Helmet>
-          <link rel="icon" type="image/png" href="/favicon.png" />
-        </Helmet>
       </Fragment>
     );
   }
