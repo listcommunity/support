@@ -547,10 +547,13 @@ export default {
     logo: "https://avatars.githubusercontent.com/kubernetes",
     color: "#2754e0",
     category: "Back-End Development",
-    mutate() {
-      hide("#readme > ul:first-of-type");
-      hide("#user-content-menu", { parent: true });
-      hide("#toc-menu");
+    mutateContent() {
+      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector("#readme > hr:first-of-type").style.display = "none";
+      this.querySelector("#user-content-menu").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-menu").style.display = "none";
     },
   },
   "jdauphant/awesome-ansible": {
