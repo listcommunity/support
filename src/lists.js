@@ -543,7 +543,7 @@ export default {
   "ramitsurana/awesome-kubernetes": {
     slug: "kubernetes",
     label: "Kubernetes",
-    shortDescription: "Production-Grade Container Scheduling and Management.",
+    shortDescription: "Kubernetes is a system for automating deployment, scaling and management of containerized applications.",
     logo: "https://avatars.githubusercontent.com/kubernetes",
     color: "#2754e0",
     category: "Back-End Development",
