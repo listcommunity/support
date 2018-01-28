@@ -39,7 +39,7 @@ export default {
   },
   "fsprojects/awesome-fsharp":{
     slug: "fsharp",
-    label: "Fsharp",
+    label: "F#",
     shortDescription:
       "F# is a crossplatform functional first programming language built on the .NET Framework.",
     logo: "https://avatars.githubusercontent.com/fsharp",
