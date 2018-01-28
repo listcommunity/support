@@ -526,6 +526,15 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
+  "humiaozuzu/awesome-flask": {
+    slug: "flask",
+    label: "Flask",
+    shortDescription:
+      "Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine.",
+    logo: "https://raw.githubusercontent.com/pallets/flask/master/docs/_static/flask.png",
+    color: "#ffffff",
+    category: "Back-End Development",
+  },
   "ekremkaraca/awesome-rails": {
     slug: "rails",
     label: "Rails",
