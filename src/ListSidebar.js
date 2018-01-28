@@ -46,7 +46,7 @@ class ListSidebar extends PureComponent {
       this.generateTOC();
     }
 
-    if (!isSnapshot && this.props.mutateTOC) {
+    if (!isSnapshot && this.state.content.length > 0 && this.props.mutateTOC) {
       try {
         this.props.mutateTOC.call(this.node);
       } catch (e) {
