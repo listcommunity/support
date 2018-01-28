@@ -1,0 +1,4645 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Public APIs / List.community</title><script type="text/javascript">!function(i){if(i.search){var a={};i.search.slice(1).split("&").forEach(function(i){var l=i.split("=");a[l[0]]=l.slice(1).join("=").replace(/~and~/g,"&")}),void 0!==a.p&&window.history.replaceState(null,null,i.pathname.slice(0,-1)+(a.p||"")+(a.q?"?"+a.q:"")+i.hash)}}(window.location)</script><script src="https://cdn.ravenjs.com/3.21.0/raven.min.js" crossorigin="anonymous"></script><link href="https://fonts.googleapis.com/css?family=Karla:400,700,700i" rel="stylesheet"><link href="/static/css/main.05073bbf.css" rel="stylesheet"><link rel="icon" type="image/png" href="/favicon.png?size=32" data-react-helmet="true"><meta name="description" content="List.community is an easy way to browse curated lists on GitHub." data-react-helmet="true"><meta property="og:url" content="https://list.community" data-react-helmet="true"><meta property="og:site_name" content="List.community" data-react-helmet="true"><meta property="og:title" content="Public APIs / List.community" data-react-helmet="true"><meta property="og:description" content="List.community is an easy way to browse curated lists on GitHub." data-react-helmet="true"><meta property="og:image" content="https://list.community/avatar.png" data-react-helmet="true"><meta name="twitter:card" content="summary" data-react-helmet="true"><meta name="twitter:title" content="Public APIs / List.community" data-react-helmet="true"><meta name="twitter:description" content="List.community is an easy way to browse curated lists on GitHub." data-react-helmet="true"><meta name="twitter:image" content="https://list.community/avatar.png" data-react-helmet="true"><link rel="preload" as="script" href="/static/js/main.993c6201.js"></head><body><div id="root"><div class="overflow-x-hidden bg-white min-h-screen pt-15 lg:pt-0"><div class="lg:mr-80"><div class="fixed pin-x pin-t z-20 lg:mr-80"><header class="select-none bg-black shadow-md text-black" style="background:#fff"><div class="max-w-xl mx-auto flex items-center h-15 pb-1 px-1 xl:px-5"><a class="link-reset p-3 mr-2" href="/"><h1 class="text-xl font-semibold font-sans tracking-wide">List.community</h1></a><div class="text-xl hidden xl:block truncate">toddmotto/public-apis</div><div class="flex-1"></div><a href="https://github.com/toddmotto/public-apis" class="link-reset p-3 pt-4 hidden sm:block flex-none">Submit a resource</a><a href="https://github.com/toddmotto/public-apis/graphs/contributors" class="link-reset p-3 pt-4 hidden sm:block flex-none">Curators</a><a href="https://github.com/toddmotto/public-apis" class="link-reset p-3 pt-4 leading-none flex-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m8 0c-4.42 0-8 3.582-8 8 0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.073-2.695-1.073-.364-.923-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.713 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.273.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.731.54 1.48 0 1.071-.01 1.931-.01 2.191 0 .21.14.46.55.38 3.201-1.049 5.491-4.049 5.491-7.579 0-4.418-3.582-8-8-8"></path></svg></a><div class="cursor-pointer lg:hidden p-3 pt-4 leading-none flex-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="16" height="16"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></div></div></header></div><div class="w-full lg:pt-15"><div id="table-of-contents"></div><div id="start-of-content"></div><div id="contents"></div><div id="readme" class="markdown-body p-4 xl:p-8 max-w-xl mx-auto"><h1><a href="#public-apis-" aria-hidden="true" class="anchor" id="user-content-public-apis-"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Public APIs <a target="_blank" rel="nofollow" href="https://travis-ci.org/toddmotto/public-apis"><img alt="Build Status" target="_blank" rel="noopener noreferrer" src="https://camo.githubusercontent.com/9ae64397ffe3b85abc0c3668240e53d35643a349/68747470733a2f2f6170692e7472617669732d63692e6f72672f746f64646d6f74746f2f7075626c69632d617069732e737667" data-canonical-src="https://api.travis-ci.org/toddmotto/public-apis.svg" style="max-width:100%"></a></h1>
+<p>A collective list of free APIs for use in web development.</p>
+<p>A JSON encoding of all entries can be found <a target="_blank" rel="noopener noreferrer" href="https://github.com/toddmotto/public-apis/blob/master/json">here</a>.</p>
+<p>For information on contributing to this project, please see the <a target="_blank" rel="noopener noreferrer" href="https://github.com/toddmotto/public-apis/blob/master/.github/CONTRIBUTING.md">contributing guide</a>.</p>
+<p>Please note a passing build status indicates all listed APIs are available since the last update. A failing build status indicates that 1 or more services may be unavailable at the moment.</p>
+<h2 style="display:none"><a href="#index" aria-hidden="true" class="anchor" id="user-content-index"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Index</h2>
+<ul style="display:none">
+<li><a href="#animals">Animals</a></li>
+<li><a href="#anime">Anime</a></li>
+<li><a href="#anti-malware">Anti-Malware</a></li>
+<li><a href="#art--design">Art &amp; Design</a></li>
+<li><a href="#books">Books</a></li>
+<li><a href="#business">Business</a></li>
+<li><a href="#calendar">Calendar</a></li>
+<li><a href="#cloud-storage--file-sharing">Cloud Storage &amp; File Sharing</a></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#cryptocurrency">Cryptocurrency</a></li>
+<li><a href="#currency-exchange">Currency Exchange</a></li>
+<li><a href="#data-validation">Data Validation</a></li>
+<li><a href="#development">Development</a></li>
+<li><a href="#dictionaries">Dictionaries</a></li>
+<li><a href="#documents--productivity">Documents &amp; Productivity</a></li>
+<li><a href="#environment">Environment</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#finance">Finance</a></li>
+<li><a href="#food--drink">Food &amp; Drink</a></li>
+<li><a href="#fraud-prevention">Fraud Prevention</a></li>
+<li><a href="#games--comics">Games &amp; Comics</a></li>
+<li><a href="#geocoding">Geocoding</a></li>
+<li><a href="#government">Government</a></li>
+<li><a href="#health">Health</a></li>
+<li><a href="#jobs">Jobs</a></li>
+<li><a href="#machine-learning">Machine Learning</a></li>
+<li><a href="#music">Music</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#open-data">Open Data</a></li>
+<li><a href="#open-source-projects">Open Source Projects</a></li>
+<li><a href="#patent">Patent</a></li>
+<li><a href="#personality">Personality</a></li>
+<li><a href="#photography">Photography</a></li>
+<li><a href="#science--math">Science &amp; Math</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#shopping">Shopping</a></li>
+<li><a href="#social">Social</a></li>
+<li><a href="#sports--fitness">Sports &amp; Fitness</a></li>
+<li><a href="#test-data">Test Data</a></li>
+<li><a href="#text-analysis">Text Analysis</a></li>
+<li><a href="#tracking">Tracking</a></li>
+<li><a href="#transportation">Transportation</a></li>
+<li><a href="#url-shorteners">URL Shorteners</a></li>
+<li><a href="#vehicle">Vehicle</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#weather">Weather</a></li>
+</ul>
+<h3><a href="#animals" aria-hidden="true" class="anchor" id="user-content-animals"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Animals</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dogs</td>
+<td>Based on the Stanford Dogs Dataset</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dog.ceo/dog-api/">Go!</a></td>
+</tr>
+<tr>
+<td>HTTPCat</td>
+<td>Cat for every HTTP Status</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://http.cat/">Go!</a></td>
+</tr>
+<tr>
+<td>IUCN</td>
+<td>IUCN Red List of Threatened Species</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://apiv3.iucnredlist.org/api/v3/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Movebank</td>
+<td>Movement and Migration data of animals</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-movebank/movebank-api-doc" target="_blank" rel="noopener noreferrer" href="https://github.com/movebank/movebank-api-doc">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">1 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Petfinder</td>
+<td>Adoption</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.petfinder.com/developers/api-docs/">Go!</a></td>
+</tr>
+<tr>
+<td>RescueGroups</td>
+<td>Adoption</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#anime" aria-hidden="true" class="anchor" id="user-content-anime"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anime</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AniList</td>
+<td>Anime discovery &amp; tracking</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-AniList/ApiV2-GraphQL-Docs" target="_blank" rel="noopener noreferrer" href="https://github.com/AniList/ApiV2-GraphQL-Docs">Go!</a></td>
+</tr>
+<tr>
+<td>Jikan</td>
+<td>Unofficial MyAnimeList API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://jikan.me">Go!</a></td>
+</tr>
+<tr>
+<td>Kitsu</td>
+<td>Anime discovery platform</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.kitsu.apiary.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Studio Ghibli</td>
+<td>Resources from Studio Ghibli films</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ghibliapi.herokuapp.com">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#anti-malware" aria-hidden="true" class="anchor" id="user-content-anti-malware"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anti-Malware</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AlienVault Open Threat Exchange (OTX)</td>
+<td>IP/domain/URL reputation</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://otx.alienvault.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Certly</td>
+<td>Certly Link/Domain Flagging</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://guard.certly.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Google Safe Browsing</td>
+<td>Google Link/Domain Flagging</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/safe-browsing/">Go!</a></td>
+</tr>
+<tr>
+<td>Metacert</td>
+<td>Metacert Link Flagging</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://metacert.com/">Go!</a></td>
+</tr>
+<tr>
+<td>VirusTotal</td>
+<td>VirusTotal File/URL Analysis</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.virustotal.com/en/documentation/public-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Web Of Trust (WOT)</td>
+<td>Website reputation</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mywot.com/wiki/API">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#art--design" aria-hidden="true" class="anchor" id="user-content-art--design"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Art &amp; Design</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Behance</td>
+<td>Design</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.behance.net/dev">Go!</a></td>
+</tr>
+<tr>
+<td>Cooper Hewitt</td>
+<td>Smithsonian Design Museum</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://collection.cooperhewitt.org/api">Go!</a></td>
+</tr>
+<tr>
+<td>Dribbble</td>
+<td>Design</td>
+<td><code>OAuth</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.dribbble.com/v1/">Go!</a></td>
+</tr>
+<tr>
+<td>Harvard Art Museums</td>
+<td>Art</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a id="user-content-harvardartmuseums/api-docs" target="_blank" rel="noopener noreferrer" href="https://github.com/harvardartmuseums/api-docs">Go!</a></td>
+</tr>
+<tr>
+<td>Iconfinder</td>
+<td>Icons</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.iconfinder.com">Go!</a></td>
+</tr>
+<tr>
+<td>Icons8</td>
+<td>Icons</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.icons8.apiary.io/#reference/0/meta">Go!</a></td>
+</tr>
+<tr>
+<td>Noun Project</td>
+<td>Icons</td>
+<td><code>OAuth</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.thenounproject.com/index.html">Go!</a></td>
+</tr>
+<tr>
+<td>Rijksmuseum</td>
+<td>Art</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.rijksmuseum.nl/en/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#books" aria-hidden="true" class="anchor" id="user-content-books"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Books</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BookNomads</td>
+<td>Books published in the Netherlands and Flanders (about 2.5 million), book covers, and related data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.booknomads.com/dev">Go!</a></td>
+</tr>
+<tr>
+<td>British National Bibliography</td>
+<td>Books</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://bnb.data.bl.uk/">Go!</a></td>
+</tr>
+<tr>
+<td>Goodreads</td>
+<td>Books</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.goodreads.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Google Books</td>
+<td>Books</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/books/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Library</td>
+<td>Books, book covers, and related data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://openlibrary.org/developers/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#business" aria-hidden="true" class="anchor" id="user-content-business"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Business</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charity Search</td>
+<td>Non-profit charity data</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://charityapi.orghunter.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Clearbit Logo</td>
+<td>Search for company logos and embed them in your projects</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://clearbit.com/docs#logo-api">Go!</a></td>
+</tr>
+<tr>
+<td>Domainsdb.info</td>
+<td>Registered Domain Names Search</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://domainsdb.info/">Go!</a></td>
+</tr>
+<tr>
+<td>Gmail</td>
+<td>Flexible, RESTful access to the user's inbox</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/gmail/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Google Analytics</td>
+<td>Collect, configure, and analyze your data to reach the right audience</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/analytics/">Go!</a></td>
+</tr>
+<tr>
+<td>mailgun</td>
+<td>Email Service</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mailgun.com/">Go!</a></td>
+</tr>
+<tr>
+<td>markerapi</td>
+<td>Trademark Search</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.markerapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Trello</td>
+<td>Boards, lists, and cards to help you organize and prioritize your projects</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.trello.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#calendar" aria-hidden="true" class="anchor" id="user-content-calendar"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calendar</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Church Calendar</td>
+<td>Catholic liturgical calendar</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://calapi.inadiutorium.cz/">Go!</a></td>
+</tr>
+<tr>
+<td>Czech and Slovak Namedays Calendar</td>
+<td>Lookup for a date and returns nameday</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.abalin.net/">Go!</a></td>
+</tr>
+<tr>
+<td>Czech Namedays Calendar</td>
+<td>Lookup for a name and returns nameday date</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://svatky.adresa.info/">Go!</a></td>
+</tr>
+<tr>
+<td>Google Calendar</td>
+<td>Display, create and modify Google calendar events</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/google-apps/calendar/">Go!</a></td>
+</tr>
+<tr>
+<td>Hebrew Calendar</td>
+<td>Convert between Gregarian and Hebrew, fetch Shabbat and Holiday times, etc</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.hebcal.com/home/developer-apis">Go!</a></td>
+</tr>
+<tr>
+<td>Holidays</td>
+<td>Historical data regarding holidays</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://holidayapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>LectServe</td>
+<td>Protestant liturgical calendar</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.lectserve.com">Go!</a></td>
+</tr>
+<tr>
+<td>Non-Working Days</td>
+<td>Database of ICS files for non working days</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-gadael/icsdb" target="_blank" rel="noopener noreferrer" href="https://github.com/gadael/icsdb">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#cloud-storage--file-sharing" aria-hidden="true" class="anchor" id="user-content-cloud-storage--file-sharing"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloud Storage &amp; File Sharing</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box</td>
+<td>File Sharing and Storage</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.box.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Dropbox</td>
+<td>File Sharing and Storage</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.dropbox.com/developers">Go!</a></td>
+</tr>
+<tr>
+<td>Google Drive</td>
+<td>File Sharing and Storage</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/drive/">Go!</a></td>
+</tr>
+<tr>
+<td>OneDrive</td>
+<td>File Sharing and Storage</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dev.onedrive.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Pastebin</td>
+<td>Plain Text Storage</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pastebin.com/api/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#continuous-integration" aria-hidden="true" class="anchor" id="user-content-continuous-integration"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Continuous Integration</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CircleCI</td>
+<td>Automate the software development process using continuous integration and continuous delivery</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://circleci.com/docs/api/v1-reference/">Go!</a></td>
+</tr>
+<tr>
+<td>Codeship</td>
+<td>Codeship is a Continuous Integration Platform in the cloud</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://apidocs.codeship.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Travis CI</td>
+<td>Sync your GitHub projects with Travis CI to test your code in minutes</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.travis-ci.com/api/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#cryptocurrency" aria-hidden="true" class="anchor" id="user-content-cryptocurrency"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cryptocurrency</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BitcoinCharts</td>
+<td>Financial and Technical Data related to the Bitcoin Network</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://bitcoincharts.com/about/exchanges/">Go!</a></td>
+</tr>
+<tr>
+<td>Bitfinex</td>
+<td>Cryptocurrency Trading Platform</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.bitfinex.com/docs/introduction">Go!</a></td>
+</tr>
+<tr>
+<td>Block</td>
+<td>Bitcoin Payment, Wallet &amp; Transaction Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.block.io/docs/basic">Go!</a></td>
+</tr>
+<tr>
+<td>Blockchain</td>
+<td>Bitcoin Payment, Wallet &amp; Transaction Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.blockchain.info/api">Go!</a></td>
+</tr>
+<tr>
+<td>Coinbase</td>
+<td>Bitcoin, Litecoin and Ethereum Prices</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.coinbase.com">Go!</a></td>
+</tr>
+<tr>
+<td>CoinBin</td>
+<td>Cryptocurrency information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://coinbin.org/">Go!</a></td>
+</tr>
+<tr>
+<td>CoinDesk</td>
+<td>Bitcoin Price Index</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.coindesk.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>CoinMarketCap</td>
+<td>Cryptocurrencies Prices</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://coinmarketcap.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>CryptoCompare</td>
+<td>Cryptocurrencies Comparison</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.cryptocompare.com/api#">Go!</a></td>
+</tr>
+<tr>
+<td>Cryptonator</td>
+<td>Cryptocurrencies Exchange Rates</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.cryptonator.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>GDAX</td>
+<td>Cryptocurrency Trading Platform</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.gdax.com/#api">Go!</a></td>
+</tr>
+<tr>
+<td>MercadoBitcoin</td>
+<td>Brazilian Cryptocurrency Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mercadobitcoin.net/api-doc/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#currency-exchange" aria-hidden="true" class="anchor" id="user-content-currency-exchange"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Currency Exchange</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1Forge</td>
+<td>Forex currency market data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://1forge.com/forex-data-api/api-documentation">Go!</a></td>
+</tr>
+<tr>
+<td>Currencylayer</td>
+<td>Exchange rates and currency conversion</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://currencylayer.com/documentation">Go!</a></td>
+</tr>
+<tr>
+<td>Czech National Bank</td>
+<td>A collection of exchange rates</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.xml">Go!</a></td>
+</tr>
+<tr>
+<td>Fixer.io</td>
+<td>Exchange rates and currency conversion</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://fixer.io">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#data-validation" aria-hidden="true" class="anchor" id="user-content-data-validation"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Validation</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>languagelayer</td>
+<td>Language detection</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://languagelayer.com">Go!</a></td>
+</tr>
+<tr>
+<td>Lob.com</td>
+<td>US Address Verification</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://lob.com/">Go!</a></td>
+</tr>
+<tr>
+<td>mailboxlayer</td>
+<td>Email address validation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://mailboxlayer.com">Go!</a></td>
+</tr>
+<tr>
+<td>MailTest</td>
+<td>Email address validation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://mailtest.in/documentation/">Go!</a></td>
+</tr>
+<tr>
+<td>NumValidate</td>
+<td>Open Source phone number validation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://numvalidate.com">Go!</a></td>
+</tr>
+<tr>
+<td>numverify</td>
+<td>Phone number validation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://numverify.com">Go!</a></td>
+</tr>
+<tr>
+<td>PurgoMalum</td>
+<td>Content validator against profanity &amp; obscenity</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.purgomalum.com">Go!</a></td>
+</tr>
+<tr>
+<td>vatlayer</td>
+<td>VAT number validation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://vatlayer.com">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#development" aria-hidden="true" class="anchor" id="user-content-development"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Development</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ApiLeap</td>
+<td>Make screenshots from web pages and HTML</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://apileap.com/">Go!</a></td>
+</tr>
+<tr>
+<td>APIs.guru</td>
+<td>Wikipedia for Web APIs, OpenAPI/Swagger specs for public APIs</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://apis.guru/api-doc/">Go!</a></td>
+</tr>
+<tr>
+<td>BetterMeta</td>
+<td>Return a site's meta tags in JSON format</td>
+<td>X-Mashape-Key</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://bettermeta.io">Go!</a></td>
+</tr>
+<tr>
+<td>Bitbucket</td>
+<td>Pull public information for a Bitbucket account</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.bitbucket.org/2.0/users/karllhughes">Go!</a></td>
+</tr>
+<tr>
+<td>Browshot</td>
+<td>Easily make screenshots of web pages in any screen size, as any device</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://browshot.com/api/documentation">Go!</a></td>
+</tr>
+<tr>
+<td>CDNJS</td>
+<td>Library info on CDNJS</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.cdnjs.com/libraries/jquery">Go!</a></td>
+</tr>
+<tr>
+<td>Changelogs.md</td>
+<td>Structured changelog metadata from open source projects</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://changelogs.md">Go!</a></td>
+</tr>
+<tr>
+<td>Count.io</td>
+<td>Persistent counting and A/B testing</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://count.io">Go!</a></td>
+</tr>
+<tr>
+<td>DigitalOcean Status</td>
+<td>Status of all DigitalOcean services</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://status.digitalocean.com/api/v1">Go!</a></td>
+</tr>
+<tr>
+<td>DomainDb Info</td>
+<td>Domain name search to find all domains containing particular words/phrases/etc</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://domainsdb.info/apidomainsdb/index.php">Go!</a></td>
+</tr>
+<tr>
+<td>Faceplusplus</td>
+<td>A tool to detect face</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.faceplusplus.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Genderize.io</td>
+<td>Determines a gender from a first name</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://genderize.io">Go!</a></td>
+</tr>
+<tr>
+<td>Github</td>
+<td>Information for a user's Github profile</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://developer.github.com/v3/">Go!</a></td>
+</tr>
+<tr>
+<td>Gitter</td>
+<td>Chat for GitHub</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-gitterHQ/docs" target="_blank" rel="noopener noreferrer" href="https://github.com/gitterHQ/docs">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">43 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">38 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>HackerRank</td>
+<td>Compile source code and run against a set of provided test cases</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.hackerrank.com/api/docs">Go!</a></td>
+</tr>
+<tr>
+<td>HTTP2.Pro</td>
+<td>Test endpoints for client and server HTTP/2 protocol support</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://http2.pro/doc/api">Go!</a></td>
+</tr>
+<tr>
+<td>import.io</td>
+<td>Retrieve structured data from a website or RSS feed</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.docs.import.io/">Go!</a></td>
+</tr>
+<tr>
+<td>IPify</td>
+<td>A simple IP Address API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ipify.org/">Go!</a></td>
+</tr>
+<tr>
+<td>IPinfo</td>
+<td>Another simple IP Address API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ipinfo.io/developers">Go!</a></td>
+</tr>
+<tr>
+<td>JSON 2 JSONP</td>
+<td>Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://json2jsonp.com/">Go!</a></td>
+</tr>
+<tr>
+<td>JSONbin.io</td>
+<td>Free JSON storage service. Ideal for small scale Web apps, Websites and Mobile apps</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://jsonbin.io">Go!</a></td>
+</tr>
+<tr>
+<td>Judge0</td>
+<td>Compile and run source code</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.judge0.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Kairos</td>
+<td>Face Recognition and Emotion Analysis</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.kairos.com/features">Go!</a></td>
+</tr>
+<tr>
+<td>Let's Validate</td>
+<td>Uncovers the technologies used on websites and URL to thumbnail</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-letsvalidate/api" target="_blank" rel="noopener noreferrer" href="https://github.com/letsvalidate/api">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">22 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>LiveEdu</td>
+<td>Live Coding Streaming</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.liveedu.tv/developer/applications/">Go!</a></td>
+</tr>
+<tr>
+<td>Myjson</td>
+<td>A simple JSON store for your web or mobile app</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://myjson.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Plino</td>
+<td>Spam filtering system</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://plino.herokuapp.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Public APIs</td>
+<td>A collective list of free JSON APIs for use in web development</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://github.com/toddmotto/public-apis/tree/master/json">Go!</a></td>
+</tr>
+<tr>
+<td>QR code</td>
+<td>Generate and decode / read QR code graphics</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://goqr.me/api/">Go!</a></td>
+</tr>
+<tr>
+<td>ReqRes</td>
+<td>A hosted REST-API ready to respond to your AJAX requests</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://reqres.in/">Go!</a></td>
+</tr>
+<tr>
+<td>Scrape Website Email</td>
+<td>Grabs email addresses from a URL</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/tommytcchan/scrape-website-email">Go!</a></td>
+</tr>
+<tr>
+<td>SHOUTCLOUD</td>
+<td>ALL-CAPS AS A SERVICE</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://shoutcloud.io/">Go!</a></td>
+</tr>
+<tr>
+<td>StackExchange</td>
+<td>Q&amp;A forum for developers</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.stackexchange.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Verse</td>
+<td>Check what's the latest version of your favorite open-source project</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://verse.pawelad.xyz/">Go!</a></td>
+</tr>
+<tr>
+<td>XML to JSON</td>
+<td>Integration developer utility APIs</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.wso2apistore.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#dictionaries" aria-hidden="true" class="anchor" id="user-content-dictionaries"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dictionaries</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oxford</td>
+<td>Dictionary Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.oxforddictionaries.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Wordnik</td>
+<td>Dictionary Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.wordnik.com">Go!</a></td>
+</tr>
+<tr>
+<td>Words</td>
+<td>Definitions and synonyms for more than 150,000 words</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.wordsapi.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#documents--productivity" aria-hidden="true" class="anchor" id="user-content-documents--productivity"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documents &amp; Productivity</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File.io</td>
+<td>File Sharing</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.file.io">Go!</a></td>
+</tr>
+<tr>
+<td>Mercury</td>
+<td>Web parser</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://mercury.postlight.com/web-parser/">Go!</a></td>
+</tr>
+<tr>
+<td>pdflayer</td>
+<td>HTML/URL to PDF</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pdflayer.com">Go!</a></td>
+</tr>
+<tr>
+<td>Pocket</td>
+<td>Bookmarking service</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://getpocket.com/developer/">Go!</a></td>
+</tr>
+<tr>
+<td>PrexView</td>
+<td>Data from XML or JSON to PDF, HTML or Image</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://prexview.com">Go!</a></td>
+</tr>
+<tr>
+<td>Restpack</td>
+<td>Provides screenshot, HTML to PDF, and content extraction APIs</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://restpack.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Todoist</td>
+<td>Todo Lists</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.todoist.com">Go!</a></td>
+</tr>
+<tr>
+<td>Vector Express</td>
+<td>Free vector file converting API</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td><a target="_blank" rel="nofollow" href="http://vector.express">Go!</a></td>
+</tr>
+<tr>
+<td>Wunderlist</td>
+<td>Todo Lists</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.wunderlist.com/documentation">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#environment" aria-hidden="true" class="anchor" id="user-content-environment"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Environment</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AirVisual</td>
+<td>Air quality and weather data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://airvisual.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>OpenAQ</td>
+<td>Open air quality data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.openaq.org/">Go!</a></td>
+</tr>
+<tr>
+<td>PM2.5.in</td>
+<td>Air quality of China</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.pm25.in/api_doc">Go!</a></td>
+</tr>
+<tr>
+<td>UK Carbon Intensity</td>
+<td>The Official Carbon Intensity API for Great Britain developed by National Grid</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#events" aria-hidden="true" class="anchor" id="user-content-events"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eventbrite</td>
+<td>Find events</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.eventbrite.com/developer/v3/">Go!</a></td>
+</tr>
+<tr>
+<td>Picatic</td>
+<td>Sell tickets anywhere</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.picatic.com/?utm_medium=web&amp;utm_source=github&amp;utm_campaign=public-apis%20repo&amp;utm_content=toddmotto">Go!</a></td>
+</tr>
+<tr>
+<td>Ticketmaster</td>
+<td>Search events, attractions, or venues</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.ticketmaster.com/products-and-docs/apis/getting-started/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#finance" aria-hidden="true" class="anchor" id="user-content-finance"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finance</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha Vantage</td>
+<td>Realtime and historical stock data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.alphavantage.co/">Go!</a></td>
+</tr>
+<tr>
+<td>Barchart OnDemand</td>
+<td>Stock, Futures, and Forex Market Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.barchartondemand.com/free">Go!</a></td>
+</tr>
+<tr>
+<td>Consumer Financial Protection Bureau</td>
+<td>Financial services consumer complains data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.consumerfinance.gov/resource/jhzv-w97w.json">Go!</a></td>
+</tr>
+<tr>
+<td>IEX</td>
+<td>Stocks and Market Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://iextrading.com/developer/">Go!</a></td>
+</tr>
+<tr>
+<td>IG</td>
+<td>Spreadbetting and CFD Market Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://labs.ig.com/gettingstarted">Go!</a></td>
+</tr>
+<tr>
+<td>Plaid</td>
+<td>Connect with users’ bank accounts and access transaction data</td>
+<td>apiKey</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://plaid.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Razorpay IFSC</td>
+<td>Indian Financial Systems Code (Bank Branch Codes)</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ifsc.razorpay.com/">Go!</a></td>
+</tr>
+<tr>
+<td>RoutingNumbers.info</td>
+<td>ACH/NACHA Bank Routing Numbers</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.routingnumbers.info/api/index.html">Go!</a></td>
+</tr>
+<tr>
+<td>VAT Rates</td>
+<td>A collection of all VAT rates for EU countries</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://jsonvat.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#food--drink" aria-hidden="true" class="anchor" id="user-content-food--drink"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Food &amp; Drink</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BigOven</td>
+<td>Recipe Search</td>
+<td><code>X-Mashape-Key</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api2.bigoven.com/">Go!</a></td>
+</tr>
+<tr>
+<td>BreweryDB</td>
+<td>Beer</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.brewerydb.com/developers">Go!</a></td>
+</tr>
+<tr>
+<td>Edamam</td>
+<td>Recipe Search</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.edamam.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Food2Fork</td>
+<td>Recipe Search</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://food2fork.com/about/api">Go!</a></td>
+</tr>
+<tr>
+<td>LCBO</td>
+<td>Alcohol</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://lcboapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Food Facts</td>
+<td>Food Products Database</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://world.openfoodfacts.org/data">Go!</a></td>
+</tr>
+<tr>
+<td>PunkAPI</td>
+<td>Brewdog Beer Recipes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://punkapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Recipe Puppy</td>
+<td>Food</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.recipepuppy.com/about/api/">Go!</a></td>
+</tr>
+<tr>
+<td>TacoFancy</td>
+<td>Community-driven taco database</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a id="user-content-evz/tacofancy-api" target="_blank" rel="noopener noreferrer" href="https://github.com/evz/tacofancy-api">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">7 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">1 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>The Report of the Week</td>
+<td>Food &amp; Drink Reviews</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-andyklimczak/TheReportOfTheWeek-API" target="_blank" rel="noopener noreferrer" href="https://github.com/andyklimczak/TheReportOfTheWeek-API">Go!</a></td>
+</tr>
+<tr>
+<td>TheCocktailDB</td>
+<td>Cocktail Recipes</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.thecocktaildb.com/">Go!</a></td>
+</tr>
+<tr>
+<td>TheMealDB</td>
+<td>Meal Recipes</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.themealdb.com/">Go!</a></td>
+</tr>
+<tr>
+<td>What's on the menu?</td>
+<td>NYPL human-transcribed historical menu collection</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://nypl.github.io/menus-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Yummly</td>
+<td>Find food recipes</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.yummly.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Zomato</td>
+<td>Discover restaurants</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.zomato.com/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#fraud-prevention" aria-hidden="true" class="anchor" id="user-content-fraud-prevention"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fraud Prevention</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whitepages Pro</td>
+<td>Global identity verification with phone, address, email, and IP</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pro.whitepages.com/developer/documentation/identity-check-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Whitepages Pro</td>
+<td>Phone reputation to detect spammy phones</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pro.whitepages.com/developer/documentation/phone-reputation-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Whitepages Pro</td>
+<td>Get an owner’s name, address, demographics based on the phone number</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pro.whitepages.com/developer/documentation/reverse-phone-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Whitepages Pro</td>
+<td>Phone number validation, line_type, carrier append</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pro.whitepages.com/developer/documentation/phone-intelligence-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Whitepages Pro</td>
+<td>Get normalized physical address, residents, address type, and validity</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pro.whitepages.com/developer/documentation/reverse-address-api/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#games--comics" aria-hidden="true" class="anchor" id="user-content-games--comics"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Games &amp; Comics</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Battle.net</td>
+<td>Blizzard Entertainment</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dev.battle.net/">Go!</a></td>
+</tr>
+<tr>
+<td>Battlefield 4</td>
+<td>Battlefield 4 Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://bf4stats.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Chuck Norris Database</td>
+<td>Jokes</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.icndb.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Clash of Clans</td>
+<td>Clash of Clans Game Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.clashofclans.com">Go!</a></td>
+</tr>
+<tr>
+<td>Clash Royale</td>
+<td>Clash Royale Game Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-martincarrera/clash-royale-api" target="_blank" rel="noopener noreferrer" href="https://github.com/martincarrera/clash-royale-api">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">140 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">53 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Comic Vine</td>
+<td>Comics</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://comicvine.gamespot.com/api/documentation">Go!</a></td>
+</tr>
+<tr>
+<td>Deck of Cards</td>
+<td>Deck of Cards</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://deckofcardsapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Destiny The Game</td>
+<td>Bungie Platform API</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-Bungie-net/api" target="_blank" rel="noopener noreferrer" href="https://github.com/Bungie-net/api">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">70 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Dota 2</td>
+<td>Provides information about Player stats , Match stats, Rankings for Dota 2</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.opendota.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Eve Online</td>
+<td>Third-Party Developer Documentation</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://eveonline-third-party-documentation.readthedocs.io/en/latest/">Go!</a></td>
+</tr>
+<tr>
+<td>Games</td>
+<td>Minecraft and other server info &amp; user info)</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.gameapis.net/">Go!</a></td>
+</tr>
+<tr>
+<td>Giant Bomb</td>
+<td>Video Games</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.giantbomb.com/api/documentation">Go!</a></td>
+</tr>
+<tr>
+<td>Guild Wars 2</td>
+<td>Guild Wars 2 Game Information</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://wiki.guildwars2.com/wiki/API:Main">Go!</a></td>
+</tr>
+<tr>
+<td>Halo</td>
+<td>Halo 5 and Halo Wars 2 Information</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.haloapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Hearthstone</td>
+<td>Hearthstone Cards Information</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://hearthstoneapi.com/">Go!</a></td>
+</tr>
+<tr>
+<td>IGDB.com</td>
+<td>Video Game Database</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.igdb.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Jokes</td>
+<td>Programming and general jokes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-15Dkatz/official_joke_api" target="_blank" rel="noopener noreferrer" href="https://github.com/15Dkatz/official_joke_api">Go!</a></td>
+</tr>
+<tr>
+<td>Jservice</td>
+<td>Jeopardy Question Database</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://jservice.io">Go!</a></td>
+</tr>
+<tr>
+<td>Magic The Gathering</td>
+<td>Magic The Gathering Game Information</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://magicthegathering.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Marvel</td>
+<td>Marvel Comics</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.marvel.com">Go!</a></td>
+</tr>
+<tr>
+<td>Open Trivia</td>
+<td>Trivia Questions</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://opentdb.com/api_config.php">Go!</a></td>
+</tr>
+<tr>
+<td>PandaScore</td>
+<td>E-sports games and results</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.pandascore.co">Go!</a></td>
+</tr>
+<tr>
+<td>PlayerUnknown's Battlegrounds</td>
+<td>PUBG Stats</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pubgtracker.com/site-api">Go!</a></td>
+</tr>
+<tr>
+<td>Pokéapi</td>
+<td>Pokémon Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pokeapi.co">Go!</a></td>
+</tr>
+<tr>
+<td>Pokémon TCG</td>
+<td>Pokémon TCG Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pokemontcg.io">Go!</a></td>
+</tr>
+<tr>
+<td>Qriusity</td>
+<td>Quiz/Trivia Questions</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://qriusity.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Riot Games</td>
+<td>League of Legends Game Information</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.riotgames.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Steam</td>
+<td>Steam Client Interaction</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.valvesoftware.com/wiki/Steam_Web_API">Go!</a></td>
+</tr>
+<tr>
+<td>xkcd</td>
+<td>Retrieve xkcd comics as JSON</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://xkcd.com/json.html">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#geocoding" aria-hidden="true" class="anchor" id="user-content-geocoding"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Geocoding</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adresse.data.gouv.fr</td>
+<td>Address database of France, geocoding, and reverse</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://adresse.data.gouv.fr">Go!</a></td>
+</tr>
+<tr>
+<td>Battuta</td>
+<td>A (country/region/city) in-cascade location API</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://battuta.medunes.net">Go!</a></td>
+</tr>
+<tr>
+<td>Bing Maps</td>
+<td>Create/customize digital maps based on Bing Maps data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.microsoft.com/maps/">Go!</a></td>
+</tr>
+<tr>
+<td>City Context</td>
+<td>Crime, school, and transportation data for US cities</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.citycontext.com/api-reference#/">Go!</a></td>
+</tr>
+<tr>
+<td>CitySDK</td>
+<td>Open APIs for select European cities</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.citysdk.eu/citysdk-toolkit/">Go!</a></td>
+</tr>
+<tr>
+<td>Daum Maps</td>
+<td>Daum Maps provide multiple APIs for Korean maps</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://apis.map.daum.net/">Go!</a></td>
+</tr>
+<tr>
+<td>FreeGeoIP</td>
+<td>Geolocation of IP addresses</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://freegeoip.net/">Go!</a></td>
+</tr>
+<tr>
+<td>GeoApi</td>
+<td>French geographical data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.gouv.fr/api/geoapi.html">Go!</a></td>
+</tr>
+<tr>
+<td>Geocode.xyz</td>
+<td>Provides worldwide forward/reverse geocoding, batch geocoding and geoparsing</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://geocode.xyz/">Go!</a></td>
+</tr>
+<tr>
+<td>GeoNames</td>
+<td>Place names and other geographical data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.geonames.org/export/web-services.html">Go!</a></td>
+</tr>
+<tr>
+<td>Google Earth Engine</td>
+<td>A cloud-based platform for planetary-scale environmental data analysis</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/earth-engine/">Go!</a></td>
+</tr>
+<tr>
+<td>Google Maps</td>
+<td>Create/customize digital maps based on Google Maps data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/maps/">Go!</a></td>
+</tr>
+<tr>
+<td>GraphLoc</td>
+<td>Free GraphQL IP Geolocation API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.graphloc.com">Go!</a></td>
+</tr>
+<tr>
+<td>HelloSalut</td>
+<td>Get hello translation following user language</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.fourtonfish.com/hellosalut/hello/">Go!</a></td>
+</tr>
+<tr>
+<td>IP 2 Country</td>
+<td>Map an IP to a country</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ip2country.info">Go!</a></td>
+</tr>
+<tr>
+<td>IP Address Details</td>
+<td>Find geolocation with ip address</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ipinfo.io/">Go!</a></td>
+</tr>
+<tr>
+<td>IP Location</td>
+<td>Find IP address location information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ipapi.co/">Go!</a></td>
+</tr>
+<tr>
+<td>IP Sidekick</td>
+<td>Geolocation API that returns extra information about an IP address</td>
+<td>apiKey</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ipsidekick.com">Go!</a></td>
+</tr>
+<tr>
+<td>IP Vigilante</td>
+<td>Free IP Geolocation API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ipvigilante.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Mapbox</td>
+<td>Create/customize beautiful digital maps</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mapbox.com/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Mexico</td>
+<td>Mexico RESTful zip codes API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-IcaliaLabs/sepomex" target="_blank" rel="noopener noreferrer" href="https://github.com/IcaliaLabs/sepomex">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">38 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">20 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>One Map, Singapore</td>
+<td>Singapore Land Authority REST API services for Singapore addresses</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.onemap.sg/">Go!</a></td>
+</tr>
+<tr>
+<td>OnWater</td>
+<td>Determine if a lat/lon is on water or land</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://onwater.io/">Go!</a></td>
+</tr>
+<tr>
+<td>OpenCage</td>
+<td>Forward and reverse geocoding using open data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://geocoder.opencagedata.com">Go!</a></td>
+</tr>
+<tr>
+<td>OpenStreetMap</td>
+<td>Navigation, geolocation and geographical data</td>
+<td><code>OAuth</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://wiki.openstreetmap.org/wiki/API">Go!</a></td>
+</tr>
+<tr>
+<td>PostcodeData.nl</td>
+<td>Provide geolocation data based on postcode for Dutch addresses</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&amp;streetnumber=60&amp;ref=domeinnaam.nl&amp;type=json">Go!</a></td>
+</tr>
+<tr>
+<td>Postcodes.io</td>
+<td>Postcode lookup &amp; Geolocation for the UK</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://postcodes.io">Go!</a></td>
+</tr>
+<tr>
+<td>REST Countries</td>
+<td>Get information about countries via a RESTful API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://restcountries.eu">Go!</a></td>
+</tr>
+<tr>
+<td>Uebermaps</td>
+<td>Discover and share maps with friends</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://uebermaps.com/api/v2">Go!</a></td>
+</tr>
+<tr>
+<td>Utah AGRC</td>
+<td>Utah Web API for geocoding Utah addresses</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.mapserv.utah.gov">Go!</a></td>
+</tr>
+<tr>
+<td>ViaCep</td>
+<td>Brazil RESTful zip codes API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://viacep.com.br">Go!</a></td>
+</tr>
+<tr>
+<td>Zippopotam</td>
+<td>Get information about place such as country, city, state, etc</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.zippopotam.us">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#government" aria-hidden="true" class="anchor" id="user-content-government"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Government</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BCLaws</td>
+<td>Access to the laws of British Columbia</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.bclaws.ca/civix/template/complete/api/index.html">Go!</a></td>
+</tr>
+<tr>
+<td>BusinessUSA</td>
+<td>BusinessUSA gives developers access to authoritative information on U.S. programs, events, services and more</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://business.usa.gov/developer">Go!</a></td>
+</tr>
+<tr>
+<td>Census.gov</td>
+<td>The US Census Bureau provides various APIs and data sets on demographics and businesses</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.census.gov/data/developers/data-sets.html">Go!</a></td>
+</tr>
+<tr>
+<td>EPA</td>
+<td>Web services and data sets from the US Environmental Protection Agency</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.epa.gov/category/api/">Go!</a></td>
+</tr>
+<tr>
+<td>FEC</td>
+<td>Information on campaign donations in federal elections</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.open.fec.gov/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Food Standards Agency</td>
+<td>UK food hygiene rating data API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://ratings.food.gov.uk/open-data/en-GB">Go!</a></td>
+</tr>
+<tr>
+<td>Regulations.gov</td>
+<td>Regulations.gov provides access to Federal regulatory materials and increases public participation and their understanding of the Federal rule making process</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://regulationsgov.github.io/developers/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#health" aria-hidden="true" class="anchor" id="user-content-health"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Health</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BetterDoctor</td>
+<td>Detailed information about doctors in your area</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.betterdoctor.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Diabetes</td>
+<td>Logging and retrieving diabetes information</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://predictbgl.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Flutrack</td>
+<td>Influenza-like symptoms with geotracking</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.flutrack.org/">Go!</a></td>
+</tr>
+<tr>
+<td>Healthcare.gov</td>
+<td>Educational content about the US Health Insurance Marketplace</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.healthcare.gov/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Lexigram</td>
+<td>NLP that extracts mentions of clinical concepts from text, gives access to clinical ontology</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.lexigram.io/v1/welcome">Go!</a></td>
+</tr>
+<tr>
+<td>Makeup</td>
+<td>Makeup Information</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://makeup-api.herokuapp.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Medicare</td>
+<td>Access to the data from the CMS - medicare.gov</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.medicare.gov/developers">Go!</a></td>
+</tr>
+<tr>
+<td>NPPES</td>
+<td>National Plan &amp; Provider Enumeration System, info on healthcare providers registered in US</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://npiregistry.cms.hhs.gov/registry/help-api">Go!</a></td>
+</tr>
+<tr>
+<td>Nutritionix</td>
+<td>Worlds largest verified nutrition database</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.nutritionix.com/">Go!</a></td>
+</tr>
+<tr>
+<td>openFDA</td>
+<td>Public FDA data about drugs, devices, and foods</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://open.fda.gov/api/">Go!</a></td>
+</tr>
+<tr>
+<td>USDA Nutrients</td>
+<td>National Nutrient Database for Standard Reference</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://ndb.nal.usda.gov/ndb/doc/index">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#jobs" aria-hidden="true" class="anchor" id="user-content-jobs"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Jobs</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adzuna</td>
+<td>Job board aggregator</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.adzuna.com/overview">Go!</a></td>
+</tr>
+<tr>
+<td>Authentic Jobs</td>
+<td>Job board for designers, hackers, and creative pros</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://authenticjobs.com/api/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Careerjet</td>
+<td>Job search engine</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.careerjet.com/partners/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Github Jobs</td>
+<td>Jobs for software developers</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="noopener noreferrer" href="https://jobs.github.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Indeed</td>
+<td>Job board aggregator</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.indeed.com/publisher">Go!</a></td>
+</tr>
+<tr>
+<td>Jobs2Careers</td>
+<td>Job aggregator</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.jobs2careers.com/api/spec.pdf">Go!</a></td>
+</tr>
+<tr>
+<td>Jooble</td>
+<td>Job search engine</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://us.jooble.org/api/about">Go!</a></td>
+</tr>
+<tr>
+<td>Juju</td>
+<td>Job search engine</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.juju.com/publisher/spec/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Skills</td>
+<td>Job titles, skills, and related jobs data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a id="user-content-workforce-data-initiative/skills-api" target="_blank" rel="noopener noreferrer" href="https://github.com/workforce-data-initiative/skills-api/wiki/API-Overview">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">1 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Reed</td>
+<td>Job board aggregator</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.reed.co.uk/developers">Go!</a></td>
+</tr>
+<tr>
+<td>Search.gov Jobs</td>
+<td>Tap into a list of current jobs openings with the United States government</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://search.gov/developer/jobs.html">Go!</a></td>
+</tr>
+<tr>
+<td>The Muse</td>
+<td>Job board and company profiles</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.themuse.com/developers/api/v2">Go!</a></td>
+</tr>
+<tr>
+<td>Upwork</td>
+<td>Freelance job board and management system</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.upwork.com/">Go!</a></td>
+</tr>
+<tr>
+<td>USAJOBS</td>
+<td>US government job board</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.usajobs.gov/">Go!</a></td>
+</tr>
+<tr>
+<td>ZipRecruiter</td>
+<td>Job search app and website</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ziprecruiter.com/publishers">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#machine-learning" aria-hidden="true" class="anchor" id="user-content-machine-learning"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Machine Learning</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clarifai</td>
+<td>Computer Vision</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.clarifai.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Cleverbot</td>
+<td>Web chat bot</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.cleverbot.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Dialogflow</td>
+<td>Natural Language Processing</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dialogflow.com">Go!</a></td>
+</tr>
+<tr>
+<td>Keen IO</td>
+<td>Data Analytics</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://keen.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Unplugg</td>
+<td>Forecasting API for timeseries data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://unplu.gg/test_api.html">Go!</a></td>
+</tr>
+<tr>
+<td>Wit.ai</td>
+<td>Natural Language Processing</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://wit.ai/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#music" aria-hidden="true" class="anchor" id="user-content-music"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Music</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bandsintown</td>
+<td>Music Events</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0">Go!</a></td>
+</tr>
+<tr>
+<td>Deezer</td>
+<td>Music</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.deezer.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Discogs</td>
+<td>Music</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.discogs.com/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Genius</td>
+<td>Crowdsourced lyrics and music knowledge</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.genius.com/">Go!</a></td>
+</tr>
+<tr>
+<td>iTunes Search</td>
+<td>Software products</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Jamendo</td>
+<td>Music</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.jamendo.com/v3.0">Go!</a></td>
+</tr>
+<tr>
+<td>LastFm</td>
+<td>Music</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.last.fm/api">Go!</a></td>
+</tr>
+<tr>
+<td>Lyrics.ovh</td>
+<td>Simple API to retrieve the lyrics of a song</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.lyricsovh.apiary.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Mixcloud</td>
+<td>Music</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mixcloud.com/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>MusicBrainz</td>
+<td>Music</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2">Go!</a></td>
+</tr>
+<tr>
+<td>Musikki</td>
+<td>Music</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://music-api.musikki.com/reference">Go!</a></td>
+</tr>
+<tr>
+<td>Musixmatch</td>
+<td>Music</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.musixmatch.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Songkick</td>
+<td>Music Events</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.songkick.com/developer/">Go!</a></td>
+</tr>
+<tr>
+<td>Songsterr</td>
+<td>Provides guitar, bass and drums tabs and chords</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.songsterr.com/a/wa/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Spotify</td>
+<td>Fetch data from the Spotify music catalog, manage users' playlists and saved music, get recommendations, control Spotify Connect, and more</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://beta.developer.spotify.com/documentation/web-api/">Go!</a></td>
+</tr>
+<tr>
+<td>TasteDive</td>
+<td>Similar artist API (also works for movies and TV shows)</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://tastedive.com/read/api">Go!</a></td>
+</tr>
+<tr>
+<td>TheAudioDB</td>
+<td>Music</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.theaudiodb.com">Go!</a></td>
+</tr>
+<tr>
+<td>Vagalume</td>
+<td>Crowdsourced lyrics and music knowledge</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.vagalume.com.br/docs/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#news" aria-hidden="true" class="anchor" id="user-content-news"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>News</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chronicling America</td>
+<td>Provides access to millions of pages of historic US newspapers from the Library of Congress</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://chroniclingamerica.loc.gov/about/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Feedbin</td>
+<td>RSS reader</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-feedbin/feedbin-api" target="_blank" rel="noopener noreferrer" href="https://github.com/feedbin/feedbin-api">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">134 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">8 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>New York Times</td>
+<td>Provides news</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.nytimes.com/">Go!</a></td>
+</tr>
+<tr>
+<td>News</td>
+<td>Headlines currently published on a range of news sources and blogs</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://newsapi.org/">Go!</a></td>
+</tr>
+<tr>
+<td>NPR One</td>
+<td>Personalized news listening experience from NPR</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://dev.npr.org/api/">Go!</a></td>
+</tr>
+<tr>
+<td>The Guardian</td>
+<td>Access all the content the Guardian creates, categorised by tags and section</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://open-platform.theguardian.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#open-data" aria-hidden="true" class="anchor" id="user-content-open-data"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open Data</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18F</td>
+<td>US Federal Government /Developer Program</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://18f.github.io/API-All-the-X/">Go!</a></td>
+</tr>
+<tr>
+<td>Abbreviation</td>
+<td>Get abbreviations and meanings</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/daxeel/abbreviations">Go!</a></td>
+</tr>
+<tr>
+<td>Callook.info</td>
+<td>United States ham radio callsigns</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://callook.info">Go!</a></td>
+</tr>
+<tr>
+<td>CARTO</td>
+<td>Location Information Prediction</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://carto.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Celebinfo</td>
+<td>Celebrity information</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/daxeel/celebinfo/">Go!</a></td>
+</tr>
+<tr>
+<td>Colorado Data Engine</td>
+<td>Formatted and geolocated Colorado public data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://codataengine.org/">Go!</a></td>
+</tr>
+<tr>
+<td>Colorado Information Marketplace</td>
+<td>Colorado State Government Open Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.colorado.gov/">Go!</a></td>
+</tr>
+<tr>
+<td>Data USA</td>
+<td>US Public Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://datausa.io/about/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Datakick</td>
+<td>The open product database</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.datakick.org/api">Go!</a></td>
+</tr>
+<tr>
+<td>Dronestream</td>
+<td>Tracks United States drone strikes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dronestre.am/">Go!</a></td>
+</tr>
+<tr>
+<td>Federal Register</td>
+<td>The Daily Journal of the United States Government</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.federalregister.gov/reader-aids/developer-resources">Go!</a></td>
+</tr>
+<tr>
+<td>fonoApi</td>
+<td>Mobile Device Description</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://fonoapi.freshpixl.com/">Go!</a></td>
+</tr>
+<tr>
+<td>French Address Search</td>
+<td>French Government</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://adresse.data.gouv.fr/api">Go!</a></td>
+</tr>
+<tr>
+<td>INQStats</td>
+<td>Open demographic data such as population, life expectancy, migration rate, etc</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://blog.inqubu.com/inqstats-open-api-published-to-get-demographic-data">Go!</a></td>
+</tr>
+<tr>
+<td>LinkPreview</td>
+<td>Get JSON formatted summary with title, description and preview image for any requested URL</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a target="_blank" rel="nofollow" href="https://www.linkpreview.net">Go!</a></td>
+</tr>
+<tr>
+<td>Marijuana Strains</td>
+<td>Marijuana strains, races, flavors, and effects</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://strains.evanbusse.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Microlink.io</td>
+<td>Turns any link into information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://docs.microlink.io">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, Australia</td>
+<td>Australian Government Open Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.data.gov.au/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, Canada</td>
+<td>Canadian Government Open Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://open.canada.ca/en">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, France</td>
+<td>French Government Open Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.data.gouv.fr/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, India</td>
+<td>Indian Government Open Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.gov.in/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, New Zealand</td>
+<td>New Zealand Government Open Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.data.govt.nz/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, Taiwan</td>
+<td>Taiwan Government Open Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.gov.tw/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Government, USA</td>
+<td>United States Government Open Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.data.gov/">Go!</a></td>
+</tr>
+<tr>
+<td>Prague Opendata</td>
+<td>Prague City Open Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://opendata.praha.eu/en">Go!</a></td>
+</tr>
+<tr>
+<td>Quandl</td>
+<td>Stock Market Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.quandl.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Represent by Open North</td>
+<td>Find Canadian Government Representatives</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://represent.opennorth.ca/">Go!</a></td>
+</tr>
+<tr>
+<td>Scoop.it</td>
+<td>Content Curation Service</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.scoop.it/dev">Go!</a></td>
+</tr>
+<tr>
+<td>Teleport</td>
+<td>Quality of Life Data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.teleport.org/">Go!</a></td>
+</tr>
+<tr>
+<td>Universities List</td>
+<td>University names, countries and domains</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-Hipo/university-domains-list" target="_blank" rel="noopener noreferrer" href="https://github.com/Hipo/university-domains-list">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">16 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">5 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>UPC database</td>
+<td>More than 1.5 million barcode numbers from all around the world</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://upcdatabase.org/api">Go!</a></td>
+</tr>
+<tr>
+<td>Wikidata</td>
+<td>Collaboratively edited knowledge base operated by the Wikimedia Foundation</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.wikidata.org/w/api.php?action=help">Go!</a></td>
+</tr>
+<tr>
+<td>Wikipedia</td>
+<td>Mediawiki Encyclopedia</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.mediawiki.org/wiki/API:Main_page">Go!</a></td>
+</tr>
+<tr>
+<td>Yelp</td>
+<td>Find Local Business</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.yelp.com/developers/documentation/v3">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#open-source-projects" aria-hidden="true" class="anchor" id="user-content-open-source-projects"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Open Source Projects</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Countly</td>
+<td>Countly web analytics</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://resources.count.ly/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Drupal.org</td>
+<td>Drupal.org</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.drupal.org/drupalorg/docs/api">Go!</a></td>
+</tr>
+<tr>
+<td>Libraries.io</td>
+<td>Open source software libraries</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://libraries.io/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#patent" aria-hidden="true" class="anchor" id="user-content-patent"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Patent</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EPO</td>
+<td>European patent search system api</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.epo.org/">Go!</a></td>
+</tr>
+<tr>
+<td>TIPO</td>
+<td>Taiwan patent search system api</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://tiponet.tipo.gov.tw/Gazette/OpenData/OD/OD05.aspx?QryDS=API00">Go!</a></td>
+</tr>
+<tr>
+<td>USPTO</td>
+<td>USA patent api services</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.uspto.gov/learning-and-resources/open-data-and-mobility">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#personality" aria-hidden="true" class="anchor" id="user-content-personality"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Personality</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chucknorris.io</td>
+<td>JSON API for hand curated Chuck Norris jokes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.chucknorris.io">Go!</a></td>
+</tr>
+<tr>
+<td>FavQs.com</td>
+<td>FavQs allows you to collect, discover, and share your favorite quotes</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://favqs.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Forismatic</td>
+<td>Inspirational Quotes</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://forismatic.com/en/api/">Go!</a></td>
+</tr>
+<tr>
+<td>icanhazdadjoke</td>
+<td>The largest selection of dad jokes on the internet</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://icanhazdadjoke.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Community of readers and writers offering unique perspectives on ideas</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-Medium/medium-api-docs" target="_blank" rel="noopener noreferrer" href="https://github.com/Medium/medium-api-docs">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">806 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">71 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Quotes on Design</td>
+<td>Inspirational Quotes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://quotesondesign.com/api-v4-0/">Go!</a></td>
+</tr>
+<tr>
+<td>Traitify</td>
+<td>Assess, collect, and analyze Personality</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://app.traitify.com/developer">Go!</a></td>
+</tr>
+<tr>
+<td>tronalddump.io</td>
+<td>Api &amp; web archive for the things Donald Trump has said</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.tronalddump.io">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#photography" aria-hidden="true" class="anchor" id="user-content-photography"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Photography</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500px</td>
+<td>Photography Community</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-500px/api-documentation" target="_blank" rel="noopener noreferrer" href="https://github.com/500px/api-documentation">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">759 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">313 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Flickr</td>
+<td>Flickr Services</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.flickr.com/services/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Getty Images</td>
+<td>Build applications using the world's most powerful imagery</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://developers.gettyimages.com/en/">Go!</a></td>
+</tr>
+<tr>
+<td>Gfycat</td>
+<td>Jiffier GIFs</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.gfycat.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Giphy</td>
+<td>Get all your gifs</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.giphy.com/docs/">Go!</a></td>
+</tr>
+<tr>
+<td>Gyazo</td>
+<td>Upload images</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://gyazo.com/api/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Imgur</td>
+<td>Images</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://apidocs.imgur.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Pixabay</td>
+<td>Photography</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pixabay.com/sk/service/about/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Pixhost</td>
+<td>Upload images, photos, galleries</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pixhost.org/api/index.html">Go!</a></td>
+</tr>
+<tr>
+<td>PlaceKitten</td>
+<td>Resizable kitten placeholder images</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://placekitten.com/">Go!</a></td>
+</tr>
+<tr>
+<td>ScreenShotLayer</td>
+<td>URL 2 Image</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://screenshotlayer.com">Go!</a></td>
+</tr>
+<tr>
+<td>Unsplash</td>
+<td>Photography</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://unsplash.com/developers">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#science--math" aria-hidden="true" class="anchor" id="user-content-science--math"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Science &amp; Math</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arcsecond.io</td>
+<td>Multiple astronomy data sources</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.arcsecond.io/">Go!</a></td>
+</tr>
+<tr>
+<td>CORE</td>
+<td>Access the world's Open Access research papers</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://core.ac.uk/services#api">Go!</a></td>
+</tr>
+<tr>
+<td>inspirehep.net</td>
+<td>High Energy Physics info. system</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://inspirehep.net/info/hep/api?ln=en">Go!</a></td>
+</tr>
+<tr>
+<td>Launch Library</td>
+<td>Upcoming Space Launches</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://launchlibrary.net/docs/1.3/api.html">Go!</a></td>
+</tr>
+<tr>
+<td>Minor Planet Center</td>
+<td>Asterank.com Information</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.asterank.com/mpc">Go!</a></td>
+</tr>
+<tr>
+<td>NASA</td>
+<td>NASA data, including imagery</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.nasa.gov">Go!</a></td>
+</tr>
+<tr>
+<td>Newton</td>
+<td>Symbolic and Arithmetic Math Calculator</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://newton.now.sh/">Go!</a></td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td>Facts about numbers</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://numbersapi.com">Go!</a></td>
+</tr>
+<tr>
+<td>Open Notify</td>
+<td>ISS astronauts, current location, etc</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://open-notify.org/Open-Notify-API/">Go!</a></td>
+</tr>
+<tr>
+<td>Open Science Framework</td>
+<td>Repository and archive for study designs, research materials, data, manuscripts, etc</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.osf.io">Go!</a></td>
+</tr>
+<tr>
+<td>SHARE</td>
+<td>A free, open, dataset about research and scholarly activities</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://share.osf.io/api/v2/">Go!</a></td>
+</tr>
+<tr>
+<td>SpaceX</td>
+<td>Company, vehicle, launchpad and launch data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-r-spacex/SpaceX-API" target="_blank" rel="noopener noreferrer" href="https://github.com/r-spacex/SpaceX-API">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">97 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">17 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Sunrise and Sunset</td>
+<td>Sunset and sunrise times for a given latitude and longitude</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://sunrise-sunset.org/api">Go!</a></td>
+</tr>
+<tr>
+<td>USGS Earthquake Hazards Program</td>
+<td>Earthquakes data real-time</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://earthquake.usgs.gov/fdsnws/event/1/">Go!</a></td>
+</tr>
+<tr>
+<td>USGS Water Services</td>
+<td>Water quality and level info for rivers and lakes</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://waterservices.usgs.gov/">Go!</a></td>
+</tr>
+<tr>
+<td>World Bank</td>
+<td>World Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://datahelpdesk.worldbank.org/knowledgebase/topics/125589">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#security" aria-hidden="true" class="anchor" id="user-content-security"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Security</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AXFR Database</td>
+<td>AXFR public database</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.axfrcheck.com">Go!</a></td>
+</tr>
+<tr>
+<td>HaveIBeenPwned</td>
+<td>Passwords which have previously been exposed in data breaches</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://haveibeenpwned.com/API/v2">Go!</a></td>
+</tr>
+<tr>
+<td>UK Police</td>
+<td>UK Police data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.police.uk/docs/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#shopping" aria-hidden="true" class="anchor" id="user-content-shopping"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shopping</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best Buy</td>
+<td>Products, Buying Options, Categories, Recommendations, Stores, and Commerce</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://bestbuyapis.github.io/api-documentation/#overview">Go!</a></td>
+</tr>
+<tr>
+<td>eBay</td>
+<td>Sell and Buy on eBay</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://go.developer.ebay.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Wal-Mart</td>
+<td>Item price and availability</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.walmartlabs.com/docs">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#social" aria-hidden="true" class="anchor" id="user-content-social"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Social</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buffer</td>
+<td>Access to pending and sent updates in Buffer</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://buffer.com/developers/api">Go!</a></td>
+</tr>
+<tr>
+<td>Cisco Spark</td>
+<td>Team Collaboration Software</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.ciscospark.com">Go!</a></td>
+</tr>
+<tr>
+<td>Discord</td>
+<td>Make bots for Discord, integrate Discord onto an external platform</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://discordapp.com/developers/docs/intro">Go!</a></td>
+</tr>
+<tr>
+<td>Disqus</td>
+<td>Communicate with Disqus data</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://disqus.com/api/docs/auth/">Go!</a></td>
+</tr>
+<tr>
+<td>DonReach Social Count</td>
+<td>Get the social share count of a URL from every major social network</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://donreach.com/social-share-count/">Go!</a></td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td>Facebook Login, Share on FB, Social Plugins, Analytics and more</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.facebook.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Foursquare</td>
+<td>Interact with Foursquare users and places (geolocation-based checkins, photos, tips, events, etc)</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.foursquare.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Fuck Off as a Service</td>
+<td>Asks someone to fuck off</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.foaas.com">Go!</a></td>
+</tr>
+<tr>
+<td>Full Contact</td>
+<td>Get Social Media profiles and contact Information</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.fullcontact.com/developer/docs/">Go!</a></td>
+</tr>
+<tr>
+<td>HackerNews</td>
+<td>Social news for CS and entrepreneurship</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-HackerNews/API" target="_blank" rel="noopener noreferrer" href="https://github.com/HackerNews/API">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">2k <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">76 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td>Instagram Login, Share on Instagram, Social Plugins and more</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.instagram.com/developer/">Go!</a></td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td>The foundation of all digital integrations with LinkedIn</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.linkedin.com/docs/rest-api">Go!</a></td>
+</tr>
+<tr>
+<td>Meetup.com</td>
+<td>Data about Meetups from Meetup.com</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.meetup.com/meetup_api/">Go!</a></td>
+</tr>
+<tr>
+<td>Pinterest</td>
+<td>The world's catalog of ideas</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.pinterest.com/">Go!</a></td>
+</tr>
+<tr>
+<td>PWRTelegram bot</td>
+<td>Boosted version of the Telegram bot API</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://pwrtelegram.xyz">Go!</a></td>
+</tr>
+<tr>
+<td>Reddit</td>
+<td>Homepage of the internet</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.reddit.com/dev/api">Go!</a></td>
+</tr>
+<tr>
+<td>SharedCount</td>
+<td>Social media like and share data for any URL</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.sharedcount.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Slack</td>
+<td>Team Instant Messaging</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.slack.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Telegram Bot</td>
+<td>Simplified HTTP version of the MTProto API for bots</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://core.telegram.org/bots/api">Go!</a></td>
+</tr>
+<tr>
+<td>Telegram MTProto</td>
+<td>Read and write Telegram data</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://core.telegram.org/api#getting-started">Go!</a></td>
+</tr>
+<tr>
+<td>Tumblr</td>
+<td>Read and write Tumblr Data</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.tumblr.com/docs/en/api/v2">Go!</a></td>
+</tr>
+<tr>
+<td>Twitch</td>
+<td>Game Streaming API</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dev.twitch.tv/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Twitter</td>
+<td>Read and write Twitter data</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dev.twitter.com/rest/public">Go!</a></td>
+</tr>
+<tr>
+<td>vk</td>
+<td>Read and write vk data</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://vk.com/dev/sites">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#sports--fitness" aria-hidden="true" class="anchor" id="user-content-sports--fitness"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sports &amp; Fitness</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BikeWise</td>
+<td>Bikewise is a place to learn about and report bike crashes, hazards, and thefts</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.bikewise.org/documentation/api_v2">Go!</a></td>
+</tr>
+<tr>
+<td>Cartola FC</td>
+<td>The Cartola FC API serves to check the partial points of your team</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-wgenial/cartrolandofc" target="_blank" rel="noopener noreferrer" href="https://github.com/wgenial/cartrolandofc">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">160 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">80 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>City Bikes</td>
+<td>City Bikes around the world</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.citybik.es/v2/">Go!</a></td>
+</tr>
+<tr>
+<td>Cricket Live Scores</td>
+<td>Live cricket scores</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/dev132/cricket-live-scores">Go!</a></td>
+</tr>
+<tr>
+<td>Ergast F1</td>
+<td>F1 data from the beginning of the world championships in 1950</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://ergast.com/mrd/">Go!</a></td>
+</tr>
+<tr>
+<td>Fitbit</td>
+<td>Fitbit Information</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://dev.fitbit.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Football-Data.org</td>
+<td>Football Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.football-data.org/index">Go!</a></td>
+</tr>
+<tr>
+<td>JCDecaux Bike</td>
+<td>JCDecaux's self-service bicycles</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.jcdecaux.com/">Go!</a></td>
+</tr>
+<tr>
+<td>NBA Stats</td>
+<td>Current and historical NBA Statistics</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://any-api.com/nba_com/nba_com/docs/API_Description">Go!</a></td>
+</tr>
+<tr>
+<td>NFL Arrests</td>
+<td>NFL Arrest Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://nflarrest.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Pro Motocross</td>
+<td>The RESTful AMA Pro Motocross lap times for every racer on the start gate</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://promotocrossapi.com">Go!</a></td>
+</tr>
+<tr>
+<td>Strava</td>
+<td>Connect with athletes, activities and more</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://strava.github.io/api/">Go!</a></td>
+</tr>
+<tr>
+<td>SuredBits</td>
+<td>Query sports data, including teams, players, games, scores, and statistics</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://suredbits.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>TheSportsDB</td>
+<td>Crowd-Sourced Sports Data and Artwork</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.thesportsdb.com">Go!</a></td>
+</tr>
+<tr>
+<td>UFC Data</td>
+<td>Ultimate Fighting Championship information for events and fighters</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://ufc-data-api.ufc.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Wger</td>
+<td>Workout manager data as exercises, muscles or equipment</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://wger.de/en/software/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#test-data" aria-hidden="true" class="anchor" id="user-content-test-data"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test Data</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adorable Avatars</td>
+<td>Generate random cartoon avatars</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://avatars.adorable.io">Go!</a></td>
+</tr>
+<tr>
+<td>Bacon Ipsum</td>
+<td>A Meatier Lorem Ipsum Generator</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://baconipsum.com/json-api/">Go!</a></td>
+</tr>
+<tr>
+<td>FHIR</td>
+<td>Fast Healthcare Interoperability Resources test data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://fhirtest.uhn.ca/home">Go!</a></td>
+</tr>
+<tr>
+<td>Hipster Ipsum</td>
+<td>Generates Hipster Ipsum text</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://hipsterjesus.com/">Go!</a></td>
+</tr>
+<tr>
+<td>JSONPlaceholder</td>
+<td>Fake data for testing and prototyping</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://jsonplaceholder.typicode.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Lorem Text</td>
+<td>Generates Lorem Ipsum text</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/montanaflynn/lorem-text-generator">Go!</a></td>
+</tr>
+<tr>
+<td>LoremPicsum</td>
+<td>Generate placeholder pictures</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://lorempicsum.com">Go!</a></td>
+</tr>
+<tr>
+<td>Loripsum</td>
+<td>The "lorem ipsum" generator that doesn't suck</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://loripsum.net/">Go!</a></td>
+</tr>
+<tr>
+<td>RandomUser</td>
+<td>Generates random user data</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://randomuser.me">Go!</a></td>
+</tr>
+<tr>
+<td>RoboHash</td>
+<td>Generate random robot/alien avatars</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://robohash.org/">Go!</a></td>
+</tr>
+<tr>
+<td>UI Names</td>
+<td>Generate random fake names</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-thm/uinames" target="_blank" rel="noopener noreferrer" href="https://github.com/thm/uinames">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">363 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-green-dark">127 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Yes No</td>
+<td>Generate yes or no randomly</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://yesno.wtf/api">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#text-analysis" aria-hidden="true" class="anchor" id="user-content-text-analysis"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Analysis</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aylien Text Analysis</td>
+<td>A collection of information retrieval and natural language APIs</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.aylien.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Detect Language</td>
+<td>Detects text language</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://detectlanguage.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Google Cloud Natural</td>
+<td>Natural language understanding technologies to developers, including sentiment, entity, and syntax analysis</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://cloud.google.com/natural-language/docs/">Go!</a></td>
+</tr>
+<tr>
+<td>Semantira</td>
+<td>Text Analytics with sentiment analysis, categorization &amp; named entity extraction</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://semantria.readme.io/docs">Go!</a></td>
+</tr>
+<tr>
+<td>Watson Natural Language Understanding</td>
+<td>Natural language processing for advanced text analysis</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#tracking" aria-hidden="true" class="anchor" id="user-content-tracking"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tracking</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Postmon</td>
+<td>An API to query Brazilian ZIP codes and orders easily, quickly and free</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://postmon.com.br">Go!</a></td>
+</tr>
+<tr>
+<td>Sweden</td>
+<td>Provides information about parcels in transport</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.postnord.com/docs2">Go!</a></td>
+</tr>
+<tr>
+<td>UPS</td>
+<td>Shipment and Address information</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ups.com/upsdeveloperkit">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#transportation" aria-hidden="true" class="anchor" id="user-content-transportation"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transportation</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADS-B Exchange</td>
+<td>Access real-time and historical data of any and all airbone aircraft</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.adsbexchange.com/data/">Go!</a></td>
+</tr>
+<tr>
+<td>AIS Hub</td>
+<td>Real-time data of any marine and inland vessel equipped with AIS tracking system</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.aishub.net/api">Go!</a></td>
+</tr>
+<tr>
+<td>Amadeus Travel Innovation Sandbox</td>
+<td>Travel Search - Limited usage</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://sandbox.amadeus.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Bay Area Rapid Transit</td>
+<td>Stations and predicted arrivals for BART</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.bart.gov">Go!</a></td>
+</tr>
+<tr>
+<td>Community Transit</td>
+<td>Transitland API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-transitland/transitland-datastore" target="_blank" rel="noopener noreferrer" href="https://github.com/transitland/transitland-datastore/blob/master/README.md#api-endpoints">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-orange-dark">54 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">6 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Goibibo</td>
+<td>API for travel search</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.goibibo.com/docs">Go!</a></td>
+</tr>
+<tr>
+<td>GraphHopper</td>
+<td>A-to-B routing with turn-by-turn instructions</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://graphhopper.com/api/1/docs/">Go!</a></td>
+</tr>
+<tr>
+<td>Icelandic APIs</td>
+<td>Open APIs that deliver services in or regarding Iceland</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://docs.apis.is/">Go!</a></td>
+</tr>
+<tr>
+<td>Indian Railways</td>
+<td>Indian Railways Information</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.erail.in/">Go!</a></td>
+</tr>
+<tr>
+<td>Izi</td>
+<td>Audio guide for travellers</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api-docs.izi.travel/">Go!</a></td>
+</tr>
+<tr>
+<td>Navitia</td>
+<td>The open API for building cool stuff with transport data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.navitia.io/">Go!</a></td>
+</tr>
+<tr>
+<td>REFUGE Restrooms</td>
+<td>Provides safe restroom access for transgender, intersex, and gender nonconforming individuals</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.refugerestrooms.org/api/docs/#!/restrooms">Go!</a></td>
+</tr>
+<tr>
+<td>Schiphol Airport</td>
+<td>Schiphol</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.schiphol.nl/">Go!</a></td>
+</tr>
+<tr>
+<td>TransitLand</td>
+<td>Transit Aggregation</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://transit.land/documentation/datastore/api-endpoints.html">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Atlanta, US</td>
+<td>Marta</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.itsmarta.com/app-developer-resources.aspx">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Auckland, New Zealand</td>
+<td>Auckland Transport</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.at.govt.nz/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Belgium</td>
+<td>Belgian transport API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://hello.irail.be/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Berlin, Germany</td>
+<td>Third-party VBB API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-derhuerst/vbb-rest" target="_blank" rel="noopener noreferrer" href="https://github.com/derhuerst/vbb-rest/blob/master/docs/index.md">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">22 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Transport for Boston, US</td>
+<td>MBTA API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://realtime.mbta.com/Portal/Home/Documents">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Budapest, Hungary</td>
+<td>Budapest public transport API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://apiary.io/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Chicago, US</td>
+<td>CTA</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.transitchicago.com/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Czech Republic</td>
+<td>Czech transport API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.chaps.cz/eng/products/idos-internet">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Denver, US</td>
+<td>RTD</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.rtd-denver.com/gtfs-developer-guide.shtml">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Finland</td>
+<td>Finnish transport API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://digitransit.fi/en/developers/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Germany</td>
+<td>Deutsche Bahn (DB) API</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://data.deutschebahn.com/dataset/api-fahrplan">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for India</td>
+<td>India Public Transport API</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://data.gov.in/sector/transport">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for London, England</td>
+<td>TfL API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.tfl.gov.uk">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Madrid, Spain</td>
+<td>Madrid BUS transport API</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://opendata.emtmadrid.es/Servicios-web/BUS">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Minneapolis, US</td>
+<td>NexTrip API</td>
+<td><code>OAuth</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://svc.metrotransit.org/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for New York City, US</td>
+<td>MTA</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://datamine.mta.info/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Norway</td>
+<td>Norwegian transport API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://reisapi.ruter.no/help">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Ottawa, Canada</td>
+<td>OC Transpo next bus arrival API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.octranspo.com/index.php/developers">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Paris, France</td>
+<td>RATP Open Data API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://data.ratp.fr/api/v1/console/datasets/1.0/search/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Paris, France</td>
+<td>Live schedules made simple</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://restratpws.azurewebsites.net/swagger/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Philadelphia, US</td>
+<td>SEPTA APIs</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www3.septa.org/hackathon/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Sao Paulo, Brazil</td>
+<td>SPTrans</td>
+<td><code>OAuth</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.sptrans.com.br/desenvolvedores/APIOlhoVivo/Documentacao.aspx">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Sweden</td>
+<td>Public Transport consumer</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.trafiklab.se/api">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Switzerland</td>
+<td>Swiss public transport API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://transport.opendata.ch/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Switzerland</td>
+<td>Official Swiss Public Transport Open Data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://opentransportdata.swiss/en/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for The Netherlands</td>
+<td>NS, only trains</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.ns.nl/reisinformatie/ns-api">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for The Netherlands</td>
+<td>OVAPI, country-wide public transport</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-skywave/KV78Turbo-OVAPI" target="_blank" rel="noopener noreferrer" href="https://github.com/skywave/KV78Turbo-OVAPI/wiki">Go!</a><span class="ml-1 text-grey-dark whitespace-no-wrap"><span class="text-grey-dark">20 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" width="14" height="12" class="mr-1"><polygon points="14 5 9.1 4.36 7 0 4.9 4.36 0 5 3.6 8.26 2.67 13 7 10.67 11.33 13 10.4 8.26"></polygon></svg></span><span class="text-grey-dark">5 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 14" width="10" height="12"><path d="M8,-8.47032947e-22 C7.09660216,-0.00238695453 6.3045861,0.603179379 6.07006224,1.47560813 C5.83553838,2.34803688 6.21717019,3.26909995 7,3.72 L7,5 L5,7 L3,5 L3,3.72 C3.78282981,3.26909995 4.16446162,2.34803688 3.92993776,1.47560813 C3.6954139,0.603179379 2.90339784,-0.00238695453 2,-4.44088363e-16 C1.09660216,-0.00238695453 0.304586097,0.603179379 0.0700622397,1.47560813 C-0.164461618,2.34803688 0.217170191,3.26909995 1,3.72 L1,5.5 L4,8.5 L4,10.28 C3.21717019,10.7309 2.83553838,11.6519631 3.07006224,12.5243919 C3.3045861,13.3968206 4.09660216,14.002387 5,14 C5.90339784,14.002387 6.6954139,13.3968206 6.92993776,12.5243919 C7.16446162,11.6519631 6.78282981,10.7309 6,10.28 L6,8.5 L9,5.5 L9,3.72 C9.78282981,3.26909995 10.1644616,2.34803688 9.92993776,1.47560813 C9.6954139,0.603179379 8.90339784,-0.00238695453 8,-8.47032947e-22 Z M2,3.2 C1.34,3.2 0.8,2.65 0.8,2 C0.8,1.35 1.35,0.8 2,0.8 C2.65,0.8 3.2,1.35 3.2,2 C3.2,2.65 2.65,3.2 2,3.2 Z M5,13.2 C4.34,13.2 3.8,12.65 3.8,12 C3.8,11.35 4.35,10.8 5,10.8 C5.65,10.8 6.2,11.35 6.2,12 C6.2,12.65 5.65,13.2 5,13.2 Z M8,3.2 C7.34,3.2 6.8,2.65 6.8,2 C6.8,1.35 7.35,0.8 8,0.8 C8.65,0.8 9.2,1.35 9.2,2 C9.2,2.65 8.65,3.2 8,3.2 Z"></path></svg></span></span></td>
+</tr>
+<tr>
+<td>Transport for Toronto, Canada</td>
+<td>TTC</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://myttc.ca/developers">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for United States</td>
+<td>NextBus API</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Vancouver, Canada</td>
+<td>TransLink</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.translink.ca/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Victoria, AU</td>
+<td>PTV API</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.ptv.vic.gov.au/about-ptv/ptv-data-and-reports/digital-products/ptv-timetable-api/">Go!</a></td>
+</tr>
+<tr>
+<td>Transport for Washington, US</td>
+<td>Washington Metro transport API</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.wmata.com/">Go!</a></td>
+</tr>
+<tr>
+<td>WhereIsMyTransport</td>
+<td>Platform for public transport data in emerging cities</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.whereismytransport.com/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#url-shorteners" aria-hidden="true" class="anchor" id="user-content-url-shorteners"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>URL Shorteners</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bitly</td>
+<td>URL shortener and link management</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://dev.bitly.com/get_started.html">Go!</a></td>
+</tr>
+<tr>
+<td>ClickMeter</td>
+<td>Monitor, compare, and optimize your marketing links</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://support.clickmeter.com/hc/en-us/categories/201474986">Go!</a></td>
+</tr>
+<tr>
+<td>Google URL Shortener</td>
+<td>Takes long URLs and squeezes them into fewer characters to make a link that is easier to share</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/url-shortener/v1/getting_started">Go!</a></td>
+</tr>
+<tr>
+<td>Rebrandly</td>
+<td>Custom URL shortener for sharing branded links</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.rebrandly.com/v1/docs">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#vehicle" aria-hidden="true" class="anchor" id="user-content-vehicle"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vehicle</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brazilian Vehicles and Prices</td>
+<td>Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://deividfortuna.github.io/fipe/">Go!</a></td>
+</tr>
+<tr>
+<td>Kelley Blue Book</td>
+<td>Vehicle info, pricing, configuration, plus much more</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>No</td>
+<td><a target="_blank" rel="nofollow" href="http://developer.kbb.com/#!/data/1-Default">Go!</a></td>
+</tr>
+<tr>
+<td>NHTSA</td>
+<td>NHTSA Product Information Catalog and Vehicle Listing</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://vpic.nhtsa.dot.gov/api/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#video" aria-hidden="true" class="anchor" id="user-content-video"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Video</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>An API of Ice And Fire</td>
+<td>Game Of Thrones API</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://anapioficeandfire.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Czech Television</td>
+<td>TV programme of Czech TV</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.ceskatelevize.cz/xml/tv-program/">Go!</a></td>
+</tr>
+<tr>
+<td>Dailymotion</td>
+<td>Dailymotion Developer API</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.dailymotion.com/">Go!</a></td>
+</tr>
+<tr>
+<td>Netflix Roulette</td>
+<td>Netflix database</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://netflixroulette.net/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Ron Swanson Quotes</td>
+<td>Television</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a id="user-content-jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api" target="_blank" rel="noopener noreferrer" href="https://github.com/jamesseanwright/ron-swanson-quotes#ron-swanson-quotes-api">Go!</a></td>
+</tr>
+<tr>
+<td>SWAPI</td>
+<td>Star Wars Information</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://swapi.co">Go!</a></td>
+</tr>
+<tr>
+<td>TMDb</td>
+<td>Community-based movie data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.themoviedb.org/documentation/api">Go!</a></td>
+</tr>
+<tr>
+<td>TVDB</td>
+<td>Television data</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://api.thetvdb.com/swagger">Go!</a></td>
+</tr>
+<tr>
+<td>TVMaze</td>
+<td>TV Show Data</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://www.tvmaze.com/api">Go!</a></td>
+</tr>
+<tr>
+<td>Utelly</td>
+<td>Check where a tv show or movie is available</td>
+<td><code>X-Mashape-Key</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://market.mashape.com/utelly/utelly">Go!</a></td>
+</tr>
+<tr>
+<td>Vimeo</td>
+<td>Vimeo Developer API</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.vimeo.com/">Go!</a></td>
+</tr>
+<tr>
+<td>YouTube</td>
+<td>Add YouTube functionality to your sites and apps</td>
+<td><code>OAuth</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developers.google.com/youtube/">Go!</a></td>
+</tr></tbody></table>
+<h3><a href="#weather" aria-hidden="true" class="anchor" id="user-content-weather"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Weather</h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+<th>Auth</th>
+<th>HTTPS</th>
+<th>CORS</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dark Sky</td>
+<td>Weather</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://darksky.net/dev/">Go!</a></td>
+</tr>
+<tr>
+<td>MetaWeather</td>
+<td>Weather</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.metaweather.com/api/">Go!</a></td>
+</tr>
+<tr>
+<td>ODWeather</td>
+<td>Weather and weather webcams</td>
+<td>No</td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://api.oceandrivers.com/static/docs.html">Go!</a></td>
+</tr>
+<tr>
+<td>OpenWeatherMap</td>
+<td>Weather</td>
+<td><code>apiKey</code></td>
+<td>No</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="http://openweathermap.org/api">Go!</a></td>
+</tr>
+<tr>
+<td>Weatherbit</td>
+<td>Weather</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.weatherbit.io/api">Go!</a></td>
+</tr>
+<tr>
+<td>Wunderground</td>
+<td>Weather</td>
+<td><code>apiKey</code></td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://www.wunderground.com/weather/api/">Go!</a></td>
+</tr>
+<tr>
+<td>Yahoo! Weather</td>
+<td>Weather</td>
+<td>No</td>
+<td>Yes</td>
+<td>Unknown</td>
+<td><a target="_blank" rel="nofollow" href="https://developer.yahoo.com/weather/">Go!</a></td>
+</tr></tbody></table>
+</div></div></div><div class="w-full max-w-xs bg-grey-lightest fixed pin-r pin-t pin-b mt-15 lg:mt-0 lg:flex flex-col overflow-hidden z-20 hidden"><div class="flex-1 overflow-y-scroll scrolling-touch -mr-8 pr-8"><div class="m-4 text-grey leading-loose text-center text-sm"><noscript>Enable JavaScript for more features</noscript></div></div><div class="flex-none"><div class="ad border-t shadow-lg hidden lg:block p-4"></div></div></div><div style="position:fixed;bottom:30px;right:350px;cursor:pointer;transition:opacity .2s linear 0s,visibility;z-index:20;opacity:0;visibility:hidden"><div class="bg-grey-light p-2 rounded hidden lg:block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" class="block" width="32" height="32"><path fill-rule="evenodd" d="M5 3L0 9h3v4h4V9h3z"></path></svg></div></div></div></div><script type="text/javascript" src="/static/js/main.993c6201.js"></script></body></html>
