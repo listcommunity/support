@@ -1250,4 +1250,21 @@ export default {
       this.querySelector("#toc-contents").style.display = "none";
     },
   },
+  "GetStoryline/awesome-bots": {
+    slug: "bots",
+    label: "Bots",
+    shortDescription:
+      "Tools, newsletters and other resources about bots, applications that runs automated tasks over the internet.",
+    category: "Miscellaneous",
+    mutateContent() {
+      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
+      const selector =
+        "#toc-we-also-run-one-of-the-most-active-facebook-communities-900-members-and-telegram-channel-1500-members-about-bots";
+      this.querySelector(selector).style.display = "none";
+    },
+  },
 };
