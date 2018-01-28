@@ -41,7 +41,7 @@ export default {
     slug: "fsharp",
     label: "F#",
     shortDescription:
-      "F# is a crossplatform functional first programming language built on the .NET Framework.",
+      "F# is an open source cross-platform functional-first programming language built on the .NET Framework.",
     logo: "https://avatars.githubusercontent.com/fsharp",
     color: "#378bba",
     category: "Programming Languages",
