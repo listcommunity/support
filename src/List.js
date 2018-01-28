@@ -143,7 +143,7 @@ class List extends Component {
 
     return (
       <div className="overflow-x-hidden bg-white min-h-screen pt-15 lg:pt-0">
-        <ListHelmet {...config} />
+        {Object.keys(config).length > 0 && <ListHelmet {...config} />}
 
         <div className="lg:mr-80">
           {requestAccessToken && <AccessTokenDialog onSubmit={this.handleAccessTokenSubmit} />}
