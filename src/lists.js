@@ -1163,7 +1163,7 @@ export default {
     slug: "bots",
     label: "Bots",
     shortDescription:
-      "A list of newsletters, tools, podcasts and more information about bots.",
+      "Tools, newsletters and other resources about bots, applications that runs automated tasks over the internet.",
     color: "#ffffff",
     category: "Miscellaneous",
     invertTextColor: true,
