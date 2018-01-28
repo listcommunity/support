@@ -1164,9 +1164,7 @@ export default {
     label: "Bots",
     shortDescription:
       "Tools, newsletters and other resources about bots, applications that runs automated tasks over the internet.",
-    color: "#ffffff",
     category: "Miscellaneous",
-    invertTextColor: true,
     mutateContent() {
       this.querySelector("#readme > ul:first-of-type").style.display = "none";
       this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
