@@ -600,6 +600,22 @@ export default {
       this.querySelector(selector).style.display = "none";
     },
   },
+  "ramitsurana/awesome-kubernetes": {
+    slug: "kubernetes",
+    label: "Kubernetes",
+    shortDescription: "Kubernetes is a system for automating deployment, scaling and management of containerized applications.",
+    logo: "https://avatars.githubusercontent.com/kubernetes",
+    color: "#2754e0",
+    category: "Back-End Development",
+    mutateContent() {
+      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector("#readme > hr:first-of-type").style.display = "none";
+      this.querySelector("#user-content-menu").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-menu").style.display = "none";
+    },
+  },
   "jdauphant/awesome-ansible": {
     slug: "ansible",
     label: "Ansible",
