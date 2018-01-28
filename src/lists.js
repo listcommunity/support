@@ -45,8 +45,12 @@ export default {
     logo: "https://avatars.githubusercontent.com/fsharp",
     color: "#378bba",
     category: "Programming Languages",
-    mutate(){
-      hide("#readme > ul:first-of-type");
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
   "avelino/awesome-go": {
