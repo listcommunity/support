@@ -46,6 +46,22 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
+  "fsprojects/awesome-fsharp":{
+    slug: "fsharp",
+    label: "F#",
+    shortDescription:
+      "F# is an open source cross-platform functional-first programming language built on the .NET Framework.",
+    logo: "https://avatars.githubusercontent.com/fsharp",
+    color: "#378bba",
+    category: "Programming Languages",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
+    },
+  },
   "avelino/awesome-go": {
     slug: "go",
     label: "Go",
