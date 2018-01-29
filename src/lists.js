@@ -667,12 +667,11 @@ export default {
     color: "#ef5138",
     category: "Platforms",
     mutateContent() {
-      this.querySelector(":scope > ul:nth-of-type(3)").style.display = "none";
+      this.querySelector(":scope > ul:nth-of-type(2)").style.display = "none";
       this.querySelector("#user-content-content").parentNode.style.display = "none";
     },
     mutateTOC() {
       this.querySelector("#toc-content").style.display = "none";
-      this.querySelector("#toc-weve-launched-our-newsletter-").style.display = "none";
     },
   },
   "jondot/awesome-react-native": {
