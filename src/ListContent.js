@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from "react";
-import convert from "htmr/lib/module";
+import convert from "htmr";
 
 import CustomLink from "./CustomLink";
 import CustomImg from "./CustomImg";
@@ -20,8 +20,10 @@ class ListContent extends PureComponent {
 
     if (this.props.text) {
       const wrapper = convert(this.props.text, {
-        a: CustomLink,
-        img: CustomImg,
+        map: {
+          a: CustomLink,
+          img: CustomImg,
+        },
       });
       content = wrapper.props.children[0];
     }
