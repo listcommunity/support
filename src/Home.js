@@ -108,7 +108,7 @@ class Home extends Component {
             ))}
           </div>
 
-          <footer className="bg-grey-lighter p-6 text-center leading-loose">
+          <footer className="border-t border-grey-lighter p-6 text-center leading-loose">
             <div className="max-w-xl mx-auto">
               This project is only possible thanks to the{" "}
               <a href="https://github.com/sindresorhus/awesome" className="link-reset font-bold">

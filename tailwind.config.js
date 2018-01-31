@@ -289,7 +289,7 @@ module.exports = {
   */
 
   leading: {
-    none: 1,
+    none: 0,
     tight: 1.15,
     normal: 1.35,
     loose: 1.5,

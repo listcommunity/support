@@ -1,5 +1,5 @@
 .toc a {
-  color: #666;
+  color: config("colors.grey-darker");
   display: block;
   overflow: hidden;
   text-decoration: none;
@@ -8,8 +8,29 @@
   margin-bottom: 0.5rem;
 }
 
-.toc-h2 { padding-left: 1rem; }
-.toc-h3 { padding-left: 2rem; }
-.toc-h4 { padding-left: 3rem; }
-.toc-h5 { padding-left: 4rem; }
-.toc-h6 { padding-left: 5rem; }
+.toc-h3 {
+  padding-left: 1rem;
+}
+.toc-h4 {
+  padding-left: 2rem;
+}
+.toc-h5 {
+  padding-left: 3rem;
+}
+.toc-h6 {
+  padding-left: 4rem;
+}
+
+.toc-h2::before,
+.toc-h3::before,
+.toc-h4::before,
+.toc-h5::before,
+.toc-h6::before {
+  float: left;
+  margin-top: -0.2em;
+  margin-right: 0.2em;
+  font-size: 1.2em;
+  line-height: 1;
+  color: config("colors.grey");
+  content: "\231e";
+}

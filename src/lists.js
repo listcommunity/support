@@ -296,7 +296,7 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
     mutateTOC() {
-      this.style.marginLeft = "-32px";
+      this.style.marginLeft = "-16px";
     },
   },
   "Granze/awesome-polymer": {

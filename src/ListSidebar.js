@@ -85,7 +85,7 @@ class ListSidebar extends PureComponent {
               key={item.hash}
               id={`toc-${item.hash.slice(1)}`}
               className={`toc-${item.name}${
-                this.props.activeItem === item.hash ? " font-bold" : ""
+                this.props.activeItem === item.hash ? " font-semibold" : ""
               }`}
               href={item.hash}>
               {item.text}
