@@ -1095,6 +1095,19 @@ export default {
       this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
+  "owainlewis/awesome-artificial-intelligence": {
+    slug: "artificial-intelligence",
+    label: "Artificial Intelligence",
+    shortDescription: "Artificial Intelligence is the simulation of human intelligence by machines, especially computer systems.",
+    category: "Computer Science",
+    mutateContent() {
+      this.querySelector(":scope > ol:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
+    },
+  },
   "mre/awesome-static-analysis": {
     slug: "static-analysis",
     label: "Static Analysis",
