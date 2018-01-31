@@ -299,6 +299,18 @@ export default {
       this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
+  "drobakowski/awesome-erlang": {
+    slug: "erlang",
+    label: "Erlang",
+    shortDescription: "Erlang is a general-purpose, concurrent, functional programming language.",
+    logo: "/logos/erlang.png",
+    favicon: "/favicons/erlang.png",
+    color: "#a2003e",
+    category: "Programming Languages",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+    },
+  },
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
