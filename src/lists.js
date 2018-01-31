@@ -46,6 +46,21 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
+  "hantuzun/awesome-clojurescript": {
+    slug: "clojurescript",
+    label: "ClojureScript",
+    shortDescription: "ClojureScript is a compiler for the Clojure programming language that targets JavaScript.",
+    logo: "https://avatars.githubusercontent.com/cljsinfo",
+    color: "#26324b",
+    category: "Programming Languages",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > hr:first-of-type").style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-a-community-driven-list-of-clojurescript-frameworks-libraries-and-wrappers").style.display = "none";
+    },
+  },
   "fsprojects/awesome-fsharp":{
     slug: "fsharp",
     label: "F#",
