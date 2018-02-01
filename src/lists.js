@@ -161,6 +161,18 @@ export default {
       this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
+  "vramana/awesome-reasonml": {
+    slug: "reason",
+    label: "Reason",
+    shortDescription:
+      "Reason is a new syntax and toolchain powered by the OCaml language that can be compiled to JavaScript.",
+    logo: "https://avatars.githubusercontent.com/reasonml",
+    color: "#db4d3f",
+    category: "Programming Languages",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+    },
+  },
   "akullpp/awesome-java": {
     slug: "java",
     label: "Java",
