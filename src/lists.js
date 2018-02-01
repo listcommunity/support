@@ -1318,4 +1318,18 @@ export default {
       this.querySelector(selector).style.display = "none";
     },
   },
+  "coinpride/CryptoList": {
+    slug: "cryptocurrency",
+    label: "Cryptocurrency",
+    shortDescription:
+      "A cryptocurrency is a digital asset designed to work as a medium of exchange that uses cryptography.",
+    category: "Miscellaneous",
+    mutateContent() {
+      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-contents").style.display = "none";
+    },
+  },
 };
