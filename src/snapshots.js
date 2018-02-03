@@ -5,7 +5,7 @@ let rootElement = document.getElementById("root");
 
 export const isSnapshot = navigator.userAgent === "ReactSnap";
 
-export const render = (component) => {
+export const render = component => {
   if (!isSnapshot && rootElement.hasChildNodes()) {
     ReactDOM.render(component, cloneElement);
   } else {

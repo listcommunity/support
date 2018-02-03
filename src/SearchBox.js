@@ -18,10 +18,13 @@ class SearchBox extends Component {
           autoComplete="off"
           autoCorrect="off"
           spellCheck="false"
-          onChange={(e) => this.props.handleChange(e.target.value)}
+          onChange={e => this.props.handleChange(e.target.value)}
         />
 
-        <button type="submit" className="leading-none text-grey p-2 absolute pin-l" title="Submit your search query">
+        <button
+          type="submit"
+          className="leading-none text-grey p-2 absolute pin-l"
+          title="Submit your search query">
           <SearchIcon width="16" height="16" />
         </button>
 
@@ -30,7 +33,7 @@ class SearchBox extends Component {
           onClick={() => this.props.handleChange()}
           title="Clear the search query"
           type="reset">
-            <ClearIcon width="16" height="16" />
+          <ClearIcon width="16" height="16" />
         </button>
       </div>
     );

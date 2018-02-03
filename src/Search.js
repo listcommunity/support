@@ -8,7 +8,7 @@ class Search extends Component {
     query: null,
     results: [],
     lastUpdate: new Date(),
-    searching: false
+    searching: false,
   };
 
   handleChange = query => {
@@ -52,12 +52,15 @@ class Search extends Component {
             ))}
           </div>
         )}
-        {results.length === 0 && searching && (
-          <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">Searching…</div>
-        )}
-        {results.length === 0 && !searching && query && (
-          <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">No results</div>
-        )}
+        {results.length === 0 &&
+          searching && (
+            <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">Searching…</div>
+          )}
+        {results.length === 0 &&
+          !searching &&
+          query && (
+            <div className="px-3 py-2 bg-white rounded shadow mt-2 text-grey">No results</div>
+          )}
       </Fragment>
     );
   }

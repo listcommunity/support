@@ -7,21 +7,21 @@
 @import "./ListSidebar";
 
 html {
-  background: config('colors.grey-lighter');
+  background: config("colors.grey-lighter");
   min-width: 320px;
 }
 
 body {
-  @apply
-    .text-black
-    .font-sans
-    .leading-normal;
+  @apply .text-black .font-sans .leading-normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  @apply
-    .font-headings
-    .tracking-tight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply .font-headings .tracking-tight;
 }
 
 img {
@@ -66,8 +66,7 @@ input:focus {
 .custom-outline,
 .hover\:custom-outline:hover,
 .focus\:custom-outline:focus {
-  box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.2),
-    0 5px 30px 0 rgba(3, 102, 214, 0.1);
+  box-shadow: 0 0 0 0.2rem rgba(3, 102, 214, 0.2), 0 5px 30px 0 rgba(3, 102, 214, 0.1);
   outline: none;
 }
 

@@ -13,7 +13,9 @@
     "gh-pages": "^1.1.0",
     "github-markdown-css": "^2.9.0",
     "htmr": "^0.6.3",
+    "husky": "^0.14.3",
     "is-absolute-url": "^2.1.0",
+    "lint-staged": "^6.1.0",
     "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",
     "lodash.difference": "^4.5.0",
@@ -22,6 +24,7 @@
     "numeral": "^2.0.6",
     "postcss-cli": "^4.1.1",
     "postcss-import": "^11.0.0",
+    "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -34,6 +37,7 @@
     "url-join": "^2.0.2"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "npm-run-all -p start:css start:js",
     "start:css": "postcss src/css/index.css -o src/index.css -w",
     "start:js": "react-scripts start",
@@ -45,6 +49,9 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": ["prettier --write", "git add"]
   },
   "prettier": {
     "printWidth": 100,
