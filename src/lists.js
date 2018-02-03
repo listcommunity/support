@@ -1050,6 +1050,20 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
+  "prakhar1989/awesome-courses": {
+    slug: "university-courses",
+    label: "University Courses",
+    description:
+      "Assignments, lectures, notes, readings and examinations available online for free from Computer Science courses.",
+    category: "Computer Science",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-contents").style.display = "none";
+    },
+  },
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
