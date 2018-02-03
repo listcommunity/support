@@ -2,7 +2,7 @@ export default {
   "sorrycc/awesome-javascript": {
     slug: "javascript",
     label: "JavaScript",
-    shortDescription:
+    description:
       "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
@@ -14,7 +14,7 @@ export default {
   "vinta/awesome-python": {
     slug: "python",
     label: "Python",
-    shortDescription: "Python is a dynamically typed programming language.",
+    description: "Python is a dynamically typed programming language.",
     logo: "/logos/python.png",
     favicon: "/favicons/python.png",
     color: "#3572a5",
@@ -26,7 +26,7 @@ export default {
   "h4cc/awesome-elixir": {
     slug: "elixir",
     label: "Elixir",
-    shortDescription:
+    description:
       "Elixir is a dynamic, functional language designed for building scalable and maintainable applications.",
     logo: "https://avatars.githubusercontent.com/elixir-lang",
     color: "#4e2a8e",
@@ -38,7 +38,7 @@ export default {
   "razum2um/awesome-clojure": {
     slug: "clojure",
     label: "Clojure",
-    shortDescription: "Clojure is a functional, dynamic, general-purpose programming language.",
+    description: "Clojure is a functional, dynamic, general-purpose programming language.",
     logo: "https://avatars.githubusercontent.com/clojure",
     color: "#26324b",
     category: "Programming Languages",
@@ -49,7 +49,8 @@ export default {
   "hantuzun/awesome-clojurescript": {
     slug: "clojurescript",
     label: "ClojureScript",
-    shortDescription: "ClojureScript is a compiler for the Clojure programming language that targets JavaScript.",
+    description:
+      "ClojureScript is a compiler for the Clojure programming language that targets JavaScript.",
     logo: "https://avatars.githubusercontent.com/cljsinfo",
     color: "#26324b",
     category: "Programming Languages",
@@ -58,13 +59,16 @@ export default {
       this.querySelector(":scope > hr:first-of-type").style.display = "none";
     },
     mutateTOC() {
-      this.querySelector("#toc-a-community-driven-list-of-clojurescript-frameworks-libraries-and-wrappers").style.display = "none";
+      this.querySelector(
+        "#toc-a-community-driven-list-of-clojurescript-frameworks-libraries-and-wrappers"
+      ).style.display =
+        "none";
     },
   },
-  "fsprojects/awesome-fsharp":{
+  "fsprojects/awesome-fsharp": {
     slug: "fsharp",
     label: "F#",
-    shortDescription:
+    description:
       "F# is an open source cross-platform functional-first programming language built on the .NET Framework.",
     logo: "https://avatars.githubusercontent.com/fsharp",
     color: "#378bba",
@@ -80,7 +84,7 @@ export default {
   "avelino/awesome-go": {
     slug: "go",
     label: "Go",
-    shortDescription:
+    description:
       "Go is a programming language built to resemble a simplified version of the C programming language.",
     logo: "https://avatars.githubusercontent.com/golang",
     color: "#375eab",
@@ -100,7 +104,7 @@ export default {
   "markets/awesome-ruby": {
     slug: "ruby",
     label: "Ruby",
-    shortDescription:
+    description:
       "Ruby is a scripting language designed for simplified object-oriented programming.",
     logo: "https://avatars.githubusercontent.com/ruby",
     color: "#cc342d",
@@ -116,7 +120,7 @@ export default {
   "matteocrippa/awesome-swift": {
     slug: "swift",
     label: "Swift",
-    shortDescription:
+    description:
       "Swift is a modern programming language focused on safety, performance and expressivity.",
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
     color: "#ef5138",
@@ -132,7 +136,7 @@ export default {
   "uraimo/Awesome-Swift-Playgrounds": {
     slug: "swift-playgrounds",
     label: "Swift Playgrounds",
-    shortDescription:
+    description:
       "Swift Playgrounds make learning the Swift programming language interactive and fun.",
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/swift/swift.png",
     color: "#ef5138",
@@ -148,7 +152,7 @@ export default {
   "isRuslan/awesome-elm": {
     slug: "elm",
     label: "Elm",
-    shortDescription:
+    description:
       "Elm is a programming language for declaratively creating web browser-based graphical user interfaces.",
     logo: "https://avatars.githubusercontent.com/elm-lang",
     color: "#60b5cc",
@@ -164,7 +168,7 @@ export default {
   "vramana/awesome-reasonml": {
     slug: "reason",
     label: "Reason",
-    shortDescription:
+    description:
       "Reason is a new syntax and toolchain powered by the OCaml language that can be compiled to JavaScript.",
     logo: "https://avatars.githubusercontent.com/reasonml",
     color: "#db4d3f",
@@ -176,7 +180,7 @@ export default {
   "akullpp/awesome-java": {
     slug: "java",
     label: "Java",
-    shortDescription:
+    description:
       "Java is an object-oriented programming language used mainly for desktop and mobile applications.",
     logo: "/logos/java.png",
     favicon: "/favicons/java.png",
@@ -189,7 +193,7 @@ export default {
   "rizo/awesome-ocaml": {
     slug: "ocaml",
     label: "OCaml",
-    shortDescription:
+    description:
       "OCaml is an industrial strength programming language supporting functional, imperative and object-oriented styles.",
     logo: "https://avatars.githubusercontent.com/ocaml",
     color: "#c97928",
@@ -205,7 +209,7 @@ export default {
   "ziadoz/awesome-php": {
     slug: "php",
     label: "PHP",
-    shortDescription:
+    description:
       "PHP is a scripting language that works particularly well for server-side web development.",
     logo: "https://avatars.githubusercontent.com/php",
     color: "#4f5d95",
@@ -221,7 +225,7 @@ export default {
   "veelenga/awesome-crystal": {
     slug: "crystal",
     label: "Crystal",
-    shortDescription: "Crystal is a self-hosted, general purpose programming language.",
+    description: "Crystal is a self-hosted, general purpose programming language.",
     logo: "https://avatars.githubusercontent.com/crystal-lang",
     color: "#222222",
     category: "Programming Languages",
@@ -232,7 +236,7 @@ export default {
   "qinwf/awesome-R": {
     slug: "r",
     label: "R",
-    shortDescription:
+    description:
       "R is a free programming language and software environment for statistical computing and graphics.",
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/r/r.png",
     color: "#198ce7",
@@ -244,7 +248,7 @@ export default {
   "parro-it/awesome-micro-npm-packages": {
     slug: "micro-npm",
     label: "Micro npm Packages",
-    shortDescription:
+    description:
       "A curated list of small, focused npm packages. npm is a package manager for JavaScript included with Node.js.",
     logo: "https://avatars.githubusercontent.com/npm",
     color: "#cb3837",
@@ -253,7 +257,7 @@ export default {
   "dustinspecker/awesome-eslint": {
     slug: "eslint",
     label: "ESLint",
-    shortDescription:
+    description:
       "ESLint is an extensible static-analysis tool for JavaScript and related languages that helps catch errors.",
     logo: "https://avatars.githubusercontent.com/eslint",
     color: "#463fd4",
@@ -269,7 +273,7 @@ export default {
   "fffaraz/awesome-cpp": {
     slug: "cpp",
     label: "C and C++",
-    shortDescription:
+    description:
       "C++ is a general purpose and object-oriented programming language. It was designed as an extension of the C language.",
     logo: "https://avatars.githubusercontent.com/isocpp",
     color: "#00589c",
@@ -281,7 +285,7 @@ export default {
   "hachiojipm/awesome-perl": {
     slug: "perl",
     label: "Perl",
-    shortDescription:
+    description:
       "Perl is a highly capable and feature-rich programming language with over 29 years of development.",
     logo: "https://avatars.githubusercontent.com/Perl",
     color: "#0073a1",
@@ -297,7 +301,7 @@ export default {
   "rust-unofficial/awesome-rust": {
     slug: "rust",
     label: "Rust",
-    shortDescription:
+    description:
       "Rust is a systems programming language. It is designed for improved memory safety without sacrificing performance.",
     logo: "https://avatars.githubusercontent.com/rust-lang",
     color: "#428bca",
@@ -314,7 +318,7 @@ export default {
   "drobakowski/awesome-erlang": {
     slug: "erlang",
     label: "Erlang",
-    shortDescription: "Erlang is a general-purpose, concurrent, functional programming language.",
+    description: "Erlang is a general-purpose, concurrent, functional programming language.",
     logo: "/logos/erlang.png",
     favicon: "/favicons/erlang.png",
     color: "#a2003e",
@@ -326,8 +330,7 @@ export default {
   "enaqx/awesome-react": {
     slug: "react",
     label: "React",
-    shortDescription:
-      "React is an open source JavaScript library used for designing user interfaces.",
+    description: "React is an open source JavaScript library used for designing user interfaces.",
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Front-End Development",
@@ -341,7 +344,7 @@ export default {
   "Granze/awesome-polymer": {
     slug: "polymer",
     label: "Polymer",
-    shortDescription:
+    description:
       "Polymer is an open source JavaScript library for building web applications using Web Components.",
     logo: "https://avatars.githubusercontent.com/Polymer",
     color: "#e8345a",
@@ -350,7 +353,7 @@ export default {
   "gdi2290/awesome-angular": {
     slug: "angular",
     label: "Angular",
-    shortDescription:
+    description:
       "Angular is an open source JavaScript-based framework for building web applications.",
     logo: "https://avatars.githubusercontent.com/angular",
     color: "#dd0031",
@@ -369,7 +372,7 @@ export default {
   "vuejs/awesome-vue": {
     slug: "vue",
     label: "Vue.js",
-    shortDescription: "Vue.js is a JavaScript framework for building interactive web applications.",
+    description: "Vue.js is a JavaScript framework for building interactive web applications.",
     logo: "https://avatars.githubusercontent.com/vuejs",
     color: "#4fc08d",
     category: "Front-End Development",
@@ -384,7 +387,7 @@ export default {
   "webpack-contrib/awesome-webpack": {
     slug: "webpack",
     label: "Webpack",
-    shortDescription:
+    description:
       "Webpack is a bundler that takes modules with dependencies and creates static assets.",
     logo: "https://avatars.githubusercontent.com/webpack",
     color: "#2b3a42",
@@ -400,7 +403,7 @@ export default {
   "chentsulin/awesome-graphql": {
     slug: "graphql",
     label: "GraphQL & Relay",
-    shortDescription:
+    description:
       "GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.",
     logo: "/logos/graphql.png",
     favicon: "/favicons/graphql.png",
@@ -417,7 +420,7 @@ export default {
   "Famolus/awesome-sass": {
     slug: "sass",
     label: "Sass",
-    shortDescription:
+    description:
       "Sass is an extension of CSS, adding nested rules, variables, selector inheritance and more.",
     logo: "https://avatars.githubusercontent.com/sass",
     color: "#c6538c",
@@ -433,8 +436,7 @@ export default {
   "unicodeveloper/awesome-nextjs": {
     slug: "next",
     label: "Next.js",
-    shortDescription:
-      "Next.js is a framework for server-rendered or statically-exported React apps.",
+    description: "Next.js is a framework for server-rendered or statically-exported React apps.",
     logo: "https://avatars.githubusercontent.com/zeit",
     color: "#222",
     category: "Front-End Development",
@@ -449,7 +451,7 @@ export default {
   "hyperapp/awesome": {
     slug: "hyperapp",
     label: "Hyperapp",
-    shortDescription: "Hyperapp is a 1 KB JavaScript library for building frontend applications.",
+    description: "Hyperapp is a 1 KB JavaScript library for building frontend applications.",
     logo: "https://avatars.githubusercontent.com/hyperapp",
     color: "#00bbff",
     category: "Front-End Development",
@@ -460,7 +462,7 @@ export default {
   "Urigo/awesome-meteor": {
     slug: "meteor",
     label: "Meteor",
-    shortDescription:
+    description:
       "Meteor is an open source platform for developing web, mobile and desktop applications.",
     logo: "/logos/meteor.png",
     favicon: "/favicons/meteor.png",
@@ -473,7 +475,7 @@ export default {
   "wbkd/awesome-d3": {
     slug: "d3js",
     label: "D3.js",
-    shortDescription:
+    description:
       "D3.js is a JavaScript library for manipulating documents based on data. D3 brings data to life using HTML, SVG and CSS.",
     logo: "https://avatars.githubusercontent.com/d3",
     color: "#f79045",
@@ -486,7 +488,7 @@ export default {
   "addyosmani/es6-tools": {
     slug: "es6-tools",
     label: "ECMAScript 6 Tools",
-    shortDescription:
+    description:
       "An aggregation of tooling for using ES6 today. EcmaScript 6 is the sixth release of the ECMAScript language.",
     logo: "https://avatars.githubusercontent.com/tc39",
     color: "#f7df1e",
@@ -495,7 +497,7 @@ export default {
   "babel/awesome-babel": {
     slug: "babel",
     label: "Babel",
-    shortDescription: "Babel is a compiler for writing next generation JavaScript, today.",
+    description: "Babel is a compiler for writing next generation JavaScript, today.",
     logo: "https://avatars.githubusercontent.com/babel",
     color: "#f5da55",
     category: "Front-End Development",
@@ -503,7 +505,7 @@ export default {
   "mateusortiz/webcomponents-the-right-way": {
     slug: "webcomponents",
     label: "Web Components",
-    shortDescription:
+    description:
       "Web Components are a set of features that allow for the creation of reusable components in web applications.",
     logo: "https://avatars.githubusercontent.com/webcomponents",
     color: "#e6e6e6",
@@ -515,7 +517,7 @@ export default {
   "sotayamashita/awesome-css": {
     slug: "css",
     label: "CSS",
-    shortDescription:
+    description:
       "Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance of views.",
     logo: "https://avatars.githubusercontent.com/css",
     color: "#256bdc",
@@ -531,7 +533,7 @@ export default {
   "afonsopacifer/awesome-flexbox": {
     slug: "flexbox",
     label: "Flexbox",
-    shortDescription:
+    description:
       "The CSS Flexible Box Module is a layout model and method that offers powerful space distribution and alignment capabilities.",
     logo: "https://avatars.githubusercontent.com/css",
     color: "#256bdc",
@@ -547,7 +549,7 @@ export default {
   "ChromeDevTools/awesome-chrome-devtools": {
     slug: "chrome-devtools",
     label: "Chrome DevTools",
-    shortDescription:
+    description:
       "Chrome DevTools is a set of authoring, debugging, and profiling tools built into Google Chrome.",
     logo: "https://avatars.githubusercontent.com/ChromeDevTools",
     color: "#307eff",
@@ -556,7 +558,7 @@ export default {
   "rosarior/awesome-django": {
     slug: "django",
     label: "Django",
-    shortDescription:
+    description:
       "Django is a web application framework for Python. It is meant to prioritize reusability and rapid development.",
     logo: "https://avatars.githubusercontent.com/django",
     color: "#0c4b33",
@@ -568,7 +570,7 @@ export default {
   "humiaozuzu/awesome-flask": {
     slug: "flask",
     label: "Flask",
-    shortDescription:
+    description:
       "Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine.",
     logo: "https://raw.githubusercontent.com/pallets/flask/master/docs/_static/flask.png",
     color: "#ffffff",
@@ -577,7 +579,7 @@ export default {
   "ekremkaraca/awesome-rails": {
     slug: "rails",
     label: "Rails",
-    shortDescription:
+    description:
       "Ruby on Rails is a web application framework written in Ruby. It is meant to help simplify the building of complex websites.",
     logo: "https://avatars.githubusercontent.com/rails",
     color: "#cc342d",
@@ -593,7 +595,7 @@ export default {
   "hothero/awesome-rails-gem": {
     slug: "rails-gems",
     label: "Rails Gems",
-    shortDescription:
+    description:
       "A collection of Ruby Gems for Rails development. The goal is to help developers build awesome applications.",
     logo: "https://avatars.githubusercontent.com/rails",
     color: "#cc342d",
@@ -605,7 +607,7 @@ export default {
   "chiraggude/awesome-laravel": {
     slug: "laravel",
     label: "Laravel",
-    shortDescription:
+    description:
       "Laravel is a popular PHP framework, used for the development of MVC web applications.",
     logo: "https://avatars.githubusercontent.com/laravel",
     color: "#e74430",
@@ -624,7 +626,7 @@ export default {
   "veggiemonk/awesome-docker": {
     slug: "docker",
     label: "Docker",
-    shortDescription: "Docker is a platform built for developers to build and run applications.",
+    description: "Docker is a platform built for developers to build and run applications.",
     logo: "https://avatars.githubusercontent.com/docker",
     color: "#066da5",
     category: "Back-End Development",
@@ -642,7 +644,8 @@ export default {
   "ramitsurana/awesome-kubernetes": {
     slug: "kubernetes",
     label: "Kubernetes",
-    shortDescription: "Kubernetes is a system for automating deployment, scaling and management of containerized applications.",
+    description:
+      "Kubernetes is a system for automating deployment, scaling and management of containerized applications.",
     logo: "https://avatars.githubusercontent.com/kubernetes",
     color: "#2754e0",
     category: "Back-End Development",
@@ -658,7 +661,7 @@ export default {
   "jdauphant/awesome-ansible": {
     slug: "ansible",
     label: "Ansible",
-    shortDescription:
+    description:
       "Ansible is a powerful automation engine used for configuration management, application deployment and task automation.",
     logo: "/logos/ansible.png",
     favicon: "/favicons/ansible.png",
@@ -672,7 +675,7 @@ export default {
   "anaibol/awesome-serverless": {
     slug: "serverless",
     label: "Serverless",
-    shortDescription:
+    description:
       "Serverless refers to apps that depend on third-party services (backend as a service) or custom code (functions as a service).",
     category: "Back-End Development",
     mutateContent() {
@@ -689,8 +692,7 @@ export default {
   "JStumpp/awesome-android": {
     slug: "android",
     label: "Android",
-    shortDescription:
-      "Android is an operating system built by Google designed for mobile applications.",
+    description: "Android is an operating system built by Google designed for mobile applications.",
     logo: "https://avatars.githubusercontent.com/android",
     color: "#6ab344",
     category: "Platforms",
@@ -701,7 +703,7 @@ export default {
   "vsouza/awesome-ios": {
     slug: "ios",
     label: "iOS",
-    shortDescription: "iOS is the operating system for all of Apple’s mobile products.",
+    description: "iOS is the operating system for all of Apple’s mobile products.",
     logo: "https://raw.githubusercontent.com/github/explore/master/topics/ios/ios.png",
     color: "#ef5138",
     category: "Platforms",
@@ -716,7 +718,7 @@ export default {
   "jondot/awesome-react-native": {
     slug: "react-native",
     label: "React Native",
-    shortDescription: "React Native is a JavaScript mobile framework developed by Facebook.",
+    description: "React Native is a JavaScript mobile framework developed by Facebook.",
     logo: "https://avatars.githubusercontent.com/react-community",
     color: "#61dafb",
     category: "Platforms",
@@ -727,7 +729,7 @@ export default {
   "sindresorhus/awesome-electron": {
     slug: "electron",
     label: "Electron",
-    shortDescription:
+    description:
       "Electron is a framework for building cross-platform desktop applications with web technology.",
     logo: "https://avatars.githubusercontent.com/electron",
     color: "#2f3241",
@@ -746,7 +748,7 @@ export default {
   "sindresorhus/awesome-nodejs": {
     slug: "nodejs",
     label: "Node.js",
-    shortDescription: "Node.js is a tool for executing JavaScript in a variety of environments.",
+    description: "Node.js is a tool for executing JavaScript in a variety of environments.",
     logo: "https://avatars.githubusercontent.com/nodejs",
     color: "#43853d",
     category: "Platforms",
@@ -761,7 +763,7 @@ export default {
   "iCHAIT/awesome-macOS": {
     slug: "macos",
     label: "macOS",
-    shortDescription:
+    description:
       "macOS is the operating system for Mac computers. It was designed by Apple and is meant specifically for their hardware.",
     logo: "https://avatars.githubusercontent.com/apple",
     category: "Platforms",
@@ -776,7 +778,7 @@ export default {
   "Awesome-Windows/Awesome": {
     slug: "windows",
     label: "Windows",
-    shortDescription: "Windows is Microsoft's GUI-based operating system.",
+    description: "Windows is Microsoft's GUI-based operating system.",
     logo: "https://avatars.githubusercontent.com/Microsoft",
     color: "#e6e6e6",
     category: "Platforms",
@@ -788,7 +790,7 @@ export default {
   "benoitjadinon/awesome-xamarin": {
     slug: "xamarin",
     label: "Xamarin",
-    shortDescription: "Xamarin is a platform for developing iOS and Android applications.",
+    description: "Xamarin is a platform for developing iOS and Android applications.",
     logo: "https://avatars.githubusercontent.com/xamarin",
     color: "#2c3e50",
     category: "Platforms",
@@ -799,7 +801,7 @@ export default {
   "deephacks/awesome-jvm": {
     slug: "jvm",
     label: "JVM",
-    shortDescription:
+    description:
       "A curated list of low-level, performance and non-framework related resources for the Java virtual machine.",
     logo: "/logos/java.png",
     favicon: "/favicons/java.png",
@@ -812,7 +814,7 @@ export default {
   "donnemartin/awesome-aws": {
     slug: "aws",
     label: "AWS",
-    shortDescription:
+    description:
       "Amazon Web Services provides on-demand cloud computing platforms on a subscription basis.",
     logo: "https://avatars.githubusercontent.com/aws",
     color: "#ffa93f",
@@ -829,7 +831,7 @@ export default {
   "ianstormtaylor/awesome-heroku": {
     slug: "heroku",
     label: "Heroku",
-    shortDescription:
+    description:
       "Heroku is a cloud platform as a service supporting several programming languages that is used as a deployment model.",
     logo: "https://avatars.githubusercontent.com/heroku",
     color: "#624eaf",
@@ -841,7 +843,7 @@ export default {
   "ipfs/awesome-ipfs": {
     slug: "ipfs",
     label: "IPFS",
-    shortDescription:
+    description:
       "IPFS is a peer-to-peer protocol for content-addressed sharing of data via a distributed file system.",
     logo: "/logos/ipfs.png",
     favicon: "/favicons/ipfs.png",
@@ -858,7 +860,7 @@ export default {
   "thibmaek/awesome-raspberry-pi": {
     slug: "raspberry-pi",
     label: "Raspberry Pi",
-    shortDescription:
+    description:
       "A Raspberry Pi is a popular piece of hardware called a micro-controller. Its use ranges from robotics to home automation.",
     logo: "https://avatars.githubusercontent.com/raspberrypi",
     color: "#d6264f",
@@ -874,8 +876,7 @@ export default {
   "Lembed/Awesome-arduino": {
     slug: "arduino",
     label: "Arduino",
-    shortDescription:
-      "Arduino is an open source hardware and software company and maker community.",
+    description: "Arduino is an open source hardware and software company and maker community.",
     logo: "https://avatars.githubusercontent.com/arduino",
     color: "#00979d",
     category: "Platforms",
@@ -886,7 +887,7 @@ export default {
   "JesseTG/awesome-qt": {
     slug: "qt",
     label: "Qt",
-    shortDescription:
+    description:
       "Qt is a powerful cross-platform application development framework, for use primarily (but not exclusively) in C++.",
     logo: "https://avatars.githubusercontent.com/qt",
     color: "#41cd52",
@@ -902,7 +903,7 @@ export default {
   "Kazhnuz/awesome-gnome": {
     slug: "gnome",
     label: "GNOME",
-    shortDescription:
+    description:
       "GNOME is a desktop environment composed of free and open-source software that runs on Linux and most BSD derivatives.",
     logo: "https://avatars.githubusercontent.com/GNOME",
     color: "#4a86cf",
@@ -918,7 +919,7 @@ export default {
   "mehcode/awesome-atom": {
     slug: "atom",
     label: "Atom",
-    shortDescription:
+    description:
       "Atom is a text editor developed by GitHub. It is designed to be approachable out of the box yet highly customizable.",
     logo: "https://avatars.githubusercontent.com/atom",
     color: "#5fb57d",
@@ -934,7 +935,7 @@ export default {
   "dhamaniasad/awesome-postgres": {
     slug: "postgresql",
     label: "PostgreSQL",
-    shortDescription:
+    description:
       "PostgreSQL is an open source database management system that is object-relational.",
     logo: "https://avatars.githubusercontent.com/postgres",
     color: "#336791",
@@ -950,7 +951,7 @@ export default {
   "ramnes/awesome-mongodb": {
     slug: "mongodb",
     label: "MongoDB",
-    shortDescription:
+    description:
       "MongoDB is a NoSQL cross-platform database. It is designed for scalability and performance.",
     logo: "https://avatars.githubusercontent.com/mongodb",
     color: "#218e38",
@@ -966,7 +967,7 @@ export default {
   "emacs-tw/awesome-emacs": {
     slug: "emacs",
     label: "Emacs",
-    shortDescription:
+    description:
       "Emacs is an extensible, customizable, free text editor and computing environment.",
     logo: "https://avatars.githubusercontent.com/emacs",
     color: "#7f5ab6",
@@ -978,7 +979,7 @@ export default {
   "viatsko/awesome-vscode": {
     slug: "vscode",
     label: "VS Code",
-    shortDescription:
+    description:
       "VS Code is a customizable code editor. It includes support for Git, intelligent code completion, code refactoring and more.",
     logo: "/logos/vscode.png",
     favicon: "/favicons/vscode.png",
@@ -995,8 +996,7 @@ export default {
   "dreikanter/sublime-bookmarks": {
     slug: "sublime-text",
     label: "Sublime Text",
-    shortDescription:
-      "Sublime Text is a customizable proprietary cross-platform source code editor.",
+    description: "Sublime Text is a customizable proprietary cross-platform source code editor.",
     logo: "https://avatars.githubusercontent.com/SublimeText",
     color: "#ff8100",
     category: "Editors",
@@ -1004,7 +1004,7 @@ export default {
   "akrawchyk/awesome-vim": {
     slug: "vim",
     label: "Vim",
-    shortDescription:
+    description:
       "Vim is a console-run text editor program. Bram Moolenaar is credited with the development, which began in 1988.",
     logo: "https://avatars.githubusercontent.com/vim",
     color: "#199f4b",
@@ -1020,8 +1020,7 @@ export default {
   "awesome-lists/awesome-bash": {
     slug: "bash",
     label: "Bash",
-    shortDescription:
-      "Bash is a shell and command language interpreter for the GNU operating system.",
+    description: "Bash is a shell and command language interpreter for the GNU operating system.",
     logo: "/logos/bash.png",
     favicon: "/favicons/bash.png",
     color: "#2f3a43",
@@ -1030,7 +1029,7 @@ export default {
   "unixorn/awesome-zsh-plugins": {
     slug: "zsh",
     label: "Zsh",
-    shortDescription:
+    description:
       "Zsh is a shell designed for interactive use, although it is also a powerful scripting language.",
     logo: "https://avatars.githubusercontent.com/zsh-users",
     color: "#000000",
@@ -1043,7 +1042,7 @@ export default {
   "alebcay/awesome-shell": {
     slug: "shell",
     label: "Shell",
-    shortDescription:
+    description:
       "A shell is a text-based terminal, used for manipulating programs and files. Shell scripts typically manage program execution.",
     color: "#000000",
     category: "Development Environment",
@@ -1054,7 +1053,7 @@ export default {
   "sobolevn/awesome-cryptography": {
     slug: "cryptography",
     label: "Cryptography",
-    shortDescription:
+    description:
       "Cryptography is the practice and study of techniques for secure communication in the presence of third parties.",
     category: "Computer Science",
     mutateContent() {
@@ -1068,7 +1067,7 @@ export default {
   "jbhuang0604/awesome-computer-vision": {
     slug: "computer-vision",
     label: "Computer Vision",
-    shortDescription:
+    description:
       "Computer vision deals with the extraction, analysis and understanding of information from images and videos.",
     category: "Computer Science",
     mutateContent() {
@@ -1082,7 +1081,7 @@ export default {
   "ChristosChristofidis/awesome-deep-learning": {
     slug: "deep-learning",
     label: "Deep Learning",
-    shortDescription:
+    description:
       "Deep Learning is an AI function and subset of machine learning, used for processing large amounts of complex data.",
     category: "Computer Science",
     mutateContent() {
@@ -1096,7 +1095,7 @@ export default {
   "josephmisiti/awesome-machine-learning": {
     slug: "machine-learning",
     label: "Machine Learning",
-    shortDescription:
+    description:
       "Machine learning is a way of modeling and interpreting data that allows a piece of software to respond intelligently.",
     category: "Computer Science",
     mutateContent() {
@@ -1110,7 +1109,8 @@ export default {
   "owainlewis/awesome-artificial-intelligence": {
     slug: "artificial-intelligence",
     label: "Artificial Intelligence",
-    shortDescription: "Artificial Intelligence is the simulation of human intelligence by machines, especially computer systems.",
+    description:
+      "Artificial Intelligence is the simulation of human intelligence by machines, especially computer systems.",
     category: "Computer Science",
     mutateContent() {
       this.querySelector(":scope > ol:first-of-type").style.display = "none";
@@ -1123,7 +1123,7 @@ export default {
   "mre/awesome-static-analysis": {
     slug: "static-analysis",
     label: "Static Analysis",
-    shortDescription:
+    description:
       "Static program analysis is the analysis of computer software that is performed without actually executing programs.",
     category: "Computer Science",
     mutateContent() {
@@ -1137,7 +1137,7 @@ export default {
   "bulutyazilim/awesome-datascience": {
     slug: "data-science",
     label: "Data Science",
-    shortDescription:
+    description:
       "Data Science applies scientific methods, processes, and systems to extract knowledge and insights from data.",
     category: "Computer Science",
     mutateContent() {
@@ -1151,7 +1151,7 @@ export default {
   "tayllan/awesome-algorithms": {
     slug: "algorithms",
     label: "Algorithms",
-    shortDescription: "Algorithms are self-contained sequences that carry out a variety of tasks.",
+    description: "Algorithms are self-contained sequences that carry out a variety of tasks.",
     category: "Computer Science",
     mutateContent() {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
@@ -1160,7 +1160,7 @@ export default {
   "monostable/awesome-electronics": {
     slug: "electronics",
     label: "Electronics",
-    shortDescription:
+    description:
       "Electronic engineering is the practice of understanding, designing and building electronic circuits.",
     category: "Hardware",
     mutateContent() {
@@ -1174,7 +1174,7 @@ export default {
   "phodal/awesome-iot": {
     slug: "iot",
     label: "IoT",
-    shortDescription:
+    description:
       "IoT refers to the network of physical devices embedded in everyday objects, enabling them to send and receive data.",
     category: "Hardware",
     mutateContent() {
@@ -1188,7 +1188,7 @@ export default {
   "awesomedata/awesome-public-datasets": {
     slug: "public-datasets",
     label: "Public Datasets",
-    shortDescription:
+    description:
       "A topic-centric list of high-quality open datasets in public domains. By everyone, for everyone!",
     category: "APIs and Datasets",
     mutateContent() {
@@ -1198,7 +1198,7 @@ export default {
   "abhishekbanthia/Public-APIs": {
     slug: "public-apis-2",
     label: "Public APIs",
-    shortDescription:
+    description:
       "An attempt to categorize different APIs scoured from the web which make their resources available for consumption.",
     category: "APIs and Datasets",
     mutateContent() {
@@ -1212,7 +1212,7 @@ export default {
   "toddmotto/public-apis": {
     slug: "public-apis",
     label: "Public APIs",
-    shortDescription: "A collective list of free and public APIs for use in web development.",
+    description: "A collective list of free and public APIs for use in web development.",
     category: "APIs and Datasets",
     mutateContent() {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
@@ -1225,7 +1225,7 @@ export default {
   "fasouto/awesome-dataviz": {
     slug: "data-visualization",
     label: "Data Visualization",
-    shortDescription:
+    description:
       "Data Visualization is the visual depiction of data through the use of graphs, plots, and informational graphics.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1239,7 +1239,7 @@ export default {
   "mfornos/awesome-microservices": {
     slug: "microservices",
     label: "Microservices",
-    shortDescription:
+    description:
       "Microservices is an architecture that structures an application as a collection of loosely coupled services.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1250,7 +1250,7 @@ export default {
   "Kickball/awesome-selfhosted": {
     slug: "self-hosted",
     label: "Self-Hosted",
-    shortDescription:
+    description:
       "Self-hosting is the process of locally hosting and managing applications instead of renting from SaaS providers.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1261,7 +1261,7 @@ export default {
   "folkswhocode/awesome-diversity": {
     slug: "diversity",
     label: "Diversity",
-    shortDescription:
+    description:
       "A curated list of amazingly awesome articles, websites and resources about diversity in technology.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1275,7 +1275,7 @@ export default {
   "cristianoliveira/awesome4girls": {
     slug: "for-girls",
     label: "For Girls",
-    shortDescription:
+    description:
       "A curated list of inclusive events, projects and initiatives for women in the tech area.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1290,7 +1290,7 @@ export default {
   "mislavcimpersak/awesome-dev-fun": {
     slug: "dev-fun",
     label: "Dev Fun",
-    shortDescription:
+    description:
       "A list of libraries, packages and languages that have no real purpose but to make a developer chuckle.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1304,7 +1304,7 @@ export default {
   "GetStoryline/awesome-bots": {
     slug: "bots",
     label: "Bots",
-    shortDescription:
+    description:
       "Tools, newsletters and other resources about bots, applications that runs automated tasks over the internet.",
     category: "Miscellaneous",
     mutateContent() {
@@ -1321,7 +1321,7 @@ export default {
   "coinpride/CryptoList": {
     slug: "cryptocurrency",
     label: "Cryptocurrency",
-    shortDescription:
+    description:
       "A cryptocurrency is a digital asset designed to work as a medium of exchange that uses cryptography.",
     category: "Miscellaneous",
     mutateContent() {

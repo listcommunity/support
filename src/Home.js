@@ -99,7 +99,7 @@ class Home extends Component {
                           />
                         )}
                         <strong className="mb-1 block">{list.label}</strong>
-                        <span className="text-sm">{list.shortDescription}</span>
+                        <span className="text-sm">{list.description}</span>
                       </Link>
                     </li>
                   ))}

@@ -24,7 +24,7 @@ and submit a pull request. Please follow this format and indentation:
 "sorrycc/awesome-javascript": { // The GitHub user and repo names
   slug: "javascript", // A slug used for short URLs (like https://list.community/javascript)
   label: "JavaScript", // The label displayed in the homepage and in the page title
-  shortDescription: // Description shown in the homepage
+  description: // Short description shown in the homepage
     "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
   logo: "https://avatars.githubusercontent.com/tc39", // (optional) Ideally a GitHub avatar so that we can pass a `size` param
   color: "#f7df1e", // (optional) Color used in the topbar
