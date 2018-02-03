@@ -702,7 +702,7 @@ export default {
     slug: "ios",
     label: "iOS",
     shortDescription: "iOS is the operating system for all of Apple’s mobile products.",
-    logo: "https://avatars.githubusercontent.com/apple",
+    logo: "https://raw.githubusercontent.com/github/explore/master/topics/ios/ios.png",
     color: "#ef5138",
     category: "Platforms",
     mutateContent() {
