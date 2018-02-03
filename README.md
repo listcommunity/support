@@ -12,6 +12,7 @@
 
 * [How do I add a list?](docs/CONTRIBUTING.md#how-do-i-add-a-list)
 * [How do I provide feedback, report a bug or make a feature request?](docs/CONTRIBUTING.md#how-do-i-provide-feedback-report-a-bug-or-make-a-feature-request)
+* [How can I run and deploy my own version of the website?](docs/CONTRIBUTING.md#how-can-i-run-and-deploy-my-own-version-of-the-website)
 
 ## Credits
 
