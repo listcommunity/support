@@ -18,7 +18,7 @@ Please add your list [to this file](../src/lists.js) and submit a pull request. 
   label: "JavaScript",
   description:
     "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
-  logo: "https://avatars.githubusercontent.com/tc39",
+  logo: "https://avatars.githubusercontent.com/javascript",
   color: "#f7df1e",
   category: "Programming Languages",
 },

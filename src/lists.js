@@ -4,7 +4,7 @@ export default {
     label: "JavaScript",
     description:
       "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
-    logo: "https://avatars.githubusercontent.com/tc39",
+    logo: "https://avatars.githubusercontent.com/javascript",
     color: "#f7df1e",
     category: "Programming Languages",
     mutateContent() {
@@ -490,7 +490,7 @@ export default {
     label: "ECMAScript 6 Tools",
     description:
       "An aggregation of tooling for using ES6 today. EcmaScript 6 is the sixth release of the ECMAScript language.",
-    logo: "https://avatars.githubusercontent.com/tc39",
+    logo: "https://avatars.githubusercontent.com/javascript",
     color: "#f7df1e",
     category: "Front-End Development",
   },
