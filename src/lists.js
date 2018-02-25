@@ -397,6 +397,7 @@ export default {
       this.querySelector("#user-content-contents").parentNode.style.display = "none";
     },
     mutateTOC() {
+      this.querySelector("#toc-").style.display = "none";
       this.querySelector("#toc-contents").style.display = "none";
     },
   },
