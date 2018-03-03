@@ -1347,4 +1347,17 @@ export default {
       this.querySelector("#toc-contents").style.display = "none";
     },
   },
+  "LisaDziuba/Marketing-for-Engineers": {
+    slug: "marketing",
+    label: "Marketing",
+    description: "Hand-picked collection of resources for solving practical marketing tasks.",
+    category: "Miscellaneous",
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(3)").style.display = "none";
+      this.querySelector("#user-content--table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc--table-of-contents").style.display = "none";
+    },
+  },
 };
