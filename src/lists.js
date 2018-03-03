@@ -651,8 +651,8 @@ export default {
     color: "#2754e0",
     category: "Back-End Development",
     mutateContent() {
-      this.querySelector("#readme > ul:first-of-type").style.display = "none";
-      this.querySelector("#readme > hr:first-of-type").style.display = "none";
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > hr:first-of-type").style.display = "none";
       this.querySelector("#user-content-menu").parentNode.style.display = "none";
     },
     mutateTOC() {
@@ -1323,7 +1323,7 @@ export default {
       "Tools, newsletters and other resources about bots, applications that runs automated tasks over the internet.",
     category: "Miscellaneous",
     mutateContent() {
-      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
       this.querySelector("#user-content-table-of-contents").parentNode.style.display = "none";
     },
     mutateTOC() {
@@ -1340,7 +1340,7 @@ export default {
       "A cryptocurrency is a digital asset designed to work as a medium of exchange that uses cryptography.",
     category: "Miscellaneous",
     mutateContent() {
-      this.querySelector("#readme > ul:first-of-type").style.display = "none";
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
       this.querySelector("#user-content-contents").parentNode.style.display = "none";
     },
     mutateTOC() {
