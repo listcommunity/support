@@ -11,18 +11,6 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
-  " LisaDziuba/Marketing-for-Engineers": {
-  slug: "marketing",
-  label: "Marketing",
-  description:
-    "💎 It’s is a hand-picked collection of resources for solving practical marketing tasks.",
-  logo: "https://avatars.githubusercontent.com/marketing",
-  color: "#50b8ed",
-  category: "Books",
-mutateContent() {
-      this.querySelector(":scope > ul:first-of-type").style.display = "none";
-    },
-  },
   "vinta/awesome-python": {
     slug: "python",
     label: "Python",
@@ -47,15 +35,6 @@ mutateContent() {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
-  "sorrycc/awesome-javascript": {
-  slug: "javascript",
-  label: "JavaScript",
-  description:
-    "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
-  logo: "https://avatars.githubusercontent.com/javascript",
-  color: "#f7df1e",
-  category: "Programming Languages",
-},
   "razum2um/awesome-clojure": {
     slug: "clojure",
     label: "Clojure",
@@ -1366,6 +1345,19 @@ mutateContent() {
     },
     mutateTOC() {
       this.querySelector("#toc-contents").style.display = "none";
+    },
+  },
+  "LisaDziuba/Marketing-for-Engineers": {
+    slug: "marketing",
+    label: "Marketing",
+    description: "Hand-picked collection of resources for solving practical marketing tasks.",
+    category: "Miscellaneous",
+    mutateContent() {
+      this.querySelector(":scope > ul:nth-of-type(3)").style.display = "none";
+      this.querySelector("#user-content--table-of-contents").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc--table-of-contents").style.display = "none";
     },
   },
 };
