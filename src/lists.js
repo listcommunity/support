@@ -788,6 +788,22 @@ export default {
       this.querySelector(":scope > h1:nth-of-type(2)").style.display = "none";
     },
   },
+  "aleksandar-todorovic/awesome-linux": {
+    slug: "linux",
+    label: "Linux",
+    description:
+      "Linux is an open source operating system modeled after UNIX. Widely used, it is known for its efficiency and reliability.",
+    logo: "/logos/linux.png",
+    favicon: "/favicons/linux.png",
+    category: "Platforms",
+    mutateContent() {
+      this.querySelector(":scope > ul:first-of-type").style.display = "none";
+      this.querySelector("#user-content-table-of-content").parentNode.style.display = "none";
+    },
+    mutateTOC() {
+      this.querySelector("#toc-table-of-content").style.display = "none";
+    },
+  },
   "benoitjadinon/awesome-xamarin": {
     slug: "xamarin",
     label: "Xamarin",
