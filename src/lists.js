@@ -351,7 +351,7 @@ export default {
     color: "#e8345a",
     category: "Front-End Development",
   },
-  "gdi2290/awesome-angular": {
+  "PatrickJS/awesome-angular": {
     slug: "angular",
     label: "Angular",
     description:
