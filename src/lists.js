@@ -4,7 +4,8 @@ export default {
     label: "JavaScript",
     description:
       "JavaScript is an object-oriented programming language used alongside HTML and CSS to give functionality to web pages.",
-    logo: "https://avatars.githubusercontent.com/javascript",
+    logo:
+      "https://raw.githubusercontent.com/github/explore/master/topics/javascript/javascript.png",
     color: "#f7df1e",
     category: "Programming Languages",
     mutateContent() {
@@ -491,7 +492,8 @@ export default {
     label: "ECMAScript 6 Tools",
     description:
       "An aggregation of tooling for using ES6 today. EcmaScript 6 is the sixth release of the ECMAScript language.",
-    logo: "https://avatars.githubusercontent.com/javascript",
+    logo:
+      "https://raw.githubusercontent.com/github/explore/master/topics/javascript/javascript.png",
     color: "#f7df1e",
     category: "Front-End Development",
   },
@@ -573,7 +575,7 @@ export default {
     label: "Flask",
     description:
       "Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine.",
-    logo: "https://raw.githubusercontent.com/pallets/flask/master/docs/_static/flask.png",
+    logo: "https://raw.githubusercontent.com/pallets/flask/master/docs/_static/flask-icon.png",
     color: "#ffffff",
     category: "Back-End Development",
   },
