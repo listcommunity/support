@@ -558,7 +558,7 @@ export default {
     color: "#307eff",
     category: "Front-End Development",
   },
-  "rosarior/awesome-django": {
+  "shahraizali/awesome-django": {
     slug: "django",
     label: "Django",
     description:
