@@ -82,6 +82,16 @@ export default {
       this.querySelector("#toc-table-of-contents").style.display = "none";
     },
   },
+  "quozd/awesome-dotnet": {
+    slug: "dotnet",
+    label: ".NET",
+    description:
+      ".NET is a developer platform with tools and libraries for building any type of app, including web, mobile, desktop, games, IoT, cloud, and microservices.",
+    logo: "https://avatars.githubusercontent.com/dotnet",
+    color: "#512bd4",
+    category: "Programming Languages",
+    mutateContent() {},
+  },
   "avelino/awesome-go": {
     slug: "go",
     label: "Go",
