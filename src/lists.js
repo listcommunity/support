@@ -191,6 +191,15 @@ export default {
       this.querySelector(":scope > ul:first-of-type").style.display = "none";
     },
   },
+  "KotlinBy/awesome-kotlin": {
+    slug: "kotlin",
+    label: "Kotlin",
+    description: "A modern programming language that makes developers happier and runs on the JVM.",
+    logo: "https://avatars.githubusercontent.com/kotlin",
+    color: "#6b70fc",
+    category: "Programming Languages",
+    mutateContent() {},
+  },
   "rizo/awesome-ocaml": {
     slug: "ocaml",
     label: "OCaml",
