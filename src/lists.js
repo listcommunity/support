@@ -1325,8 +1325,9 @@ export default {
     },
   },
   "cristianoliveira/awesome4girls": {
-    slug: "for-girls",
-    label: "For Girls",
+    slug: "for-women",
+    alternativeSlug: "for-girls",
+    label: "For Women",
     description:
       "A curated list of inclusive events, projects and initiatives for women in the tech area.",
     category: "Miscellaneous",

@@ -25,6 +25,18 @@ const App = () => (
           />
         ))}
 
+        {Object.entries(lists)
+          // allow alternative slugs to not lose old deep links to now-changed list entries
+          .filter(([_, list]) => !!list.alternativeSlug)
+          .map(([fullName, list]) => (
+            <Route
+              exact
+              key={list.alternativeSlug}
+              path={`/${list.alternativeSlug}`}
+              component={() => <Redirect to={`/${fullName}`} />}
+            />
+          ))}
+
         <Route component={NotFound} />
       </Switch>
     </Fragment>
